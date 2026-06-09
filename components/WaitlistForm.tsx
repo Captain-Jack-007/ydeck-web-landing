@@ -1,29 +1,27 @@
 "use client";
 
-import { FormEvent, useMemo, useState } from "react";
+import { FormEvent, useEffect, useMemo, useState } from "react";
 import { ArrowLeft, ArrowRight, CheckCircle2, Send } from "lucide-react";
+import { defaultLocale, translations, type Locale } from "@/lib/i18n";
 
 type WaitlistFormProps = {
   compact?: boolean;
+  locale?: Locale;
 };
 
-const presentationTypes = [
-  "Pitch decks",
-  "Business proposals",
-  "Training slides",
-  "Education lessons",
-  "Sales or client reports",
-  "Other",
-];
-
-export function WaitlistForm({ compact = false }: WaitlistFormProps) {
+export function WaitlistForm({ compact = false, locale = defaultLocale }: WaitlistFormProps) {
   const [submitted, setSubmitted] = useState(false);
-  const [mode, setMode] = useState("Both");
+  const copy = translations[locale].waitlistForm;
+  const [mode, setMode] = useState<string>(copy.modes[2]);
   const [mobileStep, setMobileStep] = useState(1);
 
+  useEffect(() => {
+    setMode(copy.modes[2]);
+  }, [copy.modes]);
+
   const buttonText = useMemo(
-    () => (submitted ? "Request Received" : "Request Early Access"),
-    [submitted],
+    () => (submitted ? copy.submitted : copy.submit),
+    [copy.submit, copy.submitted, submitted],
   );
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
@@ -33,7 +31,7 @@ export function WaitlistForm({ compact = false }: WaitlistFormProps) {
 
   return (
     <form className={compact ? "waitlist-form compact" : "waitlist-form"} onSubmit={handleSubmit}>
-      <div className="mobile-stepper" aria-label="Waitlist form progress">
+      <div className="mobile-stepper" aria-label={copy.progress}>
         <span className={mobileStep === 1 ? "active" : ""}>1</span>
         <span className={mobileStep === 2 ? "active" : ""}>2</span>
       </div>
@@ -41,38 +39,38 @@ export function WaitlistForm({ compact = false }: WaitlistFormProps) {
       <div className={mobileStep === 1 ? "form-step active" : "form-step"}>
         <div className="field-grid">
           <label>
-            <span>Full name</span>
-            <input name="name" type="text" placeholder="Your name" required />
+            <span>{copy.fields.name}</span>
+            <input name="name" type="text" placeholder={copy.placeholders.name} required />
           </label>
           <label>
-            <span>Email</span>
-            <input name="email" type="email" placeholder="you@company.com" required />
+            <span>{copy.fields.email}</span>
+            <input name="email" type="email" placeholder={copy.placeholders.email} required />
           </label>
           <label>
-            <span>Company / Organization</span>
-            <input name="company" type="text" placeholder="Company name" />
+            <span>{copy.fields.company}</span>
+            <input name="company" type="text" placeholder={copy.placeholders.company} />
           </label>
           <label>
-            <span>Role</span>
-            <input name="role" type="text" placeholder="Founder, educator, consultant..." />
+            <span>{copy.fields.role}</span>
+            <input name="role" type="text" placeholder={copy.placeholders.role} />
           </label>
         </div>
 
         <label>
-          <span>WhatsApp / WeChat</span>
-          <input name="contact" type="text" placeholder="+1 555 0100 or WeChat ID" />
+          <span>{copy.fields.contact}</span>
+          <input name="contact" type="text" placeholder={copy.placeholders.contact} />
         </label>
 
         <button className="secondary-action mobile-next" type="button" onClick={() => setMobileStep(2)}>
-          Continue <ArrowRight size={18} />
+          {copy.continue} <ArrowRight size={18} />
         </button>
       </div>
 
       <div className={mobileStep === 2 ? "form-step active" : "form-step"}>
         <label>
-          <span>What type of presentations do you create?</span>
-          <select name="presentationType" defaultValue="Pitch decks">
-            {presentationTypes.map((type) => (
+          <span>{copy.fields.presentationType}</span>
+          <select name="presentationType" defaultValue={copy.presentationTypes[0]}>
+            {copy.presentationTypes.map((type) => (
               <option key={type}>{type}</option>
             ))}
           </select>
@@ -80,9 +78,9 @@ export function WaitlistForm({ compact = false }: WaitlistFormProps) {
 
         <div className="form-row">
           <fieldset>
-            <legend>Preferred mode</legend>
-            <div className="segmented-control" role="radiogroup" aria-label="Preferred mode">
-              {["Private", "Cloud", "Both"].map((option) => (
+            <legend>{copy.fields.preferredMode}</legend>
+            <div className="segmented-control" role="radiogroup" aria-label={copy.fields.preferredMode}>
+              {copy.modes.map((option) => (
                 <label key={option} className={mode === option ? "selected" : ""}>
                   <input
                     checked={mode === option}
@@ -98,19 +96,18 @@ export function WaitlistForm({ compact = false }: WaitlistFormProps) {
           </fieldset>
 
           <label>
-            <span>Decks per month</span>
-            <select name="volume" defaultValue="3-10">
-              <option>1-2</option>
-              <option>3-10</option>
-              <option>11-25</option>
-              <option>25+</option>
+            <span>{copy.fields.volume}</span>
+            <select name="volume" defaultValue={copy.volumes[1]}>
+              {copy.volumes.map((volume) => (
+                <option key={volume}>{volume}</option>
+              ))}
             </select>
           </label>
         </div>
 
         <div className="mobile-form-actions">
           <button className="secondary-action" type="button" onClick={() => setMobileStep(1)}>
-            <ArrowLeft size={18} /> Back
+            <ArrowLeft size={18} /> {copy.back}
           </button>
           <button className="primary-action form-action" type="submit">
             {submitted ? <CheckCircle2 size={18} /> : <Send size={18} />}
@@ -126,7 +123,7 @@ export function WaitlistForm({ compact = false }: WaitlistFormProps) {
 
       {submitted && (
         <p className="form-success" role="status">
-          Thanks. Your pilot request is saved in this prototype state and ready to connect to a backend.
+          {copy.success}
         </p>
       )}
     </form>

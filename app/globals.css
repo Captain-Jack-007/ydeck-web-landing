@@ -17,6 +17,8 @@
 }
 
 html {
+  max-width: 100%;
+  overflow-x: clip;
   scroll-behavior: smooth;
 }
 
@@ -27,6 +29,13 @@ body {
   font-family:
     Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   letter-spacing: 0;
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+main {
+  max-width: 100%;
+  overflow-x: clip;
 }
 
 body::before {
@@ -87,7 +96,7 @@ button {
 .site-nav {
   align-items: center;
   display: flex;
-  gap: 24px;
+  gap: 18px;
 }
 
 .site-nav a,
@@ -117,6 +126,33 @@ button {
 
 .nav-toggle {
   display: none;
+}
+
+.language-switcher {
+  align-items: center;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  display: inline-flex;
+  gap: 2px;
+  padding: 3px;
+}
+
+.language-switcher button {
+  background: transparent;
+  border: 0;
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 900;
+  min-height: 30px;
+  min-width: 40px;
+  padding: 0 9px;
+}
+
+.language-switcher button.active {
+  background: var(--ink);
+  color: #fff;
 }
 
 .sticky-waitlist-cta {
@@ -151,6 +187,10 @@ button {
   height: 42px;
   justify-content: center;
   width: 42px;
+}
+
+.site-header .nav-toggle {
+  display: none;
 }
 
 .section-band,
@@ -1224,6 +1264,8 @@ p {
 .waitlist-topbar {
   align-items: center;
   display: flex;
+  justify-content: space-between;
+  gap: 12px;
   min-height: 44px;
 }
 
@@ -1495,16 +1537,26 @@ p {
   }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 640px) {
+  .reveal.from-left,
+  .reveal.from-right {
+    transform: translateY(24px);
+  }
+
+  .reveal.in-view {
+    transform: translate(0, 0);
+  }
+
   .site-header {
     height: 68px;
+    overflow-x: clip;
   }
 
   .sticky-waitlist-cta {
     display: none;
   }
 
-  .nav-toggle {
+  .site-header .nav-toggle {
     display: inline-flex;
     position: relative;
     z-index: 25;
@@ -1524,6 +1576,7 @@ p {
     right: 20px;
     top: 76px;
     width: min(320px, calc(100vw - 40px));
+    max-width: calc(100vw - 40px);
   }
 
   .site-nav.open {
@@ -1537,6 +1590,16 @@ p {
     text-align: left;
   }
 
+  .site-nav .language-switcher {
+    justify-content: space-between;
+    margin: 6px 0;
+    width: 100%;
+  }
+
+  .site-nav .language-switcher button {
+    flex: 1;
+  }
+
   .hero-visual {
     display: none;
   }
@@ -1544,6 +1607,7 @@ p {
   .hero {
     gap: 0;
     min-height: calc(100dvh - 68px);
+    overflow-x: clip;
     padding-bottom: 34px;
     padding-top: 34px;
   }
@@ -1564,6 +1628,7 @@ p {
   .mobile-product-preview {
     display: block;
     max-width: 430px;
+    min-width: 0;
   }
 
   .mini-deck {
@@ -1594,6 +1659,7 @@ p {
 
   .qr-panel {
     grid-template-columns: auto minmax(0, 1fr);
+    min-width: 0;
   }
 
   .qr-panel > svg {
@@ -1690,9 +1756,53 @@ p {
     padding: 0 12px;
   }
 
+  .waitlist-language button {
+    min-width: 36px;
+    padding: 0 7px;
+  }
+
   .site-footer {
     align-items: flex-start;
     flex-direction: column;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 760px) {
+  .nav-toggle {
+    display: none;
+  }
+
+  .site-nav {
+    align-items: center;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 0;
+    position: static;
+    width: auto;
+  }
+
+  .site-nav a,
+  .nav-cta {
+    border-radius: 999px;
+    font-size: 0.84rem;
+    padding: 9px 10px;
+    text-align: center;
+  }
+
+  .site-nav .language-switcher {
+    margin: 0;
+    width: auto;
+  }
+
+  .site-nav .language-switcher button {
+    flex: 0 0 auto;
+    min-width: 34px;
+    padding: 0 6px;
   }
 }
 
@@ -1725,11 +1835,21 @@ p {
 
   .mobile-hero-strip {
     justify-content: space-between;
+    min-width: 0;
     width: 100%;
   }
 
   .mobile-product-preview {
     max-width: none;
+  }
+
+  .mobile-slide-list {
+    gap: 6px;
+  }
+
+  .mobile-slide-card {
+    min-width: 0;
+    padding: 8px;
   }
 
   .mobile-hero-strip span {
