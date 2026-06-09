@@ -79,7 +79,7 @@ export const translations = {
       ],
       cloudItems: [
         "Runs online",
-        "Accessible from web and social platforms",
+        "Accessible from web, WhatsApp, WeChat, Telegram, and Discord",
         "Best for speed and convenience",
       ],
     },
@@ -138,7 +138,7 @@ export const translations = {
         ],
         [
           "Is the cloud agent still available?",
-          "Yes. The cloud agent is intended for speed, convenience, and access from web or social platforms.",
+          "Yes. The cloud agent is intended for speed, convenience, and access from web, WhatsApp, WeChat, Telegram, and Discord.",
         ],
       ],
     },
@@ -255,7 +255,7 @@ export const translations = {
       privateTitle: "私有智能体",
       cloudTitle: "云端智能体",
       privateItems: ["在你的电脑本地运行", "私有模式无需上传文件", "适合机密演示文稿"],
-      cloudItems: ["在线运行", "可从网页和社交平台访问", "适合速度和便利性"],
+      cloudItems: ["在线运行", "可从网页、WhatsApp、微信、Telegram 和 Discord 访问", "适合速度和便利性"],
     },
     workflow: {
       eyebrow: "工作流程",
@@ -301,7 +301,7 @@ export const translations = {
         ["YDeck 可以私有运行吗？", "可以。私有模式面向本地运行，让敏感文件和提示词保留在你的设备上。"],
         ["试点计划适合谁？", "适合经常制作演示文稿，并希望在发布前测试 YDeck 的创始人、教育者、顾问、公司和组织。"],
         ["可以导出什么格式？", "当前页面概念聚焦 PPTX 和 PDF 导出，便于团队继续使用熟悉的演示文稿流程。"],
-        ["云端智能体还可用吗？", "可用。云端智能体面向速度、便利性，以及网页和社交平台访问。"],
+        ["云端智能体还可用吗？", "可用。云端智能体面向速度、便利性，以及通过网页、WhatsApp、微信、Telegram 和 Discord 访问。"],
       ],
     },
     footer: {
@@ -411,7 +411,7 @@ export const translations = {
       privateTitle: "Приватный агент",
       cloudTitle: "Облачный агент",
       privateItems: ["Работает локально на компьютере", "В приватном режиме загрузка не требуется", "Лучше для конфиденциальных презентаций"],
-      cloudItems: ["Работает онлайн", "Доступен из веба и социальных платформ", "Лучше для скорости и удобства"],
+      cloudItems: ["Работает онлайн", "Доступен из веба, WhatsApp, WeChat, Telegram и Discord", "Лучше для скорости и удобства"],
     },
     workflow: {
       eyebrow: "Как это работает",
@@ -457,7 +457,7 @@ export const translations = {
         ["Может ли YDeck работать приватно?", "Да. Приватный режим создан для локальной работы, чтобы чувствительные файлы и промпты оставались на вашем устройстве."],
         ["Для кого пилот?", "Для основателей, преподавателей, консультантов, компаний и организаций, которые регулярно создают презентации и хотят протестировать YDeck до запуска."],
         ["Что можно экспортировать?", "Концепция сфокусирована на экспорте PPTX и PDF, чтобы команды продолжали работать в привычных процессах."],
-        ["Облачный агент тоже будет?", "Да. Облачный агент создан для скорости, удобства и доступа из веба или социальных платформ."],
+        ["Облачный агент тоже будет?", "Да. Облачный агент создан для скорости, удобства и доступа из веба, WhatsApp, WeChat, Telegram и Discord."],
       ],
     },
     footer: {
