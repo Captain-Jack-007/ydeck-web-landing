@@ -61,7 +61,7 @@ export function WaitlistPageClient({ initialLocale }: WaitlistPageClientProps) {
       </div>
       <section className="waitlist-hero">
         <div className="waitlist-intro">
-          <Image src="/ydeck.png" alt="YDeck logo" width={76} height={97} priority />
+          <Image src="/ydeck.png" alt="YDeck logo" width={76} height={97} loading="eager" priority />
           <p className="eyebrow"><BadgeCheck size={16} /> {t.waitlistPage.eyebrow}</p>
           <h1>{t.waitlistPage.title}</h1>
           <p>{t.waitlistPage.text}</p>

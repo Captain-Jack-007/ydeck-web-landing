@@ -83,6 +83,30 @@ export default function Home() {
     document.documentElement.lang = locale === "zh" ? "zh-CN" : locale;
   }, [locale]);
 
+  useEffect(() => {
+    if (typeof window === "undefined") {
+      return;
+    }
+
+    const syncMenuState = () => {
+      const isMobile = window.matchMedia("(max-width: 640px)").matches;
+
+      document.body.style.overflow = isMobile && navOpen ? "hidden" : "";
+
+      if (!isMobile) {
+        setNavOpen(false);
+      }
+    };
+
+    syncMenuState();
+    window.addEventListener("resize", syncMenuState);
+
+    return () => {
+      window.removeEventListener("resize", syncMenuState);
+      document.body.style.overflow = "";
+    };
+  }, [navOpen]);
+
   function openModal() {
     setModalOpen(true);
     setNavOpen(false);
@@ -95,40 +119,70 @@ export default function Home() {
     window.history.replaceState({}, "", url);
   }
 
+  function renderNavContent() {
+    return (
+      <>
+        <a href="#solution" onClick={() => setNavOpen(false)}>{t.nav.solution}</a>
+        <a href="#modes" onClick={() => setNavOpen(false)}>{t.nav.modes}</a>
+        <a href="#pilot" onClick={() => setNavOpen(false)}>{t.nav.pilot}</a>
+        <div className="language-switcher" aria-label={t.nav.language}>
+          {locales.map((item) => (
+            <button
+              aria-pressed={locale === item.code}
+              className={locale === item.code ? "active" : ""}
+              key={item.code}
+              onClick={() => {
+                selectLocale(item.code);
+                setNavOpen(false);
+              }}
+              title={item.name}
+              type="button"
+            >
+              {item.label}
+            </button>
+          ))}
+        </div>
+        <button className="nav-cta" onClick={openModal}>{t.nav.join}</button>
+      </>
+    );
+  }
+
   return (
     <main>
       <header className="site-header">
         <Link className="brand" href="/" aria-label="YDeck home">
-          <Image src="/ydeck.png" alt="" width={42} height={54} priority />
+          <Image src="/ydeck.png" alt="" width={42} height={54} loading="eager" priority />
           <span>YDeck</span>
         </Link>
-        <button className="icon-button nav-toggle" onClick={() => setNavOpen((open) => !open)} aria-label="Toggle menu">
+        <button
+          aria-expanded={navOpen}
+          aria-label="Toggle menu"
+          className="icon-button nav-toggle"
+          onClick={() => setNavOpen((open) => !open)}
+          type="button"
+        >
           {navOpen ? <X size={20} /> : <Menu size={20} />}
         </button>
-        <nav className={navOpen ? "site-nav open" : "site-nav"} aria-label="Primary navigation">
-          <a href="#solution" onClick={() => setNavOpen(false)}>{t.nav.solution}</a>
-          <a href="#modes" onClick={() => setNavOpen(false)}>{t.nav.modes}</a>
-          <a href="#pilot" onClick={() => setNavOpen(false)}>{t.nav.pilot}</a>
-          <div className="language-switcher" aria-label={t.nav.language}>
-            {locales.map((item) => (
-              <button
-                aria-pressed={locale === item.code}
-                className={locale === item.code ? "active" : ""}
-                key={item.code}
-                onClick={() => {
-                  selectLocale(item.code);
-                  setNavOpen(false);
-                }}
-                title={item.name}
-                type="button"
-              >
-                {item.label}
-              </button>
-            ))}
-          </div>
-          <button className="nav-cta" onClick={openModal}>{t.nav.join}</button>
+        <nav className="site-nav" aria-label="Primary navigation">
+          {renderNavContent()}
         </nav>
       </header>
+      {navOpen ? (
+        <div
+          aria-label="Mobile navigation"
+          className="mobile-menu-sheet"
+          onClick={() => setNavOpen(false)}
+        >
+          <div
+            className="mobile-menu-panel"
+            onClick={(event) => event.stopPropagation()}
+            role="dialog"
+            aria-modal="true"
+          >
+            {renderNavContent()}
+          </div>
+        </div>
+      ) : null}
 
       <button className="sticky-waitlist-cta" onClick={openModal}>
         {t.footer.sticky} <ArrowRight size={17} />
@@ -161,7 +215,7 @@ export default function Home() {
           <div className="mobile-product-preview" aria-label="YDeck mobile product preview">
             <div className="mobile-preview-top">
               <span className="mobile-preview-brand">
-                <Image src="/ydeck.png" alt="" width={24} height={31} />
+                <Image src="/ydeck.png" alt="" width={24} height={31} loading="eager" />
                 YDeck
               </span>
               <span className="mobile-private-status"><LockKeyhole size={13} /> {t.hero.mobileStatus}</span>
