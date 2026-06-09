@@ -106,16 +106,19 @@ export default function Home() {
           {navOpen ? <X size={20} /> : <Menu size={20} />}
         </button>
         <nav className={navOpen ? "site-nav open" : "site-nav"} aria-label="Primary navigation">
-          <a href="#solution">{t.nav.solution}</a>
-          <a href="#modes">{t.nav.modes}</a>
-          <a href="#pilot">{t.nav.pilot}</a>
+          <a href="#solution" onClick={() => setNavOpen(false)}>{t.nav.solution}</a>
+          <a href="#modes" onClick={() => setNavOpen(false)}>{t.nav.modes}</a>
+          <a href="#pilot" onClick={() => setNavOpen(false)}>{t.nav.pilot}</a>
           <div className="language-switcher" aria-label={t.nav.language}>
             {locales.map((item) => (
               <button
                 aria-pressed={locale === item.code}
                 className={locale === item.code ? "active" : ""}
                 key={item.code}
-                onClick={() => selectLocale(item.code)}
+                onClick={() => {
+                  selectLocale(item.code);
+                  setNavOpen(false);
+                }}
                 title={item.name}
                 type="button"
               >
@@ -136,6 +139,7 @@ export default function Home() {
           <p className="eyebrow"><ShieldCheck size={16} /> {t.hero.eyebrow}</p>
           <h1>YDeck</h1>
           <p className="hero-subtitle">{t.hero.subtitle}</p>
+          <p className="hero-support-line">{t.hero.supportLine}</p>
           <div className="hero-actions">
             <button className="primary-action" onClick={openModal}>
               {t.hero.primaryCta} <ArrowRight size={18} />
