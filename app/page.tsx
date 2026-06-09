@@ -329,16 +329,38 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="pilot-benefits-section">
+        <div className="section-heading reveal from-left">
+          <p className="eyebrow"><BadgeCheck size={16} /> {t.pilot.eyebrow}</p>
+          <h2>{t.pilot.sectionTitle}</h2>
+          <p>{t.pilot.sectionText}</p>
+        </div>
+        <div className="pilot-benefits-layout">
+          <div className="pilot-highlight reveal from-left">
+            <strong>{t.pilot.highlightTitle}</strong>
+            <p>{t.pilot.highlightText}</p>
+          </div>
+          <div className="pilot-benefit-cards">
+            {t.pilot.summaryCards.map(([title, text], index) => (
+              <article
+                className={`pilot-benefit-card reveal ${index % 2 === 0 ? "from-left" : "from-right"}`}
+                key={`pilot-card-${index}`}
+                style={{ transitionDelay: `${index * 80}ms` }}
+              >
+                <h3>{title}</h3>
+                <p>{text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+        <p className="pilot-extra-line reveal from-right">{t.pilot.extraLine}</p>
+      </section>
+
       <section className="pilot-section" id="pilot">
         <div className="pilot-copy reveal from-left">
           <p className="eyebrow"><BadgeCheck size={16} /> {t.pilot.eyebrow}</p>
           <h2>{t.pilot.title}</h2>
           <p>{t.pilot.text}</p>
-          <div className="benefit-list">
-            {t.pilot.benefits.map((benefit) => (
-              <span key={benefit}><Check size={16} /> {benefit}</span>
-            ))}
-          </div>
           <div className="qr-panel">
             <div className="qr-code" aria-hidden="true">
               {Array.from({ length: 25 }).map((_, index) => (

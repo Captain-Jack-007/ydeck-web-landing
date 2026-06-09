@@ -1008,11 +1008,91 @@ p {
   top: 104px;
 }
 
+.pilot-benefits-section {
+  padding: 0 clamp(20px, 5vw, 72px) clamp(54px, 7vw, 90px);
+}
+
+.pilot-benefits-layout {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr);
+  margin: 0 auto 16px;
+  max-width: 1180px;
+}
+
+.pilot-benefit-cards {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.pilot-benefit-card {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 16px 42px rgba(34, 48, 74, 0.08);
+  padding: 20px;
+}
+
+.pilot-benefit-card h3 {
+  font-size: 1.02rem;
+  margin-bottom: 10px;
+}
+
+.pilot-benefit-card p {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.pilot-extra-line {
+  color: var(--muted);
+  font-size: 0.92rem;
+  margin: 0 auto;
+  max-width: 1180px;
+  text-align: center;
+}
+
 .benefit-list {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   margin: 28px 0;
+}
+
+.pilot-benefits-intro {
+  color: var(--ink);
+  font-size: 0.95rem;
+  font-weight: 900;
+  margin: 22px 0 12px;
+}
+
+.pilot-highlight {
+  background:
+    linear-gradient(135deg, rgba(246, 148, 29, 0.14), rgba(255, 255, 255, 0.94));
+  border: 1px solid rgba(246, 148, 29, 0.24);
+  border-radius: 8px;
+  box-shadow: 0 18px 44px rgba(246, 148, 29, 0.1);
+  margin-bottom: 18px;
+  padding: 16px 18px;
+}
+
+.pilot-highlight strong {
+  color: var(--ink);
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+.pilot-highlight p {
+  font-size: 0.92rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.compact-benefits {
+  grid-template-columns: 1fr;
+  margin-bottom: 14px;
 }
 
 .benefit-list span {
@@ -1480,6 +1560,11 @@ p {
   .waitlist-hero {
     align-items: stretch;
     gap: 14px;
+    grid-template-columns: 1fr;
+  }
+
+  .pilot-benefits-layout,
+  .pilot-benefit-cards {
     grid-template-columns: 1fr;
   }
 

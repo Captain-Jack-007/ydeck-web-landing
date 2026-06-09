@@ -65,11 +65,19 @@ export function WaitlistPageClient({ initialLocale }: WaitlistPageClientProps) {
           <p className="eyebrow"><BadgeCheck size={16} /> {t.waitlistPage.eyebrow}</p>
           <h1>{t.waitlistPage.title}</h1>
           <p>{t.waitlistPage.text}</p>
-          <div className="benefit-list">
-            {t.pilot.benefits.map((benefit) => (
-              <span key={benefit}><Check size={16} /> {benefit}</span>
+          <div className="pilot-highlight">
+            <strong>{t.pilot.highlightTitle}</strong>
+            <p>{t.pilot.highlightText}</p>
+          </div>
+          <div className="pilot-benefit-cards compact-benefits">
+            {t.pilot.summaryCards.map(([title, text], index) => (
+              <article className="pilot-benefit-card" key={`waitlist-benefit-${index}`}>
+                <h3>{title}</h3>
+                <p>{text}</p>
+              </article>
             ))}
           </div>
+          <p className="pilot-extra-line">{t.pilot.extraLine}</p>
           <p className="trust-line">
             <LockKeyhole size={17} /> {t.waitlistPage.trust}
           </p>
