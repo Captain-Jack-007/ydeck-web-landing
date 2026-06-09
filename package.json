@@ -1,0 +1,26 @@
+{
+  "name": "ydeck-landing",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "predev": "lsof -ti tcp:3005 | xargs kill -9 2>/dev/null || true; rm -rf .next",
+    "dev": "next dev --webpack -p 3005",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "lucide-react": "1.17.0",
+    "next": "16.2.7",
+    "react": "19.2.7",
+    "react-dom": "19.2.7"
+  },
+  "devDependencies": {
+    "@types/node": "20.17.10",
+    "@types/react": "19.2.17",
+    "@types/react-dom": "19.2.3",
+    "typescript": "5.7.2"
+  },
+  "overrides": {
+    "postcss": "8.5.15"
+  }
+}
