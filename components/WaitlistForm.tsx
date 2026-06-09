@@ -11,6 +11,8 @@ type WaitlistFormProps = {
 
 export function WaitlistForm({ compact = false, locale = defaultLocale }: WaitlistFormProps) {
   const [submitted, setSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
   const copy = translations[locale].waitlistForm;
   const [mode, setMode] = useState<string>(copy.modes[2]);
   const [mobileStep, setMobileStep] = useState(1);
@@ -20,13 +22,47 @@ export function WaitlistForm({ compact = false, locale = defaultLocale }: Waitli
   }, [copy.modes]);
 
   const buttonText = useMemo(
-    () => (submitted ? copy.submitted : copy.submit),
-    [copy.submit, copy.submitted, submitted],
+    () => (submitted ? copy.submitted : loading ? (copy.submitting ?? "Sending…") : copy.submit),
+    [copy.submit, copy.submitted, copy.submitting, submitted, loading],
   );
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setSubmitted(true);
+    setSubmitError(null);
+    setLoading(true);
+
+    const data = new FormData(event.currentTarget);
+    const payload = {
+      name: data.get("name") as string,
+      email: data.get("email") as string,
+      company: data.get("company") as string,
+      role: data.get("role") as string,
+      contact: data.get("contact") as string,
+      presentationType: data.get("presentationType") as string,
+      mode,
+      volume: data.get("volume") as string,
+      locale,
+    };
+
+    try {
+      const res = await fetch("/api/waitlist", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      if (res.status === 409) {
+        setSubmitError(copy.errorDuplicate ?? "You're already on the list!");
+      } else if (!res.ok) {
+        setSubmitError(copy.errorGeneric ?? "Something went wrong. Please try again.");
+      } else {
+        setSubmitted(true);
+      }
+    } catch {
+      setSubmitError(copy.errorGeneric ?? "Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
@@ -109,14 +145,14 @@ export function WaitlistForm({ compact = false, locale = defaultLocale }: Waitli
           <button className="secondary-action" type="button" onClick={() => setMobileStep(1)}>
             <ArrowLeft size={18} /> {copy.back}
           </button>
-          <button className="primary-action form-action" type="submit">
+          <button className="primary-action form-action" disabled={loading || submitted} type="submit">
             {submitted ? <CheckCircle2 size={18} /> : <Send size={18} />}
             {buttonText}
           </button>
         </div>
       </div>
 
-      <button className="primary-action form-action desktop-form-action" type="submit">
+      <button className="primary-action form-action desktop-form-action" disabled={loading || submitted} type="submit">
         {submitted ? <CheckCircle2 size={18} /> : <Send size={18} />}
         {buttonText}
       </button>
@@ -124,6 +160,11 @@ export function WaitlistForm({ compact = false, locale = defaultLocale }: Waitli
       {submitted && (
         <p className="form-success" role="status">
           {copy.success}
+        </p>
+      )}
+      {submitError && (
+        <p className="form-error" role="alert">
+          {submitError}
         </p>
       )}
     </form>

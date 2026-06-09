@@ -19,7 +19,6 @@ import {
   Menu,
   MessageSquareText,
   Presentation,
-  QrCode,
   Rocket,
   ShieldCheck,
   Sparkles,
@@ -419,18 +418,6 @@ export default function Home() {
           <p className="eyebrow"><BadgeCheck size={16} /> {t.pilot.eyebrow}</p>
           <h2>{t.pilot.title}</h2>
           <p>{t.pilot.text}</p>
-          <div className="qr-panel">
-            <div className="qr-code" aria-hidden="true">
-              {Array.from({ length: 25 }).map((_, index) => (
-                <span key={index} className={index % 3 === 0 || index % 7 === 0 ? "filled" : ""} />
-              ))}
-            </div>
-            <div>
-              <strong>{t.pilot.qrTitle}</strong>
-              <p>{t.pilot.qrText}</p>
-            </div>
-            <QrCode size={22} />
-          </div>
           <Link className="secondary-action standalone-link" href={`/waitlist?lang=${locale}`}>
             {t.pilot.dedicatedLink} <ArrowRight size={18} />
           </Link>

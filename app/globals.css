@@ -1287,6 +1287,16 @@ p {
   padding: 12px 14px;
 }
 
+.form-error {
+  background: rgba(220, 38, 38, 0.07);
+  border: 1px solid rgba(220, 38, 38, 0.2);
+  border-radius: 8px;
+  color: #dc2626;
+  font-size: 0.92rem;
+  margin: 0;
+  padding: 12px 14px;
+}
+
 .faq-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -1353,9 +1363,8 @@ p {
 
 .waitlist-page {
   display: grid;
-  grid-template-rows: auto minmax(0, 1fr);
-  height: 100dvh;
-  overflow: hidden;
+  grid-template-rows: auto auto;
+  min-height: 100dvh;
   padding: clamp(14px, 2.6vw, 32px);
 }
 
@@ -1380,13 +1389,12 @@ p {
 }
 
 .waitlist-hero {
-  align-items: center;
+  align-items: start;
   display: grid;
   gap: clamp(20px, 3.2vw, 46px);
   grid-template-columns: minmax(0, 0.92fr) minmax(420px, 1.08fr);
   margin: 0 auto;
   max-width: 1180px;
-  min-height: 0;
   width: 100%;
 }
 
@@ -1408,8 +1416,6 @@ p {
 
 .dedicated {
   background: #fff;
-  max-height: calc(100dvh - 96px);
-  overflow: auto;
 }
 
 .dedicated .waitlist-form {
@@ -1576,7 +1582,6 @@ p {
   }
 
   .waitlist-hero {
-    align-items: stretch;
     gap: 14px;
     grid-template-columns: 1fr;
   }
@@ -1627,11 +1632,6 @@ p {
   .waitlist-intro .trust-line {
     font-size: 0.82rem;
     line-height: 1.3;
-  }
-
-  .dedicated {
-    max-height: none;
-    min-height: 0;
   }
 
   .problem-grid,
