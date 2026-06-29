@@ -73,12 +73,6 @@ export function Navbar({
             ))}
           </div>
           <a
-            className="hidden rounded-full px-4 py-2 text-sm font-medium text-slate-300 transition hover:text-white lg:inline-flex"
-            href="#"
-          >
-            {content.signIn}
-          </a>
-          <a
             className="hidden rounded-full bg-white px-4 py-2 text-sm font-semibold text-ydeck-black transition hover:bg-cyan-100 lg:inline-flex"
             href="#final-cta"
             onClick={handleJoin}

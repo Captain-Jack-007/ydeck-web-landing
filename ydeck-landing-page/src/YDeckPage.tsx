@@ -28,8 +28,15 @@ type YDeckPageProps = {
 };
 
 export function YDeckPage({ onJoinWaitlist }: YDeckPageProps) {
-  const [locale, setLocale] = useState<Locale>(detectInitialLocale);
+  const [locale, setLocale] = useState<Locale>('en');
   const content = localeContent[locale];
+
+  useEffect(() => {
+    const detected = detectInitialLocale();
+    if (detected !== locale) setLocale(detected);
+    // run once on mount to sync with browser/localStorage after hydration
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   const heroRef = useRef<HTMLElement>(null);
   const reduceMotion = useReducedMotion();
   const { scrollYProgress } = useScroll({
