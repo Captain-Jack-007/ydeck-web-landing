@@ -8,15 +8,18 @@ export function UseCasesSection({
   content: LocaleContent[Locale]['useCases'];
 }) {
   return (
-    <section className="relative scroll-mt-28 px-5 py-16 lg:px-8 lg:py-28" id="use-cases">
+    <section
+      className="relative scroll-mt-28 px-5 py-16 lg:px-8 lg:py-28"
+      id="use-cases"
+    >
       <div className="mx-auto max-w-7xl">
         <FadeUp>
-          <h2 className="max-w-[20rem] text-3xl font-semibold leading-tight tracking-[-0.04em] lg:max-w-3xl lg:text-6xl lg:tracking-[-0.05em]">
+          <h2 className="text-3xl font-semibold leading-tight tracking-[-0.04em] lg:max-w-3xl lg:text-6xl lg:tracking-[-0.05em]">
             {content.title}
           </h2>
         </FadeUp>
 
-        <div className="mt-8 grid max-w-[21rem] gap-3 lg:hidden">
+        <div className="mt-8 grid gap-3 lg:hidden">
           {content.cards.map(({ title, body, Icon }, index) => (
             <FadeUp key={title} delay={index * 0.04}>
               <article className="group relative overflow-hidden rounded-[1.25rem] border border-white/10 bg-ydeck-card/55 p-4">

@@ -1,5 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
-import { motion, useReducedMotion, useScroll, useTransform } from 'framer-motion';
+import {
+  motion,
+  useReducedMotion,
+  useScroll,
+  useTransform,
+} from 'framer-motion';
 import { ArrowRight, PlayCircle, Sparkles } from 'lucide-react';
 
 import { DeckCommandCenter } from './components/DeckCommandCenter';
@@ -67,7 +72,7 @@ export function YDeckPage({ onJoinWaitlist }: YDeckPageProps) {
             }}
           >
             <FadeUp>
-              <div className="glass-panel inline-flex max-w-[19rem] items-center gap-2 rounded-full border-cyan-400/30 px-3 py-2 text-[10px] font-semibold uppercase tracking-[0.12em] text-ydeck-cyan lg:max-w-full lg:px-4 lg:text-xs lg:tracking-[0.18em]">
+              <div className="glass-panel inline-flex items-center gap-2 rounded-full border-cyan-400/30 px-3 py-2 text-[10px] font-semibold uppercase tracking-[0.12em] text-ydeck-cyan lg:px-4 lg:text-xs lg:tracking-[0.18em]">
                 <Sparkles className="h-4 w-4" />
                 <span className="truncate">{content.hero.eyebrow}</span>
               </div>
@@ -76,17 +81,17 @@ export function YDeckPage({ onJoinWaitlist }: YDeckPageProps) {
             <WordsPullUp
               text={content.hero.title}
               highlightWords={[...content.hero.highlightWords]}
-              className="mt-6 max-w-[18.5rem] text-[2rem] font-semibold leading-[1.08] tracking-[-0.035em] text-ydeck-text lg:max-w-4xl lg:text-8xl lg:leading-[0.94] lg:tracking-[-0.04em]"
+              className="mt-6 text-[2rem] font-semibold leading-[1.08] tracking-[-0.035em] text-ydeck-text lg:max-w-4xl lg:text-8xl lg:leading-[0.94] lg:tracking-[-0.04em]"
             />
 
             <FadeUp delay={0.45}>
-              <p className="mt-5 max-w-[18.5rem] text-sm leading-[1.75] text-ydeck-muted lg:mt-6 lg:max-w-xl lg:text-lg">
+              <p className="mt-5 text-sm leading-[1.75] text-ydeck-muted lg:mt-6 lg:max-w-xl lg:text-lg">
                 {content.hero.body}
               </p>
             </FadeUp>
 
             <FadeUp delay={0.62}>
-              <div className="mt-7 flex max-w-[18.5rem] flex-col gap-3 lg:mt-8 lg:max-w-none lg:flex-row">
+              <div className="mt-7 flex flex-col gap-3 lg:mt-8 lg:flex-row">
                 <motion.a
                   href="#final-cta"
                   onClick={(event) => {
@@ -109,14 +114,14 @@ export function YDeckPage({ onJoinWaitlist }: YDeckPageProps) {
                   {content.hero.secondaryCta}
                 </motion.a>
               </div>
-              <p className="mt-5 max-w-[18.5rem] text-sm leading-6 text-slate-400 lg:max-w-xl">
+              <p className="mt-5 text-sm leading-6 text-slate-400 lg:max-w-xl">
                 {content.hero.note}
               </p>
             </FadeUp>
           </motion.div>
 
           <motion.div
-            className="relative z-10 w-full max-w-[19.5rem] min-w-0 lg:col-span-6 lg:max-w-none"
+            className="relative z-10 w-full min-w-0 lg:col-span-6"
             style={{ scale: reduceMotion ? 1 : visualScale }}
           >
             <DeckCommandCenter

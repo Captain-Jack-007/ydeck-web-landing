@@ -11,18 +11,21 @@ export function WorkflowSection({
   content: LocaleContent[Locale]['workflow'];
 }) {
   return (
-    <section className="relative scroll-mt-28 px-5 pb-16 pt-10 lg:px-8 lg:pb-28 lg:pt-12" id="workflow">
+    <section
+      className="relative scroll-mt-28 px-5 pb-16 pt-10 lg:px-8 lg:pb-28 lg:pt-12"
+      id="workflow"
+    >
       <div className="mx-auto max-w-7xl">
         <FadeUp>
-          <h2 className="max-w-[20rem] text-3xl font-semibold leading-tight tracking-[-0.04em] lg:max-w-3xl lg:text-6xl lg:tracking-[-0.05em]">
+          <h2 className="text-3xl font-semibold leading-tight tracking-[-0.04em] lg:max-w-3xl lg:text-6xl lg:tracking-[-0.05em]">
             {content.title}
           </h2>
-          <p className="mt-4 max-w-[20rem] text-sm leading-6 text-ydeck-muted lg:mt-5 lg:max-w-2xl lg:text-base">
+          <p className="mt-4 text-sm leading-6 text-ydeck-muted lg:mt-5 lg:max-w-2xl lg:text-base">
             {content.body}
           </p>
         </FadeUp>
 
-        <div className="mt-8 grid max-w-[21rem] gap-3 lg:hidden">
+        <div className="mt-8 grid gap-3 lg:hidden">
           {content.steps.map(({ title, body, Icon }, index) => (
             <FadeUp key={title} delay={index * 0.05}>
               <article className="relative overflow-hidden rounded-[1.25rem] border border-white/10 bg-ydeck-panel/70 p-4">

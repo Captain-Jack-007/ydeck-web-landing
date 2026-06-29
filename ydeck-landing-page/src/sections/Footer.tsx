@@ -46,12 +46,8 @@ export function Footer({
               </span>
               {content.promptTitle}
             </div>
-            <div className="mt-4 rounded-2xl border border-white/10 bg-black/35 p-3 font-mono text-xs leading-5 text-slate-300">
-              <TypingPrompt
-                texts={[content.prompt]}
-                speed={28}
-                pause={1400}
-              />
+            <div className="mt-4 flex min-h-[5.25rem] items-start rounded-2xl border border-white/10 bg-black/35 p-3 font-mono text-xs leading-5 text-slate-300 md:min-h-[4.25rem]">
+              <TypingPrompt texts={[content.prompt]} speed={28} pause={1400} />
             </div>
           </div>
         </div>
@@ -120,6 +116,7 @@ export function Footer({
                       <a
                         key={label}
                         href={href}
+                        onClick={href === '#final-cta' ? handleJoin : undefined}
                         className="transition hover:text-white"
                       >
                         {label}

@@ -51,10 +51,8 @@ export function FinalCTA({
               {content.secondary}
             </a>
           </div>
-          <div className="glass-panel mx-auto mt-8 max-w-xl rounded-2xl p-4 text-left font-mono text-sm text-slate-300">
-            <TypingPrompt
-              texts={[content.prompt]}
-            />
+          <div className="glass-panel mx-auto mt-8 flex min-h-[5.5rem] max-w-xl items-start rounded-2xl p-4 text-left font-mono text-sm leading-6 text-slate-300 md:min-h-[4.5rem]">
+            <TypingPrompt texts={[content.prompt]} />
           </div>
         </FadeUp>
       </div>

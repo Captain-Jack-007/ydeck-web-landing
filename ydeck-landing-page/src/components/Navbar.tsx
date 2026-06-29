@@ -21,9 +21,13 @@ export function Navbar({
   }
 
   return (
-    <nav className="fixed left-5 top-4 z-50 w-[calc(100%_-_2.5rem)] max-w-[19.5rem] rounded-full py-3 lg:left-4 lg:right-4 lg:mx-auto lg:w-auto lg:max-w-6xl">
+    <nav className="fixed left-5 right-5 top-4 z-50 rounded-full py-3 lg:left-4 lg:right-4 lg:mx-auto lg:max-w-6xl">
       <div className="glass-panel flex items-center justify-between rounded-full px-3 py-2 lg:px-4">
-        <a href="#" className="flex items-center gap-3" aria-label={content.homeLabel}>
+        <a
+          href="#"
+          className="flex items-center gap-3"
+          aria-label={content.homeLabel}
+        >
           <span className="flex h-9 w-9 items-center justify-center rounded-xl border border-white/10 bg-white/[0.06] shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
             <Image
               src="/ydeck.png"
@@ -40,17 +44,11 @@ export function Navbar({
         </a>
 
         <div className="hidden items-center gap-6 text-sm text-slate-300 lg:flex">
-          {content.links.map(
-            ([label, href]) => (
-              <a
-                key={label}
-                href={href}
-                className="transition hover:text-white"
-              >
-                {label}
-              </a>
-            )
-          )}
+          {content.links.map(([label, href]) => (
+            <a key={label} href={href} className="transition hover:text-white">
+              {label}
+            </a>
+          ))}
         </div>
 
         <div className="flex items-center gap-2">
