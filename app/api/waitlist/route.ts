@@ -1,8 +1,19 @@
 import { NextRequest, NextResponse } from "next/server";
-import { supabase } from "@/lib/supabase";
+import { getSupabaseServerClient } from "@/lib/supabase";
 
 export async function POST(req: NextRequest) {
+  let supabase;
   let body: Record<string, string>;
+
+  try {
+    supabase = getSupabaseServerClient();
+  } catch (error) {
+    if (error instanceof Error && error.message.includes("Supabase server environment variables are missing")) {
+      console.error("[waitlist] Missing Supabase environment variables.");
+      return NextResponse.json({ error: "Waitlist is not configured" }, { status: 500 });
+    }
+    throw error;
+  }
 
   try {
     body = await req.json();

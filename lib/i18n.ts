@@ -7,15 +7,80 @@ export const locales = [
 export type Locale = (typeof locales)[number]["code"];
 
 export const defaultLocale: Locale = "en";
+export const localePreferenceKey = "ydeck-locale-preference";
+
+const centralAsiaCountryCodes = new Set(["KZ", "KG", "TJ", "TM", "UZ"]);
+const chinaCountryCodes = new Set(["CN"]);
+const centralAsiaTimeZones = new Set([
+  "Asia/Almaty",
+  "Asia/Aqtau",
+  "Asia/Aqtobe",
+  "Asia/Ashgabat",
+  "Asia/Astana",
+  "Asia/Atyrau",
+  "Asia/Bishkek",
+  "Asia/Dushanbe",
+  "Asia/Oral",
+  "Asia/Qostanay",
+  "Asia/Qyzylorda",
+  "Asia/Samarkand",
+  "Asia/Tashkent",
+]);
+const chinaTimeZones = new Set(["Asia/Shanghai", "Asia/Urumqi"]);
 
 export function isLocale(value: string | null): value is Locale {
   return value === "en" || value === "zh" || value === "ru";
+}
+
+export function localeFromCountryCode(countryCode: string | null | undefined): Locale | null {
+  if (!countryCode) {
+    return null;
+  }
+
+  const normalizedCountryCode = countryCode.toUpperCase();
+
+  if (chinaCountryCodes.has(normalizedCountryCode)) {
+    return "zh";
+  }
+
+  if (centralAsiaCountryCodes.has(normalizedCountryCode)) {
+    return "ru";
+  }
+
+  return "en";
+}
+
+export function localeFromTimeZone(timeZone: string | null | undefined): Locale | null {
+  if (!timeZone) {
+    return null;
+  }
+
+  if (chinaTimeZones.has(timeZone)) {
+    return "zh";
+  }
+
+  if (centralAsiaTimeZones.has(timeZone)) {
+    return "ru";
+  }
+
+  return "en";
+}
+
+export function resolveRegionLocale({
+  countryCode,
+  timeZone,
+}: {
+  countryCode?: string | null;
+  timeZone?: string | null;
+}): Locale {
+  return localeFromCountryCode(countryCode) ?? localeFromTimeZone(timeZone) ?? defaultLocale;
 }
 
 export const translations = {
   en: {
     nav: {
       solution: "Solution",
+      proof: "Proof",
       modes: "Private vs Cloud",
       pilot: "Pilot",
       join: "Join waitlist",
@@ -24,6 +89,8 @@ export const translations = {
     },
     hero: {
       eyebrow: "Private AI Presentation Agent",
+      title: "Create presentation decks from private files",
+      titleAccent: "without uploading them.",
       subtitle:
         "Create pitch decks, business proposals, training slides, and lessons with an AI agent that can run locally on your device or in the cloud.",
       supportLine: "Start from a prompt, PDF, book, report, lesson material, or company document.",
@@ -44,6 +111,29 @@ export const translations = {
       slideTitle: "AI decks that keep private files private.",
       slidesPlanned: "10 slides planned",
       pptxReady: "PPTX ready",
+      proofPoints: [
+        ["Private Mode", "Source files stay on your device"],
+        ["Deck planning", "Outline, story, and slide structure first"],
+        ["Editable output", "Export PPTX or PDF for familiar workflows"],
+      ],
+    },
+    proof: {
+      eyebrow: "Proof, not hype",
+      title: "What visitors can verify in the first conversation.",
+      text: "The page needs to prove the operating model, the deck output, and the pilot value without leaning on inflated launch claims.",
+      items: [
+        ["Private workflow", "Private Mode is positioned around local execution, no-upload work, and sensitive company documents."],
+        ["Concrete inputs", "YDeck starts from prompts, PDFs, books, reports, lesson material, and company documents."],
+        ["Real outputs", "The offer is specific: structured deck plans with editable PPTX and PDF export."],
+        ["Pilot access", "Selected early users get private-agent testing, direct feedback, and a lifetime discount after launch."],
+      ],
+      receiptTitle: "Deck build receipt",
+      receiptRows: [
+        ["Input", "Company report + prompt"],
+        ["Agent work", "Extract, structure, design"],
+        ["Privacy", "Private Mode keeps files local"],
+        ["Output", "10-slide PPTX + PDF"],
+      ],
     },
     problem: {
       eyebrow: "The problem",
@@ -203,6 +293,7 @@ export const translations = {
   zh: {
     nav: {
       solution: "解决方案",
+      proof: "证明",
       modes: "私有 / 云端",
       pilot: "试点计划",
       join: "加入候补名单",
@@ -211,6 +302,8 @@ export const translations = {
     },
     hero: {
       eyebrow: "私有 AI 演示文稿智能体",
+      title: "用私有文件创建演示文稿",
+      titleAccent: "无需上传文件。",
       subtitle: "用可在本地设备或云端运行的 AI 智能体，创建融资路演、商业提案、培训课件和教学幻灯片。",
       supportLine: "可从提示词、PDF、书籍、报告、课程资料或公司文档开始。",
       primaryCta: "加入试点候补名单",
@@ -230,6 +323,29 @@ export const translations = {
       slideTitle: "让私密文件保持私密的 AI 演示文稿。",
       slidesPlanned: "已规划 10 页",
       pptxReady: "PPTX 就绪",
+      proofPoints: [
+        ["私有模式", "源文件保留在你的设备上"],
+        ["文稿规划", "先生成大纲、叙事和页面结构"],
+        ["可编辑输出", "导出 PPTX 或 PDF，继续使用熟悉流程"],
+      ],
+    },
+    proof: {
+      eyebrow: "用事实证明",
+      title: "访客第一次交流就能确认的重点。",
+      text: "页面需要证明运行方式、输出结果和试点价值，而不是依赖夸张的发布口号。",
+      items: [
+        ["私有工作流", "私有模式围绕本地运行、无需上传和敏感公司文档来表达。"],
+        ["明确输入", "YDeck 可从提示词、PDF、书籍、报告、课程资料和公司文档开始。"],
+        ["真实输出", "承诺具体：结构化文稿规划，并导出可编辑 PPTX 和 PDF。"],
+        ["试点访问", "入选早期用户可测试私有智能体、直接反馈，并在发布后获得终身折扣。"],
+      ],
+      receiptTitle: "文稿生成记录",
+      receiptRows: [
+        ["输入", "公司报告 + 提示词"],
+        ["智能体工作", "提取、组织、设计"],
+        ["隐私", "私有模式让文件保留本地"],
+        ["输出", "10 页 PPTX + PDF"],
+      ],
     },
     problem: {
       eyebrow: "痛点",
@@ -362,6 +478,7 @@ export const translations = {
   ru: {
     nav: {
       solution: "Решение",
+      proof: "Доказательства",
       modes: "Приватно / Облако",
       pilot: "Пилот",
       join: "Лист ожидания",
@@ -370,6 +487,8 @@ export const translations = {
     },
     hero: {
       eyebrow: "Приватный AI-агент для презентаций",
+      title: "Создавайте презентации из приватных файлов",
+      titleAccent: "без загрузки в облако.",
       subtitle:
         "Создавайте pitch deck, бизнес-предложения, учебные слайды и уроки с AI-агентом, который работает локально на устройстве или в облаке.",
       supportLine: "Начните с промпта, PDF, книги, отчёта, учебного материала или корпоративного документа.",
@@ -390,6 +509,29 @@ export const translations = {
       slideTitle: "AI-презентации, где приватные файлы остаются приватными.",
       slidesPlanned: "10 слайдов готовы",
       pptxReady: "PPTX готов",
+      proofPoints: [
+        ["Приватный режим", "Исходные файлы остаются на вашем устройстве"],
+        ["Планирование deck", "Сначала структура, история и слайды"],
+        ["Редактируемый результат", "Экспорт PPTX или PDF для привычных процессов"],
+      ],
+    },
+    proof: {
+      eyebrow: "Доказательства вместо шума",
+      title: "Что посетитель может проверить в первом разговоре.",
+      text: "Страница должна доказывать модель работы, результат и ценность пилота без раздутых launch-обещаний.",
+      items: [
+        ["Приватный workflow", "Приватный режим объясняется через локальную работу, отсутствие загрузки и чувствительные документы."],
+        ["Конкретные входы", "YDeck начинает с промптов, PDF, книг, отчётов, учебных материалов и корпоративных документов."],
+        ["Реальные выходы", "Обещание конкретное: структурированный план deck с экспортом в PPTX и PDF."],
+        ["Пилотный доступ", "Выбранные ранние пользователи получают тест приватного агента, прямой feedback и пожизненную скидку после запуска."],
+      ],
+      receiptTitle: "Отчёт сборки deck",
+      receiptRows: [
+        ["Вход", "Отчёт компании + промпт"],
+        ["Работа агента", "Извлечение, структура, дизайн"],
+        ["Приватность", "Private Mode хранит файлы локально"],
+        ["Выход", "10-слайдовый PPTX + PDF"],
+      ],
     },
     problem: {
       eyebrow: "Проблема",

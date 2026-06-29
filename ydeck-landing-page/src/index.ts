@@ -1,0 +1,1 @@
+export { YDeckPage } from './YDeckPage';

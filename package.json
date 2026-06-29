@@ -10,10 +10,13 @@
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.108.0",
+    "@tailwindcss/postcss": "^4.3.2",
+    "framer-motion": "^12.42.0",
     "lucide-react": "1.17.0",
     "next": "16.2.7",
     "react": "19.2.7",
-    "react-dom": "19.2.7"
+    "react-dom": "19.2.7",
+    "tailwindcss": "^4.3.2"
   },
   "devDependencies": {
     "@types/node": "20.17.10",

@@ -6,6 +6,7 @@ import { ArrowLeft, BadgeCheck, Check, LockKeyhole } from "lucide-react";
 import { useEffect, useState } from "react";
 import { WaitlistForm } from "@/components/WaitlistForm";
 import { isLocale, locales, translations, type Locale } from "@/lib/i18n";
+import { detectClientLocale, readStoredLocalePreference, writeStoredLocalePreference } from "@/lib/locale";
 
 type WaitlistPageClientProps = {
   initialLocale: Locale;
@@ -17,21 +18,24 @@ export function WaitlistPageClient({ initialLocale }: WaitlistPageClientProps) {
 
   useEffect(() => {
     const urlLocale = new URLSearchParams(window.location.search).get("lang");
-    const storedLocale = window.localStorage.getItem("ydeck-locale");
+    const storedLocale = readStoredLocalePreference();
 
     if (isLocale(urlLocale)) {
+      writeStoredLocalePreference(urlLocale);
       setLocale(urlLocale);
-    } else if (isLocale(storedLocale)) {
+    } else if (storedLocale) {
       setLocale(storedLocale);
+    } else {
+      setLocale(detectClientLocale());
     }
   }, []);
 
   useEffect(() => {
-    window.localStorage.setItem("ydeck-locale", locale);
     document.documentElement.lang = locale === "zh" ? "zh-CN" : locale;
   }, [locale]);
 
   function selectLocale(nextLocale: Locale) {
+    writeStoredLocalePreference(nextLocale);
     setLocale(nextLocale);
     const url = new URL(window.location.href);
     url.searchParams.set("lang", nextLocale);
