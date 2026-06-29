@@ -1,9 +1,11 @@
 import type { Locale } from '../types';
 
 export function detectInitialLocale(): Locale {
-  if (typeof window === 'undefined') return 'en';
+  if (typeof window === 'undefined') return 'ru';
 
-  const requestedLocale = new URLSearchParams(window.location.search).get('lang');
+  const requestedLocale = new URLSearchParams(window.location.search).get(
+    'lang'
+  );
   if (
     requestedLocale === 'en' ||
     requestedLocale === 'ru' ||
@@ -18,8 +20,8 @@ export function detectInitialLocale(): Locale {
   }
 
   const browserLanguage = window.navigator.language.toLowerCase();
-  if (browserLanguage.startsWith('ru')) return 'ru';
+  if (browserLanguage.startsWith('en')) return 'en';
   if (browserLanguage.startsWith('uz')) return 'uz';
 
-  return 'en';
+  return 'ru';
 }

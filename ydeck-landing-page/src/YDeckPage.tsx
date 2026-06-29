@@ -28,7 +28,7 @@ type YDeckPageProps = {
 };
 
 export function YDeckPage({ onJoinWaitlist }: YDeckPageProps) {
-  const [locale, setLocale] = useState<Locale>('en');
+  const [locale, setLocale] = useState<Locale>('ru');
   const content = localeContent[locale];
 
   useEffect(() => {
