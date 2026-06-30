@@ -3,8 +3,8 @@
 import { useEffect, useState } from "react";
 import { WaitlistModal } from "@/components/WaitlistModal";
 import { defaultLocale, isLocale, type Locale } from "@/lib/i18n";
-import { YDeckPage } from "@/ydeck-landing-page/src/YDeckPage";
-import type { Locale as YDeckLocale } from "@/ydeck-landing-page/src/types";
+import { YDeckPage } from "@/components/ydeck/YDeckPage";
+import type { Locale as YDeckLocale } from "@/components/ydeck/types";
 
 type HomeProps = {
   initialLocale?: Locale;
