@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { languageOptions } from '../constants';
 import type { LocaleContent } from '../i18n/localeContent';
 import type { Locale } from '../types';
+import { localizedPath } from '../utils/routes';
 
 export function Navbar({
   content,
@@ -24,7 +25,7 @@ export function Navbar({
     <nav className="fixed left-5 right-5 top-4 z-50 rounded-full py-3 lg:left-4 lg:right-4 lg:mx-auto lg:max-w-6xl">
       <div className="glass-panel flex items-center justify-between rounded-full px-3 py-2 lg:px-4">
         <a
-          href="#"
+          href={localizedPath('/', locale)}
           className="flex items-center gap-3"
           aria-label={content.homeLabel}
         >
@@ -74,7 +75,7 @@ export function Navbar({
           </div>
           <a
             className="hidden rounded-full bg-white px-4 py-2 text-sm font-semibold text-ydeck-black transition hover:bg-cyan-100 lg:inline-flex"
-            href="#final-cta"
+            href={localizedPath('/waitlist', locale)}
             onClick={handleJoin}
           >
             {content.join}

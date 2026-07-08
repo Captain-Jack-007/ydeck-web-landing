@@ -4,6 +4,7 @@ import { ArrowRight, FileText } from 'lucide-react';
 import type { LocaleContent } from '../i18n/localeContent';
 import type { Locale } from '../types';
 import { TypingPrompt } from '../components/TypingPrompt';
+import { localizedPath } from '../utils/routes';
 
 export function Footer({
   content,
@@ -20,6 +21,17 @@ export function Footer({
     if (!onJoinWaitlist) return;
     event.preventDefault();
     onJoinWaitlist(locale);
+  }
+
+  function getLegalHref(index: number) {
+    const legalPaths = ['/privacy', '/terms', '/security'];
+    return localizedPath(legalPaths[index] ?? '/', locale);
+  }
+
+  function getFooterHref(href: string) {
+    if (href === '#final-cta') return localizedPath('/waitlist', locale);
+    if (href.startsWith('/')) return localizedPath(href, locale);
+    return href;
   }
 
   return (
@@ -56,7 +68,7 @@ export function Footer({
           <div className="glass-panel relative overflow-hidden rounded-[1.75rem] p-6 md:p-8">
             <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-white/[0.06] blur-2xl" />
             <a
-              href="#"
+              href={localizedPath('/', locale)}
               className="relative flex items-center gap-3"
               aria-label={homeLabel}
             >
@@ -95,7 +107,7 @@ export function Footer({
             </div>
 
             <a
-              href="#final-cta"
+              href={localizedPath('/waitlist', locale)}
               onClick={handleJoin}
               className="relative mt-8 inline-flex min-h-12 items-center justify-center rounded-full bg-white px-5 text-sm font-semibold text-ydeck-black transition hover:bg-cyan-100"
             >
@@ -112,16 +124,20 @@ export function Footer({
                     {title}
                   </h4>
                   <div className="mt-5 grid gap-3 text-sm text-ydeck-muted">
-                    {links.map(([label, href]) => (
-                      <a
-                        key={label}
-                        href={href}
-                        onClick={href === '#final-cta' ? handleJoin : undefined}
-                        className="transition hover:text-white"
-                      >
-                        {label}
-                      </a>
-                    ))}
+                    {links.map(([label, href]) => {
+                      const isWaitlistLink = href === '#final-cta';
+
+                      return (
+                        <a
+                          key={label}
+                          href={getFooterHref(href)}
+                          onClick={isWaitlistLink ? handleJoin : undefined}
+                          className="transition hover:text-white"
+                        >
+                          {label}
+                        </a>
+                      );
+                    })}
                   </div>
                 </div>
               ))}
@@ -156,7 +172,7 @@ export function Footer({
             {content.legal.map((item, index) => (
               <a
                 key={item}
-                href={index === 2 ? '#privacy' : '#'}
+                href={getLegalHref(index)}
                 className="transition hover:text-white"
               >
                 {item}

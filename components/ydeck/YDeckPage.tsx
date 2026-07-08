@@ -22,13 +22,18 @@ import { UseCasesSection } from './sections/UseCasesSection';
 import { WorkflowSection } from './sections/WorkflowSection';
 import type { Locale } from './types';
 import { detectInitialLocale } from './utils/locale';
+import { localizedPath } from './utils/routes';
 
 type YDeckPageProps = {
+  initialLocale?: Locale;
   onJoinWaitlist?: (locale: Locale) => void;
 };
 
-export function YDeckPage({ onJoinWaitlist }: YDeckPageProps) {
-  const [locale, setLocale] = useState<Locale>('ru');
+export function YDeckPage({
+  initialLocale = 'ru',
+  onJoinWaitlist,
+}: YDeckPageProps) {
+  const [locale, setLocale] = useState<Locale>(initialLocale);
   const content = localeContent[locale];
 
   useEffect(() => {
@@ -100,7 +105,7 @@ export function YDeckPage({ onJoinWaitlist }: YDeckPageProps) {
             <FadeUp delay={0.62}>
               <div className="mt-7 flex flex-col gap-3 lg:mt-8 lg:flex-row">
                 <motion.a
-                  href="#final-cta"
+                  href={localizedPath('/waitlist', locale)}
                   onClick={(event) => {
                     if (!onJoinWaitlist) return;
                     event.preventDefault();

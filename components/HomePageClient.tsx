@@ -7,7 +7,7 @@ import { YDeckPage } from "@/components/ydeck/YDeckPage";
 import type { Locale as YDeckLocale } from "@/components/ydeck/types";
 
 type HomeProps = {
-  initialLocale?: Locale;
+  initialLocale?: YDeckLocale;
 };
 
 function toWaitlistLocale(locale: YDeckLocale): Locale {
@@ -16,7 +16,9 @@ function toWaitlistLocale(locale: YDeckLocale): Locale {
 
 export function HomePageClient({ initialLocale = defaultLocale }: HomeProps) {
   const [modalOpen, setModalOpen] = useState(false);
-  const [modalLocale, setModalLocale] = useState<Locale>(initialLocale);
+  const [modalLocale, setModalLocale] = useState<Locale>(
+    toWaitlistLocale(initialLocale)
+  );
 
   useEffect(() => {
     document.body.classList.add("ydeck-body");
@@ -29,6 +31,7 @@ export function HomePageClient({ initialLocale = defaultLocale }: HomeProps) {
   return (
     <>
       <YDeckPage
+        initialLocale={initialLocale}
         onJoinWaitlist={(locale) => {
           setModalLocale(toWaitlistLocale(locale));
           setModalOpen(true);

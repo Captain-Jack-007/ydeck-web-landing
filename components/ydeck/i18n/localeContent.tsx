@@ -265,7 +265,7 @@ export const localeContent = {
           links: [
             ['Join waitlist', '#final-cta'],
             ['Pilot program', '#final-cta'],
-            ['Security notes', '#privacy'],
+            ['Security notes', '/security'],
             ['Contact', 'mailto:hello@ydeck.ai'],
           ],
         },
@@ -520,7 +520,7 @@ export const localeContent = {
           links: [
             ['Записаться', '#final-cta'],
             ['Пилотная программа', '#final-cta'],
-            ['Безопасность', '#privacy'],
+            ['Безопасность', '/security'],
             ['Контакт', 'mailto:hello@ydeck.ai'],
           ],
         },
@@ -775,7 +775,7 @@ export const localeContent = {
           links: [
             ["Ro'yxatga yozilish", '#final-cta'],
             ['Pilot dastur', '#final-cta'],
-            ['Xavfsizlik', '#privacy'],
+            ['Xavfsizlik', '/security'],
             ['Aloqa', 'mailto:hello@ydeck.ai'],
           ],
         },

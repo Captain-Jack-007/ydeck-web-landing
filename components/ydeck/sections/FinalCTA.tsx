@@ -2,6 +2,7 @@ import type { LocaleContent } from '../i18n/localeContent';
 import type { Locale } from '../types';
 import { FadeUp } from '../components/Motion';
 import { TypingPrompt } from '../components/TypingPrompt';
+import { localizedPath } from '../utils/routes';
 
 export function FinalCTA({
   content,
@@ -39,7 +40,7 @@ export function FinalCTA({
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
             <a
               className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-ydeck-black transition hover:bg-slate-200"
-              href="#"
+              href={localizedPath('/waitlist', locale)}
               onClick={handleJoin}
             >
               {content.primary}

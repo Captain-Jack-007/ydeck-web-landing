@@ -1,7 +1,7 @@
 export const locales = [
   { code: 'en', label: 'EN', name: 'English' },
-  { code: 'zh', label: '中文', name: '中文' },
   { code: 'ru', label: 'RU', name: 'Русский' },
+  { code: 'uz', label: 'UZ', name: 'O‘zbek' },
 ] as const;
 
 export type Locale = (typeof locales)[number]['code'];
@@ -29,7 +29,7 @@ const centralAsiaTimeZones = new Set([
 const chinaTimeZones = new Set(['Asia/Shanghai', 'Asia/Urumqi']);
 
 export function isLocale(value: string | null): value is Locale {
-  return value === 'en' || value === 'zh' || value === 'ru';
+  return value === 'en' || value === 'ru' || value === 'uz';
 }
 
 export function localeFromCountryCode(
@@ -42,7 +42,7 @@ export function localeFromCountryCode(
   const normalizedCountryCode = countryCode.toUpperCase();
 
   if (chinaCountryCodes.has(normalizedCountryCode)) {
-    return 'zh';
+    return 'en';
   }
 
   if (centralAsiaCountryCodes.has(normalizedCountryCode)) {
@@ -60,7 +60,7 @@ export function localeFromTimeZone(
   }
 
   if (chinaTimeZones.has(timeZone)) {
-    return 'zh';
+    return 'en';
   }
 
   if (centralAsiaTimeZones.has(timeZone)) {
@@ -824,6 +824,84 @@ export const translations = {
       success: 'Вы в списке! Мы свяжемся с вами перед запуском.',
       errorDuplicate: 'Вы уже в листе ожидания — скоро напишем!',
       errorGeneric: 'Что-то пошло не так. Попробуйте ещё раз.',
+    },
+  },
+  uz: {
+    nav: {
+      language: 'Til',
+    },
+    pilot: {
+      highlightTitle: 'Maxsus lifetime chegirma',
+      highlightText:
+        'Erta pilot foydalanuvchilar public launchdan keyin maxsus lifetime chegirma oladi.',
+      summaryCards: [
+        [
+          'Erta dostup',
+          'Public launchdan oldin YDeckdan foydalaning va test davrida mahsulotni bepul sinab ko‘ring.',
+        ],
+        [
+          'Maxfiy AI funksiyalari',
+          'Private agent imkoniyatlarini test qiling va xavfsiz taqdimot workflowlarini shakllantirishga yordam bering.',
+        ],
+        [
+          'To‘g‘ridan-to‘g‘ri product access',
+          'YDeck jamoasiga feedback bering va roadmap hamda shablonlar yo‘nalishiga ta’sir qiling.',
+        ],
+      ],
+      extraLine:
+        'Pilot davomida yangi shablonlarga priority access va bevosita feedback kanali ham kiradi.',
+    },
+    modal: {
+      close: 'Waitlist oynasini yopish',
+      eyebrow: 'Pilot dostup',
+      title: 'YDeck Pilot dasturiga qo‘shiling',
+      text: 'Tanlangan pilot foydalanuvchilar erta dostup, maxfiy AI funksiyalari, bevosita feedback kanali va public launchdan keyingi maxsus lifetime chegirma oladi.',
+    },
+    waitlistPage: {
+      back: 'Landing sahifaga qaytish',
+      eyebrow: 'Pilot dastur',
+      title: 'YDeck uchun erta dostup so‘rang',
+      text: 'Public launchdan oldin maxfiy AI taqdimot agentini test qilayotgan founderlar, o‘qituvchilar, konsultantlar, kompaniyalar va tashkilotlar qatoriga qo‘shiling.',
+      trust: 'Private Mode fayllar va promptlarni o‘z qurilmangizda saqlaydi.',
+    },
+    waitlistForm: {
+      progress: 'Waitlist forma progressi',
+      fields: {
+        name: 'Ism va familiya',
+        email: 'Email',
+        company: 'Kompaniya / tashkilot',
+        role: 'Rol',
+        contact: 'WhatsApp / WeChat',
+        presentationType: 'Qanday taqdimotlar yaratasiz?',
+        preferredMode: 'Afzal rejim',
+        volume: 'Oyiga nechta deck',
+      },
+      placeholders: {
+        name: 'Ismingiz',
+        email: 'you@company.com',
+        company: 'Kompaniya nomi',
+        role: 'Founder, o‘qituvchi, konsultant...',
+        contact: '+998 raqam yoki WeChat ID',
+      },
+      presentationTypes: [
+        'Pitch decklar',
+        'Biznes takliflar',
+        'Trening slaydlari',
+        'Ta’lim darslari',
+        'Sales yoki mijoz hisobotlari',
+        'Boshqa',
+      ],
+      modes: ['Private', 'Cloud', 'Ikkalasi'],
+      volumes: ['1-2', '3-10', '11-25', '25+'],
+      continue: 'Davom etish',
+      back: 'Orqaga',
+      submit: 'Erta dostup so‘rash',
+      submitting: 'Yuborilmoqda…',
+      submitted: 'So‘rov qabul qilindi',
+      success: 'Siz ro‘yxatdasiz! Launchdan oldin siz bilan bog‘lanamiz.',
+      errorDuplicate:
+        'Siz allaqachon waitlistdasiz — tez orada bog‘lanamiz!',
+      errorGeneric: 'Nimadir xato ketdi. Iltimos, qayta urinib ko‘ring.',
     },
   },
 } as const;

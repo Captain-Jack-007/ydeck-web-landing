@@ -31,7 +31,7 @@ export function WaitlistPageClient({ initialLocale }: WaitlistPageClientProps) {
   }, []);
 
   useEffect(() => {
-    document.documentElement.lang = locale === "zh" ? "zh-CN" : locale;
+    document.documentElement.lang = locale;
   }, [locale]);
 
   function selectLocale(nextLocale: Locale) {
