@@ -1,6 +1,41 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getSupabaseServerClient } from "@/lib/supabase";
 
+const allowedOrigins = new Set([
+  "https://ydeck.app",
+  "https://www.ydeck.app",
+  "http://localhost:3005",
+]);
+
+function corsHeaders(req: NextRequest) {
+  const origin = req.headers.get("origin");
+  const headers: Record<string, string> = {
+    "Access-Control-Allow-Methods": "POST, OPTIONS",
+    "Access-Control-Allow-Headers": "Content-Type",
+  };
+
+  if (origin && allowedOrigins.has(origin)) {
+    headers["Access-Control-Allow-Origin"] = origin;
+    headers.Vary = "Origin";
+  }
+
+  return headers;
+}
+
+function json(req: NextRequest, body: unknown, status: number) {
+  return NextResponse.json(body, {
+    status,
+    headers: corsHeaders(req),
+  });
+}
+
+export function OPTIONS(req: NextRequest) {
+  return new NextResponse(null, {
+    status: 204,
+    headers: corsHeaders(req),
+  });
+}
+
 export async function POST(req: NextRequest) {
   let supabase;
   let body: Record<string, string>;
@@ -10,7 +45,7 @@ export async function POST(req: NextRequest) {
   } catch (error) {
     if (error instanceof Error && error.message.includes("Supabase server environment variables are missing")) {
       console.error("[waitlist] Missing Supabase environment variables.");
-      return NextResponse.json({ error: "Waitlist is not configured" }, { status: 500 });
+      return json(req, { error: "Waitlist is not configured" }, 500);
     }
     throw error;
   }
@@ -18,12 +53,12 @@ export async function POST(req: NextRequest) {
   try {
     body = await req.json();
   } catch {
-    return NextResponse.json({ error: "Invalid JSON" }, { status: 400 });
+    return json(req, { error: "Invalid JSON" }, 400);
   }
 
   const email = body.email?.trim().toLowerCase();
   if (!email) {
-    return NextResponse.json({ error: "Email is required" }, { status: 422 });
+    return json(req, { error: "Email is required" }, 422);
   }
 
   const { error } = await supabase.from("waitlist").insert({
@@ -41,11 +76,11 @@ export async function POST(req: NextRequest) {
   if (error) {
     // Postgres unique_violation code — email already on list
     if (error.code === "23505") {
-      return NextResponse.json({ error: "already_registered" }, { status: 409 });
+      return json(req, { error: "already_registered" }, 409);
     }
     console.error("[waitlist] Supabase error:", error.message);
-    return NextResponse.json({ error: "Database error" }, { status: 500 });
+    return json(req, { error: "Database error" }, 500);
   }
 
-  return NextResponse.json({ ok: true }, { status: 201 });
+  return json(req, { ok: true }, 201);
 }

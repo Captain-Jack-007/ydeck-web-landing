@@ -3,6 +3,7 @@
 import { FormEvent, useEffect, useMemo, useState } from "react";
 import { ArrowLeft, ArrowRight, CheckCircle2, Send } from "lucide-react";
 import { defaultLocale, translations, type Locale } from "@/lib/i18n";
+import { getSupabaseBrowserClient } from "@/lib/supabase";
 
 type WaitlistFormProps = {
   compact?: boolean;
@@ -32,28 +33,26 @@ export function WaitlistForm({ compact = false, locale = defaultLocale }: Waitli
     setLoading(true);
 
     const data = new FormData(event.currentTarget);
-    const payload = {
-      name: data.get("name") as string,
-      email: data.get("email") as string,
-      company: data.get("company") as string,
-      role: data.get("role") as string,
-      contact: data.get("contact") as string,
-      presentationType: data.get("presentationType") as string,
-      mode,
-      volume: data.get("volume") as string,
-      locale,
-    };
+    const email = String(data.get("email") ?? "").trim().toLowerCase();
 
     try {
-      const res = await fetch("/api/waitlist", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
+      const supabase = getSupabaseBrowserClient();
+      const { error } = await supabase.from("waitlist").insert({
+        email,
+        name: String(data.get("name") ?? "").trim() || null,
+        company: String(data.get("company") ?? "").trim() || null,
+        role: String(data.get("role") ?? "").trim() || null,
+        contact: String(data.get("contact") ?? "").trim() || null,
+        presentation_type: String(data.get("presentationType") ?? "") || null,
+        preferred_mode: mode || null,
+        volume: String(data.get("volume") ?? "") || null,
+        locale,
       });
 
-      if (res.status === 409) {
+      if (error?.code === "23505") {
         setSubmitError(copy.errorDuplicate ?? "You're already on the list!");
-      } else if (!res.ok) {
+      } else if (error) {
+        console.error("[waitlist] Supabase insert error:", error.message);
         setSubmitError(copy.errorGeneric ?? "Something went wrong. Please try again.");
       } else {
         setSubmitted(true);

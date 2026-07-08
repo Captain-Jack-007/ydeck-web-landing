@@ -321,7 +321,7 @@ export const translations = {
         email: 'you@company.com',
         company: 'Company name',
         role: 'Founder, educator, consultant...',
-        contact: '+1 555 0100 or WeChat ID',
+        contact: '+998 90 123 45 67 or WeChat ID',
       },
       presentationTypes: [
         'Pitch decks',
@@ -540,7 +540,7 @@ export const translations = {
         email: 'you@company.com',
         company: '公司名称',
         role: '创始人、教育者、顾问...',
-        contact: '+86 手机号或微信 ID',
+        contact: '+998 手机号或微信 ID',
       },
       presentationTypes: [
         '融资路演',
@@ -804,7 +804,7 @@ export const translations = {
         email: 'you@company.com',
         company: 'Название компании',
         role: 'Основатель, преподаватель, консультант...',
-        contact: '+7 номер или WeChat ID',
+        contact: '+998 номер или WeChat ID',
       },
       presentationTypes: [
         'Pitch decks',
