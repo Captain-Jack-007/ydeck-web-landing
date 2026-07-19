@@ -1,0 +1,236 @@
+[
+  {
+    "path": "/settings/profile",
+    "h1": "Profile",
+    "overflow": false,
+    "scrollWidth": 1440,
+    "clientWidth": 1440,
+    "mobileMenu": false,
+    "signedOut": false,
+    "alerts": 0,
+    "undersized": [],
+    "viewport": "desktop",
+    "runtimeErrors": []
+  },
+  {
+    "path": "/settings/security",
+    "h1": "Security",
+    "overflow": false,
+    "scrollWidth": 1440,
+    "clientWidth": 1440,
+    "mobileMenu": false,
+    "signedOut": false,
+    "alerts": 0,
+    "undersized": [
+      {
+        "tag": "BUTTON",
+        "label": "Show passwords",
+        "width": 38,
+        "height": 38
+      },
+      {
+        "tag": "BUTTON",
+        "label": "Show passwords",
+        "width": 38,
+        "height": 38
+      }
+    ],
+    "viewport": "desktop",
+    "runtimeErrors": []
+  },
+  {
+    "path": "/settings/devices",
+    "h1": "Devices",
+    "overflow": false,
+    "scrollWidth": 1440,
+    "clientWidth": 1440,
+    "mobileMenu": false,
+    "signedOut": false,
+    "alerts": 0,
+    "undersized": [],
+    "viewport": "desktop",
+    "runtimeErrors": []
+  },
+  {
+    "path": "/settings/access",
+    "h1": "Workspace access",
+    "overflow": false,
+    "scrollWidth": 1440,
+    "clientWidth": 1440,
+    "mobileMenu": false,
+    "signedOut": false,
+    "alerts": 0,
+    "undersized": [],
+    "viewport": "desktop",
+    "runtimeErrors": []
+  },
+  {
+    "path": "/settings/billing",
+    "h1": "Billing",
+    "overflow": false,
+    "scrollWidth": 1440,
+    "clientWidth": 1440,
+    "mobileMenu": false,
+    "signedOut": false,
+    "alerts": 0,
+    "undersized": [],
+    "viewport": "desktop",
+    "runtimeErrors": []
+  },
+  {
+    "path": "/settings/plans",
+    "h1": "Plans",
+    "overflow": false,
+    "scrollWidth": 1440,
+    "clientWidth": 1440,
+    "mobileMenu": false,
+    "signedOut": false,
+    "alerts": 0,
+    "undersized": [],
+    "viewport": "desktop",
+    "runtimeErrors": []
+  },
+  {
+    "path": "/settings/invoices",
+    "h1": "Invoices",
+    "overflow": false,
+    "scrollWidth": 1440,
+    "clientWidth": 1440,
+    "mobileMenu": false,
+    "signedOut": false,
+    "alerts": 0,
+    "undersized": [],
+    "viewport": "desktop",
+    "runtimeErrors": []
+  },
+  {
+    "path": "/settings/account",
+    "h1": "Account and data",
+    "overflow": false,
+    "scrollWidth": 1440,
+    "clientWidth": 1440,
+    "mobileMenu": false,
+    "signedOut": false,
+    "alerts": 0,
+    "undersized": [],
+    "viewport": "desktop",
+    "runtimeErrors": []
+  },
+  {
+    "path": "/settings/profile",
+    "h1": "Profile",
+    "overflow": false,
+    "scrollWidth": 390,
+    "clientWidth": 390,
+    "mobileMenu": false,
+    "signedOut": false,
+    "alerts": 0,
+    "undersized": [],
+    "viewport": "mobile",
+    "runtimeErrors": []
+  },
+  {
+    "path": "/settings/security",
+    "h1": "Security",
+    "overflow": false,
+    "scrollWidth": 390,
+    "clientWidth": 390,
+    "mobileMenu": false,
+    "signedOut": false,
+    "alerts": 0,
+    "undersized": [
+      {
+        "tag": "BUTTON",
+        "label": "Show passwords",
+        "width": 38,
+        "height": 38
+      },
+      {
+        "tag": "BUTTON",
+        "label": "Show passwords",
+        "width": 38,
+        "height": 38
+      }
+    ],
+    "viewport": "mobile",
+    "runtimeErrors": []
+  },
+  {
+    "path": "/settings/devices",
+    "h1": "Devices",
+    "overflow": false,
+    "scrollWidth": 390,
+    "clientWidth": 390,
+    "mobileMenu": false,
+    "signedOut": false,
+    "alerts": 0,
+    "undersized": [],
+    "viewport": "mobile",
+    "runtimeErrors": []
+  },
+  {
+    "path": "/settings/access",
+    "h1": "Workspace access",
+    "overflow": false,
+    "scrollWidth": 390,
+    "clientWidth": 390,
+    "mobileMenu": false,
+    "signedOut": false,
+    "alerts": 0,
+    "undersized": [],
+    "viewport": "mobile",
+    "runtimeErrors": []
+  },
+  {
+    "path": "/settings/billing",
+    "h1": "Billing",
+    "overflow": false,
+    "scrollWidth": 390,
+    "clientWidth": 390,
+    "mobileMenu": false,
+    "signedOut": false,
+    "alerts": 0,
+    "undersized": [],
+    "viewport": "mobile",
+    "runtimeErrors": []
+  },
+  {
+    "path": "/settings/plans",
+    "h1": "Plans",
+    "overflow": false,
+    "scrollWidth": 390,
+    "clientWidth": 390,
+    "mobileMenu": false,
+    "signedOut": false,
+    "alerts": 0,
+    "undersized": [],
+    "viewport": "mobile",
+    "runtimeErrors": []
+  },
+  {
+    "path": "/settings/invoices",
+    "h1": "Invoices",
+    "overflow": false,
+    "scrollWidth": 390,
+    "clientWidth": 390,
+    "mobileMenu": false,
+    "signedOut": false,
+    "alerts": 0,
+    "undersized": [],
+    "viewport": "mobile",
+    "runtimeErrors": []
+  },
+  {
+    "path": "/settings/account",
+    "h1": "Account and data",
+    "overflow": false,
+    "scrollWidth": 390,
+    "clientWidth": 390,
+    "mobileMenu": false,
+    "signedOut": false,
+    "alerts": 0,
+    "undersized": [],
+    "viewport": "mobile",
+    "runtimeErrors": []
+  }
+]

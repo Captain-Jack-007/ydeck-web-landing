@@ -74,7 +74,7 @@ export function Navbar({
             ))}
           </div>
           <a
-            className="hidden rounded-full bg-white px-4 py-2 text-sm font-semibold text-ydeck-black transition hover:bg-cyan-100 lg:inline-flex"
+            className="inline-flex rounded-full bg-white px-4 py-2 text-sm font-semibold text-ydeck-black transition hover:bg-cyan-100"
             href={localizedPath('/waitlist', locale)}
             onClick={handleJoin}
           >

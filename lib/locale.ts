@@ -36,3 +36,13 @@ export function writeStoredLocalePreference(locale: Locale) {
   window.localStorage.setItem(localePreferenceKey, locale);
   window.localStorage.setItem(legacyLocalePreferenceKey, locale);
 }
+
+export function toAuthApiLocale(locale: string): "en" | "ru" | "uz" | "zh" {
+  if (locale === "uz-Latn" || locale === "uz-Cyrl") {
+    return "uz";
+  }
+  if (locale === "ru" || locale === "uz" || locale === "zh") {
+    return locale;
+  }
+  return "en";
+}

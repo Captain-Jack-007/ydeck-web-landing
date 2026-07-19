@@ -1,0 +1,186 @@
+{
+  "report": [
+    {
+      "path": "/settings/profile",
+      "h1": "Profile",
+      "overflow": false,
+      "clientWidth": 1024,
+      "scrollWidth": 1024,
+      "smallButtons": [],
+      "viewport": "tablet",
+      "runtimeErrors": []
+    },
+    {
+      "path": "/settings/security",
+      "h1": "Security",
+      "overflow": false,
+      "clientWidth": 1024,
+      "scrollWidth": 1024,
+      "smallButtons": [],
+      "viewport": "tablet",
+      "runtimeErrors": []
+    },
+    {
+      "path": "/settings/devices",
+      "h1": "Devices",
+      "overflow": false,
+      "clientWidth": 1024,
+      "scrollWidth": 1024,
+      "smallButtons": [],
+      "viewport": "tablet",
+      "runtimeErrors": []
+    },
+    {
+      "path": "/settings/access",
+      "h1": "Workspace access",
+      "overflow": false,
+      "clientWidth": 1024,
+      "scrollWidth": 1024,
+      "smallButtons": [
+        {
+          "label": "View members",
+          "width": 132,
+          "height": 40
+        }
+      ],
+      "viewport": "tablet",
+      "runtimeErrors": []
+    },
+    {
+      "path": "/settings/billing",
+      "h1": "Billing",
+      "overflow": false,
+      "clientWidth": 1024,
+      "scrollWidth": 1024,
+      "smallButtons": [],
+      "viewport": "tablet",
+      "runtimeErrors": []
+    },
+    {
+      "path": "/settings/plans",
+      "h1": "Plans",
+      "overflow": false,
+      "clientWidth": 1024,
+      "scrollWidth": 1024,
+      "smallButtons": [],
+      "viewport": "tablet",
+      "runtimeErrors": []
+    },
+    {
+      "path": "/settings/invoices",
+      "h1": "Invoices",
+      "overflow": false,
+      "clientWidth": 1024,
+      "scrollWidth": 1024,
+      "smallButtons": [],
+      "viewport": "tablet",
+      "runtimeErrors": []
+    },
+    {
+      "path": "/settings/account",
+      "h1": "Account and data",
+      "overflow": false,
+      "clientWidth": 1024,
+      "scrollWidth": 1024,
+      "smallButtons": [],
+      "viewport": "tablet",
+      "runtimeErrors": []
+    },
+    {
+      "path": "/settings/profile",
+      "h1": "Profile",
+      "overflow": false,
+      "clientWidth": 360,
+      "scrollWidth": 360,
+      "smallButtons": [],
+      "viewport": "small-mobile",
+      "runtimeErrors": []
+    },
+    {
+      "path": "/settings/security",
+      "h1": "Security",
+      "overflow": false,
+      "clientWidth": 360,
+      "scrollWidth": 360,
+      "smallButtons": [],
+      "viewport": "small-mobile",
+      "runtimeErrors": []
+    },
+    {
+      "path": "/settings/devices",
+      "h1": "Devices",
+      "overflow": false,
+      "clientWidth": 360,
+      "scrollWidth": 360,
+      "smallButtons": [],
+      "viewport": "small-mobile",
+      "runtimeErrors": []
+    },
+    {
+      "path": "/settings/access",
+      "h1": "Workspace access",
+      "overflow": false,
+      "clientWidth": 360,
+      "scrollWidth": 360,
+      "smallButtons": [
+        {
+          "label": "View members",
+          "width": 230,
+          "height": 40
+        }
+      ],
+      "viewport": "small-mobile",
+      "runtimeErrors": []
+    },
+    {
+      "path": "/settings/billing",
+      "overflow": false,
+      "clientWidth": 360,
+      "scrollWidth": 360,
+      "smallButtons": [],
+      "viewport": "small-mobile",
+      "runtimeErrors": []
+    },
+    {
+      "path": "/settings/plans",
+      "h1": "Plans",
+      "overflow": false,
+      "clientWidth": 360,
+      "scrollWidth": 360,
+      "smallButtons": [],
+      "viewport": "small-mobile",
+      "runtimeErrors": []
+    },
+    {
+      "path": "/settings/invoices",
+      "h1": "Invoices",
+      "overflow": false,
+      "clientWidth": 360,
+      "scrollWidth": 360,
+      "smallButtons": [],
+      "viewport": "small-mobile",
+      "runtimeErrors": []
+    },
+    {
+      "path": "/settings/account",
+      "h1": "Account and data",
+      "overflow": false,
+      "clientWidth": 360,
+      "scrollWidth": 360,
+      "smallButtons": [],
+      "viewport": "small-mobile",
+      "runtimeErrors": []
+    }
+  ],
+  "drawer": {
+    "before": {
+      "open": false,
+      "expanded": "false",
+      "focus": "settings-mobile-menu"
+    },
+    "after": {
+      "open": false,
+      "focus": "settings-mobile-menu"
+    }
+  }
+}
