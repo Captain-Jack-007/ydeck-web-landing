@@ -1,4 +1,4 @@
-const DEFAULT_AUTH_RETURN_TO = "/";
+const DEFAULT_AUTH_RETURN_TO = "/workspace";
 
 export function safeAuthReturnTo(value: string | null | undefined): string {
   if (!value) return DEFAULT_AUTH_RETURN_TO;

@@ -47,7 +47,7 @@ export function FinalCTA({
             </a>
             <a
               className="glass-panel rounded-full px-6 py-3 text-sm font-semibold text-white"
-              href="#templates"
+              href="#use-cases"
             >
               {content.secondary}
             </a>

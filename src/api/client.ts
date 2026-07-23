@@ -279,7 +279,7 @@ export function getHumanErrorMessage(error: unknown) {
       case "AUTH_EMAIL_NOT_VERIFIED":
         return "Please verify your email before continuing.";
       case "AUTH_REGISTRATION_UNAVAILABLE":
-        return "We could not create a new account with these details. Try signing in or recovering access instead.";
+        return "You may already have a YDeck account with this email. Try signing in, sending a verification code, or resetting your password.";
       case "AUTH_MAIL_DELIVERY_UNAVAILABLE":
       case "AUTH_EMAIL_PROVIDER_UNAVAILABLE":
       case "AUTH_EMAIL_PROVIDER_RATE_LIMITED":

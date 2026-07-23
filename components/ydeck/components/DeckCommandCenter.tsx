@@ -51,15 +51,20 @@ export function DeckCommandCenter({
         <div className="absolute -bottom-24 left-10 h-64 w-64 rounded-full bg-white/[0.04] blur-3xl" />
 
         <div className="relative z-10 flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-white/10 bg-black/30 px-4 py-3">
-          <div className="flex items-center gap-3">
+          <div className="flex min-w-0 items-center gap-3">
             <div className="flex gap-1.5">
               <span className="h-2.5 w-2.5 rounded-full bg-white/35" />
               <span className="h-2.5 w-2.5 rounded-full bg-white/25" />
               <span className="h-2.5 w-2.5 rounded-full bg-ydeck-cyan/65" />
             </div>
-            <span className="text-sm font-semibold">{content.title}</span>
+            <span className="truncate text-sm font-semibold" title={content.title}>
+              {content.title}
+            </span>
           </div>
-          <div className="flex items-center gap-2 rounded-full border border-ydeck-green/30 bg-ydeck-green/10 px-3 py-1 text-xs text-ydeck-green">
+          <div
+            className="flex shrink-0 items-center gap-2 rounded-full border border-ydeck-green/30 bg-ydeck-green/10 px-3 py-1 text-xs text-ydeck-green"
+            title={content.status}
+          >
             <span className="h-2 w-2 animate-pulse rounded-full bg-ydeck-green" />
             {content.status}
           </div>
@@ -75,10 +80,12 @@ export function DeckCommandCenter({
               {content.uploadChips.map(({ label, Icon }, index) => (
                 <motion.span
                   key={label}
+                  aria-label={label}
                   className="inline-flex min-w-0 items-center gap-2 rounded-2xl border border-white/10 bg-white/[0.04] px-3 py-2 text-xs text-slate-300"
                   initial={reduceMotion ? false : { opacity: 0, y: 12 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.12, ease }}
+                  title={label}
                 >
                   <Icon className="h-3.5 w-3.5 shrink-0 text-ydeck-cyan" />
                   <span className="truncate">{label}</span>
@@ -94,7 +101,7 @@ export function DeckCommandCenter({
                   return (
                     <div
                       key={step}
-                      className="grid grid-cols-[2rem_minmax(44px,1fr)_7.5rem] items-center gap-3"
+                      className="grid grid-cols-[2rem_minmax(32px,1fr)_minmax(8rem,9.5rem)] items-center gap-3"
                     >
                       <div
                         className={`flex h-8 w-8 items-center justify-center rounded-full border text-xs ${
@@ -121,9 +128,10 @@ export function DeckCommandCenter({
                         />
                       </div>
                       <span
-                        className={`text-xs ${
+                        className={`text-pretty text-xs leading-tight ${
                           active ? 'text-white' : 'text-slate-400'
                         }`}
+                        title={step}
                       >
                         {step}
                       </span>
@@ -135,9 +143,11 @@ export function DeckCommandCenter({
 
             <div className="rounded-2xl border border-white/10 bg-black/40 p-3">
               <div className="flex flex-wrap items-center justify-between gap-2 text-xs text-slate-300">
-                <span>{content.generated}</span>
-                <span>{content.ready}</span>
-                <span className="hidden sm:inline">{content.editable}</span>
+                <span title={content.generated}>{content.generated}</span>
+                <span title={content.ready}>{content.ready}</span>
+                <span className="hidden sm:inline" title={content.editable}>
+                  {content.editable}
+                </span>
               </div>
               <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-white/10">
                 <motion.div
@@ -162,10 +172,13 @@ export function DeckCommandCenter({
             style={{ y: reduceMotion ? 0 : previewY }}
           >
             <div className="rounded-2xl border border-white/10 bg-black/30 px-3 py-2">
-              <p className="truncate text-xs font-semibold text-white">
+              <p
+                className="truncate text-xs font-semibold text-white"
+                title={content.previewTitle}
+              >
                 {content.previewTitle}
               </p>
-              <p className="mt-0.5 text-[10px] text-slate-400">
+              <p className="mt-0.5 text-pretty text-[10px] leading-snug text-slate-400">
                 {content.selected}
               </p>
             </div>
@@ -182,8 +195,12 @@ export function DeckCommandCenter({
               layout={!reduceMotion}
               className="flex items-center justify-between rounded-2xl border border-ydeck-cyan/20 bg-ydeck-cyan/10 px-3 py-2 text-[10px] text-ydeck-cyan"
             >
-              <span>{content.applied}</span>
-              <span>{content.flow}</span>
+              <span className="min-w-0 truncate" title={content.applied}>
+                {content.applied}
+              </span>
+              <span className="shrink-0" title={content.flow}>
+                {content.flow}
+              </span>
             </motion.div>
           </motion.div>
         </div>
@@ -223,7 +240,10 @@ function MobileDeckCommandCenter({
             {content.title}
           </span>
         </div>
-        <div className="mt-2 inline-flex items-center gap-1.5 rounded-full border border-ydeck-green/30 bg-ydeck-green/10 px-2.5 py-1 text-[10px] font-medium text-ydeck-green">
+        <div
+          className="mt-2 inline-flex items-center gap-1.5 rounded-full border border-ydeck-green/30 bg-ydeck-green/10 px-2.5 py-1 text-[10px] font-medium text-ydeck-green"
+          title={content.status}
+        >
           <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-ydeck-green" />
           <span>{content.status}</span>
         </div>
@@ -236,10 +256,12 @@ function MobileDeckCommandCenter({
           {content.uploadChips.slice(0, 4).map(({ label, Icon }, index) => (
             <motion.span
               key={label}
+              aria-label={label}
               className="inline-flex min-w-0 items-center gap-2 rounded-xl border border-white/10 bg-white/[0.045] px-2.5 py-2 text-[11px] text-slate-300"
               initial={reduceMotion ? false : { opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.08, ease }}
+              title={label}
             >
               <Icon className="h-3.5 w-3.5 shrink-0 text-ydeck-cyan" />
               <span className="truncate">{label}</span>
@@ -262,10 +284,15 @@ function MobileDeckCommandCenter({
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(3,5,10,0)_42%,rgba(3,5,10,0.62)_100%)]" />
         <div className="absolute inset-x-3 bottom-3 flex items-end justify-between gap-3">
           <div className="min-w-0">
-            <p className="truncate text-xs font-semibold text-white">
+            <p
+              className="truncate text-xs font-semibold text-white"
+              title={content.previewTitle}
+            >
               {content.previewTitle}
             </p>
-            <p className="mt-1 text-[10px] text-white/70">{content.selected}</p>
+            <p className="mt-1 text-pretty text-[10px] leading-snug text-white/70">
+              {content.selected}
+            </p>
           </div>
           <span className="shrink-0 rounded-full border border-white/15 bg-black/45 px-2.5 py-1 text-[10px] font-semibold text-ydeck-cyan">
             {activePreview.number}
@@ -299,8 +326,12 @@ function MobileDeckCommandCenter({
 
       <div className="relative z-10 mt-3 rounded-[1.1rem] border border-white/10 bg-black/35 p-3">
         <div className="flex items-center justify-between gap-3 text-[11px] text-slate-300">
-          <span>{content.generated}</span>
-          <span className="text-ydeck-cyan">{content.ready}</span>
+          <span className="min-w-0 text-pretty leading-tight" title={content.generated}>
+            {content.generated}
+          </span>
+          <span className="shrink-0 text-ydeck-cyan" title={content.ready}>
+            {content.ready}
+          </span>
         </div>
         <div className="mt-3 grid gap-2">
           {content.timelineSteps.slice(0, 3).map((step, index) => {
@@ -321,8 +352,11 @@ function MobileDeckCommandCenter({
                 </span>
                 <span
                   className={
-                    active ? 'text-xs text-white' : 'text-xs text-slate-500'
+                    active
+                      ? 'text-pretty text-xs leading-tight text-white'
+                      : 'text-pretty text-xs leading-tight text-slate-500'
                   }
+                  title={step}
                 >
                   {step}
                 </span>

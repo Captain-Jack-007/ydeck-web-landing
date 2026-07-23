@@ -39,12 +39,12 @@ export function formatTemplatePreviewAlt(
 
 export function formatMiniSlideAlt(slide: Web3TemplateSlide, locale: Locale) {
   if (locale === 'ru') {
-    return `${slide.title}, превью слайда из макета ${slide.layout}`;
+    return `${slide.title}, превью слайда отчетного процесса`;
   }
 
   if (locale === 'uz') {
-    return `${slide.title}, ${slide.layout} maketidan slayd prevyusi`;
+    return `${slide.title}, hisobot jarayoni slaydi prevyusi`;
   }
 
-  return `${slide.title} slide preview from ${slide.layout}`;
+  return `${slide.title} reporting workflow slide preview`;
 }

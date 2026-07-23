@@ -23,14 +23,17 @@ import { WorkflowSection } from './sections/WorkflowSection';
 import type { Locale } from './types';
 import { detectInitialLocale } from './utils/locale';
 import { localizedPath } from './utils/routes';
+import type { LandingReportTemplatesPayload } from '@/src/api/report-templates';
 
 type YDeckPageProps = {
   initialLocale?: Locale;
+  initialReportTemplates: LandingReportTemplatesPayload;
   onJoinWaitlist?: (locale: Locale) => void;
 };
 
 export function YDeckPage({
   initialLocale = 'ru',
+  initialReportTemplates,
   onJoinWaitlist,
 }: YDeckPageProps) {
   const [locale, setLocale] = useState<Locale>(initialLocale);
@@ -49,7 +52,6 @@ export function YDeckPage({
     offset: ['start start', 'end start'],
   });
 
-  const heroOpacity = useTransform(scrollYProgress, [0, 0.4], [1, 0]);
   const heroY = useTransform(scrollYProgress, [0, 1], [0, -80]);
   const visualScale = useTransform(scrollYProgress, [0, 1], [1, 0.92]);
   const gridY = useTransform(scrollYProgress, [0, 1], [0, -120]);
@@ -73,31 +75,33 @@ export function YDeckPage({
 
       <section
         ref={heroRef}
-        className="relative px-5 pb-14 pt-28 lg:min-h-[115dvh] lg:px-10 lg:pb-24 lg:pt-32"
+        className="relative px-5 pb-14 pt-28 lg:px-10 lg:pb-24 lg:pt-32 xl:min-h-[100dvh]"
       >
-        <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 lg:min-h-[88dvh] lg:grid-cols-12 lg:gap-12">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 lg:gap-10 xl:min-h-[calc(100dvh-10rem)] xl:grid-cols-12 xl:gap-12">
           <motion.div
-            className="relative z-10 min-w-0 max-w-full lg:col-span-6"
+            className="relative z-10 min-w-0 max-w-full xl:col-span-7"
             style={{
-              opacity: reduceMotion ? 1 : heroOpacity,
               y: reduceMotion ? 0 : heroY,
             }}
           >
             <FadeUp>
-              <div className="glass-panel inline-flex items-center gap-2 rounded-full border-cyan-400/30 px-3 py-2 text-[10px] font-semibold uppercase tracking-[0.12em] text-ydeck-cyan lg:px-4 lg:text-xs lg:tracking-[0.18em]">
+              <div
+                className="glass-panel inline-flex max-w-full items-center gap-2 rounded-full border-cyan-400/30 px-3 py-2 text-[10px] font-semibold uppercase tracking-[0.12em] text-ydeck-cyan lg:px-4 lg:text-xs lg:tracking-[0.18em]"
+                title={content.hero.eyebrow}
+              >
                 <Sparkles className="h-4 w-4" />
-                <span className="truncate">{content.hero.eyebrow}</span>
+                <span className="min-w-0 truncate">{content.hero.eyebrow}</span>
               </div>
             </FadeUp>
 
             <WordsPullUp
               text={content.hero.title}
               highlightWords={[...content.hero.highlightWords]}
-              className="mt-6 text-[2rem] font-semibold leading-[1.08] tracking-[-0.035em] text-ydeck-text lg:max-w-4xl lg:text-8xl lg:leading-[0.94] lg:tracking-[-0.04em]"
+              className="mt-6 max-w-4xl text-balance text-[2rem] font-semibold leading-[1.08] tracking-[-0.035em] text-ydeck-text lg:text-7xl lg:leading-[0.98] xl:text-[4rem] xl:leading-[0.98]"
             />
 
             <FadeUp delay={0.45}>
-              <p className="mt-5 text-sm leading-[1.75] text-ydeck-muted lg:mt-6 lg:max-w-xl lg:text-lg">
+              <p className="mt-5 text-pretty text-sm leading-[1.75] text-ydeck-muted lg:mt-6 lg:max-w-xl lg:text-lg">
                 {content.hero.body}
               </p>
             </FadeUp>
@@ -118,7 +122,7 @@ export function YDeckPage({
                   <ArrowRight className="ml-2 h-4 w-4 transition group-hover:translate-x-1" />
                 </motion.a>
                 <motion.a
-                  href="#templates"
+                  href="#workflow"
                   whileHover={{ scale: 1.03 }}
                   className="glass-panel inline-flex min-h-11 w-full items-center justify-center rounded-full px-5 text-sm font-semibold text-white transition hover:border-cyan-300/40 lg:min-h-12 lg:w-auto lg:px-6"
                 >
@@ -126,14 +130,14 @@ export function YDeckPage({
                   {content.hero.secondaryCta}
                 </motion.a>
               </div>
-              <p className="mt-5 text-sm leading-6 text-slate-400 lg:max-w-xl">
+              <p className="mt-5 max-w-xl text-pretty text-sm leading-6 text-slate-400">
                 {content.hero.note}
               </p>
             </FadeUp>
           </motion.div>
 
           <motion.div
-            className="relative z-10 w-full min-w-0 lg:col-span-6"
+            className="relative z-10 w-full min-w-0 xl:col-span-5"
             style={{ scale: reduceMotion ? 1 : visualScale }}
           >
             <DeckCommandCenter
@@ -158,7 +162,12 @@ export function YDeckPage({
       <WorkflowSection content={content.workflow} />
       <UseCasesSection content={content.useCases} />
       <PrivacySection content={content.privacy} />
-      <TemplatesSection content={content.templates} locale={locale} />
+      <TemplatesSection
+        content={content.templates}
+        initialReportTemplates={initialReportTemplates}
+        locale={locale}
+        onJoinWaitlist={onJoinWaitlist}
+      />
       <FinalCTA
         content={content.finalCta}
         locale={locale}

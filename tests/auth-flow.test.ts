@@ -60,9 +60,9 @@ test("auth return target preserves desktop pairing code", () => {
 });
 
 test("auth return target rejects external and auth-loop URLs", () => {
-  assert.equal(safeAuthReturnTo("https://evil.example/desktop/pairing?user_code=ABC"), "/");
-  assert.equal(safeAuthReturnTo("//evil.example/desktop/pairing?user_code=ABC"), "/");
-  assert.equal(safeAuthReturnTo("/auth/sign-in?returnTo=/desktop/pairing"), "/");
+  assert.equal(safeAuthReturnTo("https://evil.example/desktop/pairing?user_code=ABC"), "/workspace");
+  assert.equal(safeAuthReturnTo("//evil.example/desktop/pairing?user_code=ABC"), "/workspace");
+  assert.equal(safeAuthReturnTo("/auth/sign-in?returnTo=/desktop/pairing"), "/workspace");
 });
 
 test("auth locale maps both Uzbek scripts to the backend locale", () => {

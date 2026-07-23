@@ -1,7 +1,21 @@
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { test } from "node:test";
+import { legalCopy } from "@/components/ydeck/data/legalPages";
+import { web3TemplateSlides } from "@/components/ydeck/data/templates";
+import { localeContent } from "@/components/ydeck/i18n/localeContent";
+import { formatMiniSlideAlt } from "@/components/ydeck/utils/formatters";
+import { translations } from "@/lib/i18n";
 import { detectDesktopPlatform } from "@/src/lib/desktop-platform";
+
+function collectStrings(value: unknown): string[] {
+  if (typeof value === "string") return [value];
+  if (Array.isArray(value)) return value.flatMap(collectStrings);
+  if (value && typeof value === "object") {
+    return Object.values(value).flatMap(collectStrings);
+  }
+  return [];
+}
 
 test("desktop platform detection never guesses architecture", () => {
   assert.equal(detectDesktopPlatform("MacIntel"), "macos");
@@ -179,11 +193,13 @@ test("Desktop pairing and session revocation require deliberate actions", async 
   assert.match(accountApi, /\/sessions\/revoke-others/);
 });
 
-test("authenticated home keeps the account bar without side navigation", async () => {
+test("authenticated workspace keeps the account bar without side navigation", async () => {
   const portal = await readFile(new URL("../components/workspace/DesktopPortalHome.tsx", import.meta.url), "utf8");
   const portalComponents = await readFile(new URL("../components/workspace/DesktopPortalComponents.tsx", import.meta.url), "utf8");
   const workspace = await readFile(new URL("../components/workspace/ProductWorkspace.tsx", import.meta.url), "utf8");
+  const workspaceRoute = await readFile(new URL("../app/workspace/page.tsx", import.meta.url), "utf8");
   const topBar = await readFile(new URL("../components/workspace/ProductTopBar.tsx", import.meta.url), "utf8");
+  assert.match(workspaceRoute, /ProductWorkspace/);
   assert.match(workspace, /ProductTopBar/);
   assert.doesNotMatch(workspace, /ProductRail|AppNavigationDrawer/);
   assert.match(topBar, /Profile/);
@@ -211,6 +227,20 @@ test("main workspace is Desktop-first and contains no inactive Cloud controls", 
   assert.doesNotMatch(portalSource, /Cloud Mode|Create a presentation|Recent presentations|Starting prompts/);
 });
 
+test("root route renders the public landing instead of the protected workspace", async () => {
+  const home = await readFile(new URL("../components/HomePageClient.tsx", import.meta.url), "utf8");
+  const rootPage = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
+  const authReturn = await readFile(new URL("../src/lib/auth-return.ts", import.meta.url), "utf8");
+
+  assert.match(rootPage, /HomePageClient/);
+  assert.match(rootPage, /detectServerLocale/);
+  assert.match(rootPage, /searchParams/);
+  assert.match(home, /YDeckPage/);
+  assert.doesNotMatch(home, /initialLocale="en"/);
+  assert.doesNotMatch(home, /ProductWorkspace/);
+  assert.match(authReturn, /DEFAULT_AUTH_RETURN_TO = "\/workspace"/);
+});
+
 test("public landing navigation exposes the waitlist without advertising authentication", async () => {
   const navbar = await readFile(
     new URL("../components/ydeck/components/Navbar.tsx", import.meta.url),
@@ -223,4 +253,197 @@ test("public landing navigation exposes the waitlist without advertising authent
     navbar,
     /className="inline-flex[^\"]*"\s+href=\{localizedPath\('\/waitlist', locale\)\}/,
   );
+});
+
+test("waitlist intake stays focused and fixes the initial locale before hydration", async () => {
+  const waitlistPage = await readFile(new URL("../app/waitlist/page.tsx", import.meta.url), "utf8");
+  const waitlistClient = await readFile(new URL("../components/WaitlistPageClient.tsx", import.meta.url), "utf8");
+  const styles = await readFile(new URL("../app/globals.css", import.meta.url), "utf8");
+
+  assert.match(waitlistPage, /document\.documentElement\.lang/);
+  assert.doesNotMatch(waitlistClient, /Back to landing|back-link|waitlistPage\.back/);
+  assert.match(styles, /@media \(min-width: 1121px\)[\s\S]*\.waitlist-page \{[\s\S]*overflow: hidden;/);
+  assert.match(styles, /\.dedicated \{[\s\S]*overflow: auto;/);
+});
+
+test("Uzbek landing, waitlist, and legal copy avoid old English fallback phrases", () => {
+  const uzbekCopy = collectStrings([
+    localeContent.uz,
+    translations.uz,
+    legalCopy.uz,
+  ]).join("\n");
+  const forbiddenPhrases = [
+    "Reporting Skills",
+    "Use cases",
+    "Pilot workflow",
+    "Approved report packs",
+    "Mining Monthly Operations Review",
+    "Previous Ops Reports",
+    "Production Export",
+    "Downtime + Safety",
+    "Corporate Template",
+    "Structure detected",
+    "KPI mapping",
+    "Input check",
+    "Draft reporting skill",
+    "Human review required",
+    "Human review kerak",
+    "Draft skill tayyor",
+    "PPTX output beta",
+    "PDF planned",
+    "Reporting Audit so‘rash",
+    "recurring reporting process",
+    "source materials",
+    "Reporting workflow review",
+    "Draft skill assessment",
+    "recurring report workflow",
+    "Reporting frequency",
+    "dostup",
+    "public launch",
+    "generated reporting draft",
+    "sensitive source materials supported",
+  ];
+
+  for (const phrase of forbiddenPhrases) {
+    assert.doesNotMatch(uzbekCopy, new RegExp(phrase.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+  }
+
+  assert.equal(localeContent.uz.nav.links[2][0], "Hisobot skill’lari");
+  assert.equal(localeContent.uz.nav.links[3][0], "Qo‘llanish sohalari");
+  assert.equal(localeContent.uz.hero.title, "Takroriy hisobotlarni kompaniyangizning ishchi xotirasiga aylantiring.");
+  assert.equal(localeContent.uz.agent.status, "Design partner piloti");
+  assert.equal(translations.uz.waitlistForm.submit, "Hisobot auditini so‘rash");
+  assert.equal(legalCopy.uz.pages.terms.title, "Pilotga kirish shartlari.");
+});
+
+test("Russian landing, waitlist, metadata, and legal copy avoid mixed English fallback phrases", async () => {
+  const rootPage = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
+  const russianMetadataSource = rootPage.match(/ru: \{[\s\S]*?\n  \},\n  uz:/)?.[0] ?? "";
+  const russianCopy = collectStrings([
+    localeContent.ru,
+    translations.ru,
+    legalCopy.ru,
+  ]).join("\n");
+  const forbiddenPhrases = [
+    "Приватный AI",
+    "приватный AI",
+    "Reporting Skills",
+    "Пилотный workflow",
+    "пилотных workflow",
+    "Approved report packs",
+    "Mining Monthly Operations Review",
+    "Previous Ops Reports",
+    "Production Export",
+    "Downtime + Safety",
+    "Corporate Template",
+    "KPI mapping",
+    "Draft reporting skill",
+    "Draft skill готов",
+    "PPTX output beta",
+    "PDF planned",
+    "review перед повтором",
+    "Source checks",
+    "одному prompt",
+    "Риски review",
+    "company reporting skill",
+    "report packs",
+    "company skill",
+    "generic no-code",
+    "human review",
+    "Review draft skill",
+    "narrative patterns",
+    "planned PDF",
+    "human approval",
+    "mining, industrial reporting, accounting",
+    "Пилотный workflow",
+    "Discovery workflow",
+    "bottlenecks",
+    "safety summaries",
+    "incident follow-up",
+    "corrective actions",
+    "cash flow",
+    "budget-versus-actual",
+    "source-backed commentary",
+    "executive reporting packs",
+    "Private execution",
+    "human control",
+    "Desktop beta foundation",
+    "private/local generation",
+    "BYOK-style",
+    "Reporting runtime",
+    "source mapping",
+    "PDF delivery",
+    "source materials",
+    "Verification direction",
+    "Human control",
+    "Long-term vision",
+    "Report pack",
+    "Source data",
+    "Skill draft",
+    "reporting workflows",
+    "marketplace шаблонов",
+    "design partners",
+    "production skills",
+    "Pilot example",
+    "Inputs:",
+    "Outputs:",
+    "Mining pilot",
+    "Industrial workflow",
+    "Finance pilot",
+    "Executive reporting",
+    "Accounting workflow",
+    "recurring reporting workflows",
+    "review draft reporting skill",
+    "monthly operations reports",
+    "Excel exports",
+    "1C data",
+    "manager comments",
+    "PowerPoint template",
+    "company method",
+    "reviewed output",
+    "pilot intake",
+    "monthly reports",
+    "source files",
+    "KPI definitions",
+    "reviewed reporting skill",
+    "AI reporting product",
+    "reusable reporting skills",
+    "planned direction",
+    "PDF reports",
+    "editable beta output",
+    "planned report engine",
+    "approval required",
+    "Trust Model",
+    "Mining operations",
+    "Accounting firms",
+    "Enterprise finance",
+    "Design partner pilot",
+    "evidence, consistency",
+    "reporting drafts",
+    "reusable skills",
+    "Editable PPTX",
+    "reporting audit",
+    "recurring report workflow",
+    "generated reporting draft",
+    "private reporting pilots",
+    "reporting workflows",
+    "certification claims",
+    "report packs",
+  ];
+
+  for (const phrase of forbiddenPhrases) {
+    assert.doesNotMatch(russianCopy, new RegExp(phrase.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+  }
+
+  assert.equal(localeContent.ru.nav.links[2][0], "Отчетные навыки");
+  assert.equal(localeContent.ru.nav.join, "Пилот");
+  assert.equal(localeContent.ru.hero.title, "Превратите повторяющиеся отчеты в рабочую память компании.");
+  assert.equal(localeContent.ru.agent.status, "Пилот с дизайн-партнером");
+  assert.equal(translations.ru.waitlistForm.fields.presentationType, "Регулярный отчетный процесс");
+  assert.equal(legalCopy.ru.pages.terms.title, "Условия пилотного доступа.");
+  assert.doesNotMatch(formatMiniSlideAlt(web3TemplateSlides[0], "ru"), /reporting workflow/);
+  assert.match(russianMetadataSource, /YDeck — приватный ИИ/);
+  assert.doesNotMatch(russianMetadataSource, /приватный AI/);
+  assert.doesNotMatch(russianMetadataSource, /report packs, исходные данные/);
+  assert.doesNotMatch(russianMetadataSource, /reporting skills/);
 });

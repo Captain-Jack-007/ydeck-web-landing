@@ -31,6 +31,10 @@ const createNextConfig = (phase) => ({
         source: "/api/v1/:path*",
         destination: `${apiProxyTarget}/api/v1/:path*`,
       },
+      {
+        source: "/assets/report-templates/:path*",
+        destination: `${apiProxyTarget}/assets/report-templates/:path*`,
+      },
     ];
   },
 });

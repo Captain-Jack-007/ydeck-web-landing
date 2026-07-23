@@ -33,7 +33,9 @@ test("registration conflicts use privacy-safe recovery copy", () => {
     status: 409,
   });
   const message = getHumanErrorMessage(error);
-  assert.match(message, /signing in or recovering access/i);
+  assert.match(message, /may already have a YDeck account/i);
+  assert.match(message, /signing in/i);
+  assert.match(message, /resetting your password/i);
   assert.equal(message.includes("already exists"), false);
 });
 

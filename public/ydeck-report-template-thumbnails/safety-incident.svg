@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="Safety and incident report preview">
+  <rect width="1280" height="720" fill="#f5f8fb"/>
+  <rect x="64" y="64" width="1152" height="592" rx="24" fill="#ffffff" stroke="#d9e3ef" stroke-width="3"/>
+  <text x="104" y="132" fill="#0f172a" font-family="Arial, sans-serif" font-size="38" font-weight="700">Safety and Incident Report</text>
+  <rect x="104" y="188" width="336" height="330" rx="18" fill="#f0fdf4" stroke="#bbf7d0"/>
+  <path d="M272 250l98 56v86c0 70-42 116-98 144-56-28-98-74-98-144v-86z" fill="#22c55e" opacity="0.9"/>
+  <path d="M226 386l34 34 70-88" fill="none" stroke="#ffffff" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="488" y="188" width="688" height="330" rx="18" fill="#0d111c"/>
+  <text x="532" y="250" fill="#ffffff" font-family="Arial, sans-serif" font-size="28" font-weight="700">Incident review</text>
+  <rect x="532" y="304" width="568" height="22" rx="11" fill="#334155"/>
+  <rect x="532" y="360" width="462" height="22" rx="11" fill="#475569"/>
+  <rect x="532" y="416" width="610" height="22" rx="11" fill="#334155"/>
+  <circle cx="1112" cy="315" r="18" fill="#22c55e"/>
+  <circle cx="1008" cy="371" r="18" fill="#eab308"/>
+  <circle cx="1150" cy="427" r="18" fill="#ef4444"/>
+</svg>

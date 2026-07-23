@@ -1,7 +1,22 @@
 "use client";
 
-import { ProductWorkspace } from "@/components/workspace/ProductWorkspace";
+import { YDeckPage } from "@/components/ydeck";
+import type { Locale } from "@/lib/i18n";
+import type { LandingReportTemplatesPayload } from "@/src/api/report-templates";
 
-export function HomePageClient() {
-  return <ProductWorkspace />;
+type HomePageClientProps = {
+  initialLocale: Locale;
+  initialReportTemplates: LandingReportTemplatesPayload;
+};
+
+export function HomePageClient({
+  initialLocale,
+  initialReportTemplates,
+}: HomePageClientProps) {
+  return (
+    <YDeckPage
+      initialLocale={initialLocale}
+      initialReportTemplates={initialReportTemplates}
+    />
+  );
 }

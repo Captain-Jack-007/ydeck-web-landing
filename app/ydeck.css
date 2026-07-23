@@ -57,7 +57,8 @@
   animation: ydeckTemplateMarquee 38s linear infinite;
 }
 
-.ydeck-page .template-marquee:hover {
+.ydeck-page .template-marquee:hover,
+.ydeck-page .template-marquee:focus-within {
   animation-play-state: paused;
 }
 

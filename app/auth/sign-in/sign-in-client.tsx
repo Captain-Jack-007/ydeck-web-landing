@@ -39,7 +39,7 @@ export default function SignInClient({ appOrigin }: { appOrigin: string }) {
   return (
     <AuthShell
       title="Sign in to YDeck"
-      subtitle="Continue to your presentation workspace."
+      subtitle="Continue to your YDeck workspace."
       footer={
         <div>
           New here? <Link href={`/auth/sign-up${authReturnToParam(returnTo)}`}>Create an account</Link>

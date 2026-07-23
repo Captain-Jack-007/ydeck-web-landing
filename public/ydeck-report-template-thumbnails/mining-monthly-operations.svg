@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="Monthly mining operations report preview">
+  <rect width="1280" height="720" fill="#f2f6fb"/>
+  <rect x="64" y="64" width="1152" height="592" rx="24" fill="#ffffff" stroke="#d9e3ef" stroke-width="3"/>
+  <rect x="104" y="104" width="1072" height="74" rx="14" fill="#0d111c"/>
+  <text x="136" y="151" fill="#ffffff" font-family="Arial, sans-serif" font-size="34" font-weight="700">Mining Monthly Operations</text>
+  <text x="942" y="149" fill="#22d3ee" font-family="Arial, sans-serif" font-size="22" font-weight="700">PILOT</text>
+  <rect x="104" y="216" width="312" height="164" rx="16" fill="#e8f5f7" stroke="#c8e8ed"/>
+  <text x="132" y="262" fill="#0f172a" font-family="Arial, sans-serif" font-size="22" font-weight="700">Production</text>
+  <text x="132" y="326" fill="#0891b2" font-family="Arial, sans-serif" font-size="58" font-weight="700">92%</text>
+  <path d="M132 350h224" stroke="#94a3b8" stroke-width="10" stroke-linecap="round"/>
+  <path d="M132 350h182" stroke="#22d3ee" stroke-width="10" stroke-linecap="round"/>
+  <rect x="456" y="216" width="312" height="164" rx="16" fill="#f8fafc" stroke="#dbe4ee"/>
+  <text x="484" y="262" fill="#0f172a" font-family="Arial, sans-serif" font-size="22" font-weight="700">Downtime</text>
+  <path d="M496 338l48-44 44 24 50-74 66 94" fill="none" stroke="#0ea5e9" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="808" y="216" width="368" height="164" rx="16" fill="#fff7ed" stroke="#fed7aa"/>
+  <text x="836" y="262" fill="#0f172a" font-family="Arial, sans-serif" font-size="22" font-weight="700">Safety flags</text>
+  <circle cx="870" cy="328" r="18" fill="#22c55e"/>
+  <circle cx="948" cy="328" r="18" fill="#eab308"/>
+  <circle cx="1026" cy="328" r="18" fill="#f97316"/>
+  <rect x="104" y="428" width="1072" height="176" rx="18" fill="#f8fafc" stroke="#dbe4ee"/>
+  <text x="136" y="474" fill="#0f172a" font-family="Arial, sans-serif" font-size="24" font-weight="700">Source-linked management commentary</text>
+  <rect x="136" y="510" width="272" height="18" rx="9" fill="#cbd5e1"/>
+  <rect x="136" y="548" width="796" height="18" rx="9" fill="#e2e8f0"/>
+  <rect x="136" y="586" width="620" height="18" rx="9" fill="#e2e8f0"/>
+</svg>

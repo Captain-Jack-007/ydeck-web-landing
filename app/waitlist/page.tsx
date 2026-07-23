@@ -12,5 +12,14 @@ export default async function WaitlistPage({ searchParams }: WaitlistPageProps) 
   const langParam = typeof lang === "string" ? lang : null;
   const initialLocale: Locale = isLocale(langParam) ? langParam : await detectServerLocale(langParam);
 
-  return <WaitlistPageClient initialLocale={initialLocale} />;
+  return (
+    <>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `document.documentElement.lang=${JSON.stringify(initialLocale)};`,
+        }}
+      />
+      <WaitlistPageClient initialLocale={initialLocale} />
+    </>
+  );
 }

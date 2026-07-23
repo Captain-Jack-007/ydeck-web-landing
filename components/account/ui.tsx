@@ -238,9 +238,9 @@ export function AuthShell({
           </Link>
           <div className="auth-visual__copy">
             <p className="auth-kicker">YDeck Cloud</p>
-            <h2>Your presentation workspace, ready when you are.</h2>
+            <h2>Your YDeck workspace, ready when you are.</h2>
             <p>
-              Create decks, manage your workspace, and connect authorized YDeck Desktop devices from one secure account.
+              Manage your workspace and connect authorized YDeck Desktop devices from one account.
             </p>
           </div>
         </aside>

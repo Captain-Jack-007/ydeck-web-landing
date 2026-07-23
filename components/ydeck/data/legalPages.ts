@@ -27,17 +27,17 @@ export const legalCopy: Record<Locale, LegalCopy> = {
     pages: {
       privacy: {
         eyebrow: 'Privacy policy',
-        title: 'Privacy for presentation work.',
+        title: 'Privacy for recurring reporting work.',
         intro:
-          'YDeck is built for people working with sensitive notes, reports, lessons, and company files. This page explains the privacy approach for the pilot and waitlist.',
+          'YDeck is being developed for teams working with sensitive report packs, source data, templates, comments, and company rules. This page explains the privacy approach for the reporting-audit form and pilot.',
         sections: [
           {
-            title: 'Waitlist information',
-            body: 'When you request access, we collect the details you submit in the form, such as name, email, organization, role, contact handle, presentation type, preferred mode, and deck volume.',
+            title: 'Reporting-audit information',
+            body: 'When you request a reporting-process audit, we collect the details you submit in the form, such as name, email, company, role, contact details, recurring report workflow, final report format, and reporting frequency.',
           },
           {
             title: 'Product files',
-            body: 'YDeck is designed around private document workflows. Pilot handling of uploaded or processed files will be explained clearly before users are invited into the product.',
+            body: 'YDeck is designed around private reporting workflows. Pilot handling of uploaded or processed report packs, source files, and templates will be explained clearly before teams are invited into the product.',
           },
           {
             title: 'Contact and deletion',
@@ -49,7 +49,7 @@ export const legalCopy: Record<Locale, LegalCopy> = {
         eyebrow: 'Terms',
         title: 'Pilot access terms.',
         intro:
-          'YDeck is preparing a pilot for selected users. These terms summarize the expected pilot relationship and will be replaced by full product terms before public launch.',
+          'YDeck is preparing a reporting-agent pilot for selected teams. These terms summarize the expected pilot relationship and will be replaced by full product terms before public launch.',
         sections: [
           {
             title: 'Pilot availability',
@@ -57,7 +57,7 @@ export const legalCopy: Record<Locale, LegalCopy> = {
           },
           {
             title: 'Use of the service',
-            body: 'Pilot users should only submit material they have permission to use and should review any generated presentation before relying on it in business, education, or public settings.',
+            body: 'Pilot users should only submit report packs, source data, and templates they have permission to use and should review any generated reporting draft before relying on it in business settings.',
           },
           {
             title: 'Changes',
@@ -67,17 +67,17 @@ export const legalCopy: Record<Locale, LegalCopy> = {
       },
       security: {
         eyebrow: 'Security',
-        title: 'Security notes for private decks.',
+        title: 'Security notes for private reporting pilots.',
         intro:
-          'YDeck is being designed for confidential presentation workflows. We avoid claiming certifications we have not earned; this page describes the product direction plainly.',
+          'YDeck is being designed for confidential reporting workflows. We avoid claiming certifications we have not earned; this page describes the product direction plainly.',
         sections: [
           {
             title: 'Local-first direction',
-            body: 'The product direction includes private and local-first workflows so sensitive source material can stay closer to the user where possible.',
+            body: 'The product direction includes private and local-first reporting workflows so sensitive source material can stay closer to the user where supported.',
           },
           {
             title: 'Sensitive material',
-            body: 'Users should treat business plans, reports, student material, and internal documents as confidential and choose the right mode before processing them.',
+            body: 'Users should treat report packs, exports, KPI definitions, manager comments, and internal documents as confidential and choose the right mode before processing them.',
           },
           {
             title: 'Responsible rollout',
@@ -94,17 +94,17 @@ export const legalCopy: Record<Locale, LegalCopy> = {
     pages: {
       privacy: {
         eyebrow: 'Политика приватности',
-        title: 'Приватность для работы с презентациями.',
+        title: 'Приватность для регулярной отчетности.',
         intro:
-          'YDeck создается для работы с чувствительными заметками, отчетами, уроками и файлами компаний. Здесь описан подход к приватности для пилота и листа ожидания.',
+          'YDeck создается для команд, которые работают с чувствительными пакетами отчетов, исходными данными, шаблонами, комментариями и правилами компании. Здесь описан подход к приватности для формы аудита и пилота.',
         sections: [
           {
-            title: 'Данные листа ожидания',
-            body: 'Когда вы запрашиваете доступ, мы собираем данные из формы: имя, email, организацию, роль, контакт, тип презентаций, предпочитаемый режим и объем deck-работы.',
+            title: 'Данные аудита отчетности',
+            body: 'Когда вы запрашиваете аудит отчетного процесса, мы собираем данные из формы: имя, email, компанию, роль, контакт, регулярный отчетный процесс, финальный формат отчета и частоту отчетности.',
           },
           {
             title: 'Файлы продукта',
-            body: 'YDeck проектируется вокруг приватных документных процессов. Обработка файлов в пилоте будет объяснена до приглашения пользователей в продукт.',
+            body: 'YDeck проектируется вокруг приватных отчетных процессов. Обработка пакетов отчетов, исходных файлов и шаблонов в пилоте будет объяснена до приглашения команд в продукт.',
           },
           {
             title: 'Контакт и удаление',
@@ -116,7 +116,7 @@ export const legalCopy: Record<Locale, LegalCopy> = {
         eyebrow: 'Условия',
         title: 'Условия пилотного доступа.',
         intro:
-          'YDeck готовит пилот для выбранных пользователей. Эти условия кратко описывают ожидаемые правила пилота и будут заменены полными условиями до публичного запуска.',
+          'YDeck готовит пилот отчетного агента для выбранных команд. Эти условия кратко описывают ожидаемые правила пилота и будут заменены полными условиями до публичного запуска.',
         sections: [
           {
             title: 'Доступ к пилоту',
@@ -124,7 +124,7 @@ export const legalCopy: Record<Locale, LegalCopy> = {
           },
           {
             title: 'Использование сервиса',
-            body: 'Пилотные пользователи должны отправлять только материалы, которые имеют право использовать, и проверять сгенерированную презентацию перед применением.',
+            body: 'Пилотные пользователи должны отправлять только пакеты отчетов, исходные данные и шаблоны, которые имеют право использовать, и проверять созданный черновик отчета перед применением.',
           },
           {
             title: 'Изменения',
@@ -134,21 +134,21 @@ export const legalCopy: Record<Locale, LegalCopy> = {
       },
       security: {
         eyebrow: 'Безопасность',
-        title: 'Заметки о безопасности приватных deck-процессов.',
+        title: 'Заметки о безопасности приватных отчетных пилотов.',
         intro:
-          'YDeck проектируется для конфиденциальной работы с презентациями. Мы не заявляем о сертификациях, которых еще нет; эта страница описывает направление продукта.',
+          'YDeck проектируется для конфиденциальных отчетных процессов. Мы не заявляем о сертификациях, которых еще нет; эта страница описывает направление продукта.',
         sections: [
           {
             title: 'Local-first направление',
-            body: 'В продуктовое направление входят приватные и local-first процессы, чтобы чувствительные исходные материалы по возможности оставались ближе к пользователю.',
+            body: 'В продуктовое направление входят приватные и local-first отчетные процессы, чтобы чувствительные исходные материалы оставались ближе к пользователю там, где это поддерживается.',
           },
           {
             title: 'Чувствительные материалы',
-            body: 'Бизнес-планы, отчеты, учебные материалы и внутренние документы стоит считать конфиденциальными и выбирать подходящий режим обработки.',
+            body: 'Пакеты отчетов, выгрузки, KPI-определения, комментарии менеджеров и внутренние документы стоит считать конфиденциальными и выбирать подходящий режим обработки.',
           },
           {
             title: 'Ответственный запуск',
-            body: 'Детали безопасности будут раскрыты пилотным пользователям до доступа. Мы не будем использовать неподтвержденные compliance, audit или certification claims.',
+            body: 'Детали безопасности будут раскрыты пилотным пользователям до доступа. Мы не будем использовать неподтвержденные заявления о compliance, аудите или сертификации.',
           },
         ],
       },
@@ -161,37 +161,37 @@ export const legalCopy: Record<Locale, LegalCopy> = {
     pages: {
       privacy: {
         eyebrow: 'Maxfiylik siyosati',
-        title: 'Taqdimot ishlarida maxfiylik.',
+        title: 'Takroriy hisobot ishlari uchun maxfiylik.',
         intro:
-          'YDeck maxfiy qaydlar, hisobotlar, dars materiallari va kompaniya fayllari bilan ishlaydigan foydalanuvchilar uchun yaratilmoqda.',
+          'YDeck sezgir report pack’lar, manba ma’lumotlari, shablonlar, izohlar va kompaniya qoidalari bilan ishlaydigan jamoalar uchun ishlab chiqilmoqda.',
         sections: [
           {
-            title: 'Waitlist ma’lumotlari',
-            body: 'Dostup so‘raganingizda formadagi ism, email, tashkilot, rol, kontakt, taqdimot turi, afzal rejim va deck hajmi kabi ma’lumotlarni olamiz.',
+            title: 'Hisobot auditi ma’lumotlari',
+            body: 'Hisobot jarayoni auditini so‘raganingizda formadagi ism, email, kompaniya, rol, kontakt, takroriy hisobot jarayoni, yakuniy hisobot formati va hisobot davriyligi kabi ma’lumotlarni olamiz.',
           },
           {
             title: 'Mahsulot fayllari',
-            body: 'YDeck maxfiy hujjat jarayonlari atrofida loyihalanmoqda. Pilotdagi fayl qayta ishlash tartibi foydalanuvchilar mahsulotga kirishidan oldin tushuntiriladi.',
+            body: 'YDeck maxfiy hisobot jarayonlari atrofida loyihalanmoqda. Pilotdagi report pack’lar, manba fayllari va shablonlarni qayta ishlash tartibi jamoalar mahsulotga kirishidan oldin tushuntiriladi.',
           },
           {
             title: 'Kontakt va o‘chirish',
-            body: 'Waitlist ma’lumotlarini yangilash yoki o‘chirish uchun arizada ishlatgan emailingizdan hello@ydeck.ai manziliga yozishingiz mumkin.',
+            body: 'Ariza ma’lumotlarini yangilash yoki o‘chirish uchun arizada ishlatgan emailingizdan hello@ydeck.ai manziliga yozishingiz mumkin.',
           },
         ],
       },
       terms: {
         eyebrow: 'Shartlar',
-        title: 'Pilot dostup shartlari.',
+        title: 'Pilotga kirish shartlari.',
         intro:
-          'YDeck tanlangan foydalanuvchilar uchun pilot tayyorlamoqda. Bu sahifa pilot munosabatini qisqacha tushuntiradi va public launchdan oldin to‘liq shartlar bilan almashtiriladi.',
+          'YDeck tanlangan jamoalar uchun hisobot agenti pilotini tayyorlamoqda. Bu sahifa pilot munosabatini qisqacha tushuntiradi va ommaviy ishga tushirishdan oldin to‘liq shartlar bilan almashtiriladi.',
         sections: [
           {
             title: 'Pilot mavjudligi',
-            body: 'Waitlist formasini yuborish dostupni kafolatlamaydi. Foydalanuvchilarni moslik, imkoniyat, region va mahsulot tayyorligiga qarab bosqichma-bosqich taklif qilamiz.',
+            body: 'Ariza formasini yuborish pilotga kirishni kafolatlamaydi. Foydalanuvchilarni moslik, imkoniyat, region va mahsulot tayyorligiga qarab bosqichma-bosqich taklif qilamiz.',
           },
           {
             title: 'Servisdan foydalanish',
-            body: 'Pilot foydalanuvchilar faqat foydalanishga ruxsat bor materiallarni yuborishi va yaratilgan taqdimotni ish, ta’lim yoki ommaviy foydalanishdan oldin tekshirishi kerak.',
+            body: 'Pilot foydalanuvchilar faqat foydalanishga ruxsat bor report pack’lar, manba ma’lumotlari va shablonlarni yuborishi hamda yaratilgan hisobot loyihasini biznesda ishlatishdan oldin tekshirishi kerak.',
           },
           {
             title: 'O‘zgarishlar',
@@ -201,21 +201,21 @@ export const legalCopy: Record<Locale, LegalCopy> = {
       },
       security: {
         eyebrow: 'Xavfsizlik',
-        title: 'Maxfiy deck ishlari uchun xavfsizlik qaydlari.',
+        title: 'Maxfiy hisobot pilotlari uchun xavfsizlik qaydlari.',
         intro:
-          'YDeck maxfiy taqdimot jarayonlari uchun loyihalanmoqda. Biz hali olinmagan sertifikat yoki compliance da’volarini ishlatmaymiz.',
+          'YDeck maxfiy hisobot jarayonlari uchun loyihalanmoqda. Biz hali olinmagan sertifikat yoki compliance da’volarini ishlatmaymiz.',
         sections: [
           {
-            title: 'Local-first yo‘nalish',
-            body: 'Mahsulot yo‘nalishi maxfiy va local-first jarayonlarni o‘z ichiga oladi, shunda sezgir manba materiallar imkon qadar foydalanuvchiga yaqin qoladi.',
+            title: 'Local-first yo‘nalishi',
+            body: 'Mahsulot yo‘nalishi maxfiy va local-first hisobot jarayonlarini o‘z ichiga oladi, shunda sezgir manba materiallari qo‘llab-quvvatlangan joylarda foydalanuvchiga yaqin qoladi.',
           },
           {
             title: 'Sezgir materiallar',
-            body: 'Biznes rejalar, hisobotlar, talaba materiallari va ichki hujjatlar maxfiy hisoblanishi, ishlov berishdan oldin mos rejim tanlanishi kerak.',
+            body: 'Report pack’lar, eksportlar, KPI ta’riflari, menejer izohlari va ichki hujjatlar maxfiy hisoblanishi, ishlov berishdan oldin mos rejim tanlanishi kerak.',
           },
           {
-            title: 'Mas’uliyatli rollout',
-            body: 'Xavfsizlik tafsilotlari pilot foydalanuvchilariga dostupdan oldin tushuntiriladi. Tasdiqlanmagan compliance, audit yoki certification da’volari berilmaydi.',
+            title: 'Mas’uliyatli joriy etish',
+            body: 'Xavfsizlik tafsilotlari pilot foydalanuvchilariga kirishdan oldin tushuntiriladi. Tasdiqlanmagan compliance, audit yoki sertifikat da’volari berilmaydi.',
           },
         ],
       },

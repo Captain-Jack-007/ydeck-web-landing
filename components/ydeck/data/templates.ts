@@ -2,7 +2,7 @@ export const web3TemplateSlides = [
   {
     number: '01',
     layout: 'mf_cover',
-    title: 'Cover',
+    title: 'Executive summary',
     kind: 'Cover',
     variant: 'cover',
     src: '/ydeck-web3-pitch-deck-previews/slide-01.png',
@@ -10,7 +10,7 @@ export const web3TemplateSlides = [
   {
     number: '05',
     layout: 'mf_market_charts',
-    title: 'Market charts',
+    title: 'KPI scorecard',
     kind: 'Market',
     variant: 'market',
     src: '/ydeck-web3-pitch-deck-previews/slide-05.png',
@@ -18,7 +18,7 @@ export const web3TemplateSlides = [
   {
     number: '09',
     layout: 'mf_plans_focus',
-    title: 'Plans focus',
+    title: 'Production versus plan',
     kind: 'Plans',
     variant: 'plans',
     src: '/ydeck-web3-pitch-deck-previews/slide-09.png',
@@ -26,7 +26,7 @@ export const web3TemplateSlides = [
   {
     number: '19',
     layout: 'mf_project_assessment',
-    title: 'Project assessment',
+    title: 'Safety and risk',
     kind: 'Review',
     variant: 'assessment',
     src: '/ydeck-web3-pitch-deck-previews/slide-19.png',

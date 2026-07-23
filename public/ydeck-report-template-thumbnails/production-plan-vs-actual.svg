@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="Production plan versus actual report preview">
+  <rect width="1280" height="720" fill="#eef6ff"/>
+  <rect x="64" y="64" width="1152" height="592" rx="24" fill="#ffffff" stroke="#d7e4f2" stroke-width="3"/>
+  <text x="104" y="132" fill="#0f172a" font-family="Arial, sans-serif" font-size="38" font-weight="700">Production Plan vs Actual</text>
+  <rect x="104" y="172" width="476" height="404" rx="18" fill="#f8fafc" stroke="#dbe4ee"/>
+  <line x1="158" y1="518" x2="526" y2="518" stroke="#94a3b8" stroke-width="3"/>
+  <line x1="158" y1="246" x2="158" y2="518" stroke="#94a3b8" stroke-width="3"/>
+  <path d="M176 486L240 430L304 398L368 340L432 310L504 250" fill="none" stroke="#22d3ee" stroke-width="12" stroke-linecap="round"/>
+  <path d="M176 462L240 452L304 370L368 388L432 330L504 292" fill="none" stroke="#f97316" stroke-width="12" stroke-linecap="round"/>
+  <rect x="632" y="172" width="544" height="108" rx="18" fill="#0d111c"/>
+  <text x="664" y="236" fill="#ffffff" font-family="Arial, sans-serif" font-size="30" font-weight="700">Variance rules</text>
+  <rect x="632" y="314" width="544" height="262" rx="18" fill="#f8fafc" stroke="#dbe4ee"/>
+  <rect x="672" y="358" width="144" height="22" rx="11" fill="#22d3ee"/>
+  <rect x="672" y="412" width="392" height="18" rx="9" fill="#cbd5e1"/>
+  <rect x="672" y="462" width="330" height="18" rx="9" fill="#cbd5e1"/>
+  <rect x="672" y="512" width="430" height="18" rx="9" fill="#cbd5e1"/>
+</svg>

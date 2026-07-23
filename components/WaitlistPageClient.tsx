@@ -1,8 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
-import { ArrowLeft, BadgeCheck, Check, LockKeyhole } from "lucide-react";
+import { BadgeCheck, LockKeyhole } from "lucide-react";
 import { useEffect, useState } from "react";
 import { WaitlistForm } from "@/components/WaitlistForm";
 import { isLocale, locales, translations, type Locale } from "@/lib/i18n";
@@ -45,9 +44,6 @@ export function WaitlistPageClient({ initialLocale }: WaitlistPageClientProps) {
   return (
     <main className="waitlist-page">
       <div className="waitlist-topbar">
-        <Link className="back-link" href={`/?lang=${locale}`}>
-          <ArrowLeft size={18} /> {t.waitlistPage.back}
-        </Link>
         <div className="language-switcher waitlist-language" aria-label={t.nav.language}>
           {locales.map((item) => (
             <button
@@ -69,19 +65,14 @@ export function WaitlistPageClient({ initialLocale }: WaitlistPageClientProps) {
           <p className="eyebrow"><BadgeCheck size={16} /> {t.waitlistPage.eyebrow}</p>
           <h1>{t.waitlistPage.title}</h1>
           <p>{t.waitlistPage.text}</p>
-          <div className="pilot-highlight">
-            <strong>{t.pilot.highlightTitle}</strong>
-            <p>{t.pilot.highlightText}</p>
-          </div>
-          <div className="pilot-benefit-cards compact-benefits">
-            {t.pilot.summaryCards.map(([title, text], index) => (
-              <article className="pilot-benefit-card" key={`waitlist-benefit-${index}`}>
-                <h3>{title}</h3>
-                <p>{text}</p>
-              </article>
+          <div className="waitlist-summary" aria-label={t.pilot.highlightTitle}>
+            {t.pilot.summaryCards.map(([title, text]) => (
+              <div className="waitlist-summary-card" key={title}>
+                <p>{title}</p>
+                <span>{text}</span>
+              </div>
             ))}
           </div>
-          <p className="pilot-extra-line">{t.pilot.extraLine}</p>
           <p className="trust-line">
             <LockKeyhole size={17} /> {t.waitlistPage.trust}
           </p>
