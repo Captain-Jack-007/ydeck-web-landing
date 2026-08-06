@@ -1,3 +1,4 @@
+import { contactEmail } from '../constants';
 import type { Locale } from '../types';
 
 export type LegalPageKey = 'privacy' | 'terms' | 'security';
@@ -23,7 +24,7 @@ export const legalCopy: Record<Locale, LegalCopy> = {
   en: {
     back: 'Back to YDeck',
     updated: 'Updated July 4, 2026',
-    contact: 'Questions: hello@ydeck.ai',
+    contact: `Questions: ${contactEmail}`,
     pages: {
       privacy: {
         eyebrow: 'Privacy policy',
@@ -41,7 +42,7 @@ export const legalCopy: Record<Locale, LegalCopy> = {
           },
           {
             title: 'Contact and deletion',
-            body: 'You can ask us to update or remove your waitlist information by emailing hello@ydeck.ai from the address used in your request.',
+            body: `You can ask us to update or remove your waitlist information by emailing ${contactEmail} from the address used in your request.`,
           },
         ],
       },
@@ -90,7 +91,7 @@ export const legalCopy: Record<Locale, LegalCopy> = {
   ru: {
     back: 'Назад к YDeck',
     updated: 'Обновлено 4 июля 2026',
-    contact: 'Вопросы: hello@ydeck.ai',
+    contact: `Вопросы: ${contactEmail}`,
     pages: {
       privacy: {
         eyebrow: 'Политика приватности',
@@ -108,7 +109,7 @@ export const legalCopy: Record<Locale, LegalCopy> = {
           },
           {
             title: 'Контакт и удаление',
-            body: 'Вы можете попросить обновить или удалить данные листа ожидания, написав на hello@ydeck.ai с email, который использовали в заявке.',
+            body: `Вы можете попросить обновить или удалить данные листа ожидания, написав на ${contactEmail} с email, который использовали в заявке.`,
           },
         ],
       },
@@ -157,7 +158,7 @@ export const legalCopy: Record<Locale, LegalCopy> = {
   uz: {
     back: 'YDeck sahifasiga qaytish',
     updated: '2026-yil 4-iyulda yangilangan',
-    contact: 'Savollar: hello@ydeck.ai',
+    contact: `Savollar: ${contactEmail}`,
     pages: {
       privacy: {
         eyebrow: 'Maxfiylik siyosati',
@@ -175,7 +176,7 @@ export const legalCopy: Record<Locale, LegalCopy> = {
           },
           {
             title: 'Kontakt va o‘chirish',
-            body: 'Ariza ma’lumotlarini yangilash yoki o‘chirish uchun arizada ishlatgan emailingizdan hello@ydeck.ai manziliga yozishingiz mumkin.',
+            body: `Ariza ma’lumotlarini yangilash yoki o‘chirish uchun arizada ishlatgan emailingizdan ${contactEmail} manziliga yozishingiz mumkin.`,
           },
         ],
       },

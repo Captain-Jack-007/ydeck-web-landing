@@ -1,0 +1,46 @@
+{
+  "desktop": {
+    "localeRU": {
+      "lang": "ru",
+      "url": "https://www.ydeck.app/waitlist?lang=ru"
+    },
+    "localeUZ": {
+      "lang": "uz",
+      "url": "https://www.ydeck.app/waitlist?lang=uz"
+    },
+    "localeEN": {
+      "lang": "en",
+      "url": "https://www.ydeck.app/waitlist?lang=en"
+    },
+    "radioValues": [
+      "PowerPoint",
+      "PDF",
+      "PowerPoint and PDF"
+    ],
+    "values": {
+      "name": "Audit Name",
+      "email": "audit-controls@example.com",
+      "company": "Audit Company",
+      "role": "Audit Role",
+      "contact": "audit@example.com",
+      "presentationType": "Other recurring report",
+      "mode": "PowerPoint and PDF",
+      "volume": "Other"
+    },
+    "keyboardLocale": "ru"
+  },
+  "mobile": {
+    "afterContinue": "12",
+    "radioValues": [
+      "PowerPoint",
+      "PDF",
+      "PowerPoint and PDF"
+    ],
+    "stepAfterBack": true,
+    "stepAfterKeyboardContinue": true
+  },
+  "finalCtaKeyboard": {
+    "primaryUrl": "https://www.ydeck.app/waitlist?lang=en",
+    "secondaryHash": "#use-cases"
+  }
+}

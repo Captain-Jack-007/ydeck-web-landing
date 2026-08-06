@@ -24,9 +24,9 @@ export function FinalCTA({
       id="final-cta"
       className="relative scroll-mt-28 overflow-hidden px-5 pb-12 pt-20 md:px-8 md:pb-14 md:pt-24"
     >
-      <div className="noise-overlay absolute inset-0 opacity-25" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(34,211,238,0.12),transparent_34%),radial-gradient(circle_at_60%_70%,rgba(255,255,255,0.05),transparent_34%)]" />
-      <div className="mx-auto flex max-w-5xl flex-col items-center text-center">
+      <div className="noise-overlay pointer-events-none absolute inset-0 opacity-25" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(34,211,238,0.12),transparent_34%),radial-gradient(circle_at_60%_70%,rgba(255,255,255,0.05),transparent_34%)]" />
+      <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center text-center">
         <FadeUp>
           <p className="text-sm uppercase tracking-[0.2em] text-ydeck-cyan">
             {content.kicker}

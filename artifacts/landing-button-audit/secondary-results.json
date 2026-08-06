@@ -1,0 +1,401 @@
+{
+  "language": {
+    "afterClick": {
+      "lang": "ru",
+      "url": "https://www.ydeck.app/?lang=en",
+      "storedLocale": "ru"
+    },
+    "afterReload": {
+      "lang": "en",
+      "url": "https://www.ydeck.app/?lang=en",
+      "storedLocale": "ru"
+    },
+    "keyboardAnchor": {
+      "hash": "#workflow",
+      "activeTag": "BODY"
+    },
+    "keyboardButton": {
+      "lang": "ru",
+      "activeText": "RU"
+    }
+  },
+  "waitlist": {
+    "desktop": {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "console": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": [],
+      "status": 200,
+      "visibleControls": [
+        {
+          "tag": "button",
+          "name": null,
+          "text": "EN",
+          "type": "button",
+          "width": 40,
+          "height": 30
+        },
+        {
+          "tag": "button",
+          "name": null,
+          "text": "RU",
+          "type": "button",
+          "width": 40,
+          "height": 30
+        },
+        {
+          "tag": "button",
+          "name": null,
+          "text": "UZ",
+          "type": "button",
+          "width": 40,
+          "height": 30
+        },
+        {
+          "tag": "input",
+          "name": "name",
+          "text": "Your name",
+          "type": "text",
+          "width": 291,
+          "height": 42
+        },
+        {
+          "tag": "input",
+          "name": "email",
+          "text": "you@company.com",
+          "type": "email",
+          "width": 291,
+          "height": 42
+        },
+        {
+          "tag": "input",
+          "name": "company",
+          "text": "Company name",
+          "type": "text",
+          "width": 291,
+          "height": 42
+        },
+        {
+          "tag": "input",
+          "name": "role",
+          "text": "CFO, Head of FP&A, Operations lead...",
+          "type": "text",
+          "width": 291,
+          "height": 42
+        },
+        {
+          "tag": "input",
+          "name": "contact",
+          "text": "Email, phone, or LinkedIn",
+          "type": "text",
+          "width": 591,
+          "height": 42
+        },
+        {
+          "tag": "select",
+          "name": "presentationType",
+          "text": "Mining monthly operations reviewProduction versus plan reportSafety or incident reportMonthly financial management reportBudget versus actual reportBoard or client financial packOther recurring report",
+          "type": null,
+          "width": 591,
+          "height": 42
+        },
+        {
+          "tag": "select",
+          "name": "volume",
+          "text": "WeeklyMonthlyQuarterlyOther",
+          "type": null,
+          "width": 291,
+          "height": 42
+        },
+        {
+          "tag": "button",
+          "name": null,
+          "text": "Request Reporting Audit",
+          "type": "submit",
+          "width": 591,
+          "height": 50
+        }
+      ],
+      "emptySubmit": {
+        "activeName": "name",
+        "currentStep": "Full nameWork emailCompanyRolePreferred contactContinue",
+        "invalid": [
+          {
+            "name": "name",
+            "visible": true,
+            "message": "Please fill in this field."
+          },
+          {
+            "name": "email",
+            "visible": true,
+            "message": "Please fill in this field."
+          }
+        ],
+        "feedback": null
+      },
+      "validSubmit": {
+        "success": "Your request was received. We will review the reporting workflow and follow up if it fits the current design-partner pilot.",
+        "error": null,
+        "visibleSubmitDisabled": true
+      },
+      "intercepted": {
+        "method": "POST",
+        "origin": "[configured Supabase origin redacted]",
+        "path": "/rest/v1/waitlist"
+      }
+    },
+    "tablet": {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "console": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": [],
+      "status": 200,
+      "visibleControls": [
+        {
+          "tag": "button",
+          "name": null,
+          "text": "EN",
+          "type": "button",
+          "width": 40,
+          "height": 30
+        },
+        {
+          "tag": "button",
+          "name": null,
+          "text": "RU",
+          "type": "button",
+          "width": 40,
+          "height": 30
+        },
+        {
+          "tag": "button",
+          "name": null,
+          "text": "UZ",
+          "type": "button",
+          "width": 40,
+          "height": 30
+        },
+        {
+          "tag": "input",
+          "name": "name",
+          "text": "Your name",
+          "type": "text",
+          "width": 338,
+          "height": 42
+        },
+        {
+          "tag": "input",
+          "name": "email",
+          "text": "you@company.com",
+          "type": "email",
+          "width": 338,
+          "height": 42
+        },
+        {
+          "tag": "input",
+          "name": "company",
+          "text": "Company name",
+          "type": "text",
+          "width": 338,
+          "height": 42
+        },
+        {
+          "tag": "input",
+          "name": "role",
+          "text": "CFO, Head of FP&A, Operations lead...",
+          "type": "text",
+          "width": 338,
+          "height": 42
+        },
+        {
+          "tag": "input",
+          "name": "contact",
+          "text": "Email, phone, or LinkedIn",
+          "type": "text",
+          "width": 686,
+          "height": 42
+        },
+        {
+          "tag": "select",
+          "name": "presentationType",
+          "text": "Mining monthly operations reviewProduction versus plan reportSafety or incident reportMonthly financial management reportBudget versus actual reportBoard or client financial packOther recurring report",
+          "type": null,
+          "width": 686,
+          "height": 42
+        },
+        {
+          "tag": "select",
+          "name": "volume",
+          "text": "WeeklyMonthlyQuarterlyOther",
+          "type": null,
+          "width": 338,
+          "height": 42
+        },
+        {
+          "tag": "button",
+          "name": null,
+          "text": "Request Reporting Audit",
+          "type": "submit",
+          "width": 686,
+          "height": 50
+        }
+      ],
+      "emptySubmit": {
+        "activeName": null,
+        "currentStep": "Full nameWork emailCompanyRolePreferred contactContinue",
+        "invalid": [
+          {
+            "name": "name",
+            "visible": true,
+            "message": "Please fill in this field."
+          },
+          {
+            "name": "email",
+            "visible": true,
+            "message": "Please fill in this field."
+          }
+        ],
+        "feedback": null
+      },
+      "validSubmit": {
+        "success": "Your request was received. We will review the reporting workflow and follow up if it fits the current design-partner pilot.",
+        "error": null,
+        "visibleSubmitDisabled": true
+      },
+      "intercepted": {
+        "method": "POST",
+        "origin": "[configured Supabase origin redacted]",
+        "path": "/rest/v1/waitlist"
+      }
+    },
+    "mobile": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "console": [
+        {
+          "type": "error",
+          "text": "An invalid form control with name='name' is not focusable."
+        },
+        {
+          "type": "error",
+          "text": "An invalid form control with name='email' is not focusable."
+        }
+      ],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": [],
+      "status": 200,
+      "visibleControls": [
+        {
+          "tag": "button",
+          "name": null,
+          "text": "EN",
+          "type": "button",
+          "width": 36,
+          "height": 30
+        },
+        {
+          "tag": "button",
+          "name": null,
+          "text": "RU",
+          "type": "button",
+          "width": 36,
+          "height": 30
+        },
+        {
+          "tag": "button",
+          "name": null,
+          "text": "UZ",
+          "type": "button",
+          "width": 36,
+          "height": 30
+        },
+        {
+          "tag": "input",
+          "name": "name",
+          "text": "Your name",
+          "type": "text",
+          "width": 344,
+          "height": 46
+        },
+        {
+          "tag": "input",
+          "name": "email",
+          "text": "you@company.com",
+          "type": "email",
+          "width": 344,
+          "height": 46
+        },
+        {
+          "tag": "input",
+          "name": "company",
+          "text": "Company name",
+          "type": "text",
+          "width": 344,
+          "height": 46
+        },
+        {
+          "tag": "input",
+          "name": "role",
+          "text": "CFO, Head of FP&A, Operations lead...",
+          "type": "text",
+          "width": 344,
+          "height": 46
+        },
+        {
+          "tag": "input",
+          "name": "contact",
+          "text": "Email, phone, or LinkedIn",
+          "type": "text",
+          "width": 344,
+          "height": 46
+        },
+        {
+          "tag": "button",
+          "name": null,
+          "text": "Continue",
+          "type": "button",
+          "width": 344,
+          "height": 50
+        }
+      ],
+      "emptySubmit": {
+        "activeName": null,
+        "currentStep": "Recurring report workflowMining monthly operations reviewProduction versus plan reportSafety or incident reportMonthly financial management reportBudget versus ",
+        "invalid": [
+          {
+            "name": "name",
+            "visible": false,
+            "message": "Please fill in this field."
+          },
+          {
+            "name": "email",
+            "visible": false,
+            "message": "Please fill in this field."
+          }
+        ],
+        "feedback": null
+      },
+      "validSubmit": {
+        "success": "Your request was received. We will review the reporting workflow and follow up if it fits the current design-partner pilot.",
+        "error": null,
+        "visibleSubmitDisabled": true
+      },
+      "intercepted": {
+        "method": "POST",
+        "origin": "[configured Supabase origin redacted]",
+        "path": "/rest/v1/waitlist"
+      }
+    }
+  }
+}

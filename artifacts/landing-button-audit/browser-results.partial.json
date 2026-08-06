@@ -1,0 +1,7273 @@
+{
+  "auditedAt": "2026-08-01T07:02:59.504Z",
+  "baseUrl": "https://www.ydeck.app",
+  "viewports": {
+    "desktop": {
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "console": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": [],
+      "status": 200,
+      "interactions": [
+        {
+          "index": 0,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "YDeck home",
+          "href": "/?lang=en",
+          "section": "nav",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 97,
+            "y": 37,
+            "width": 99,
+            "height": 36
+          },
+          "blocker": null
+        },
+        {
+          "index": 1,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Product",
+          "href": "#product",
+          "section": "nav",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 424,
+            "y": 45,
+            "width": 57,
+            "height": 20
+          },
+          "blocker": null
+        },
+        {
+          "index": 2,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "How It Works",
+          "href": "#workflow",
+          "section": "nav",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 497,
+            "y": 45,
+            "width": 94,
+            "height": 20
+          },
+          "blocker": null
+        },
+        {
+          "index": 3,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Reporting Skills",
+          "href": "#reporting-skills",
+          "section": "nav",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 607,
+            "y": 45,
+            "width": 113,
+            "height": 20
+          },
+          "blocker": null
+        },
+        {
+          "index": 4,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Use Cases",
+          "href": "#use-cases",
+          "section": "nav",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 735,
+            "y": 45,
+            "width": 73,
+            "height": 20
+          },
+          "blocker": null
+        },
+        {
+          "index": 5,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Trust",
+          "href": "#privacy",
+          "section": "nav",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 825,
+            "y": 45,
+            "width": 36,
+            "height": 20
+          },
+          "blocker": null
+        },
+        {
+          "index": 6,
+          "tag": "button",
+          "type": "button",
+          "name": null,
+          "text": "EN",
+          "href": null,
+          "section": "nav",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": "true",
+          "rect": {
+            "x": 1092,
+            "y": 43,
+            "width": 36,
+            "height": 25
+          },
+          "blocker": null
+        },
+        {
+          "index": 7,
+          "tag": "button",
+          "type": "button",
+          "name": null,
+          "text": "RU",
+          "href": null,
+          "section": "nav",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": "false",
+          "rect": {
+            "x": 1128,
+            "y": 43,
+            "width": 36,
+            "height": 25
+          },
+          "blocker": null
+        },
+        {
+          "index": 8,
+          "tag": "button",
+          "type": "button",
+          "name": null,
+          "text": "UZ",
+          "href": null,
+          "section": "nav",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": "false",
+          "rect": {
+            "x": 1164,
+            "y": 43,
+            "width": 36,
+            "height": 25
+          },
+          "blocker": null
+        },
+        {
+          "index": 9,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "nav",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 1211,
+            "y": 37,
+            "width": 132,
+            "height": 36
+          },
+          "blocker": null
+        },
+        {
+          "index": 10,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request a Reporting Process Audit",
+          "href": "/waitlist?lang=en",
+          "section": "unnamed-section",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 80,
+            "y": 684,
+            "width": 322,
+            "height": 48
+          },
+          "blocker": null
+        },
+        {
+          "index": 11,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "See How It Works",
+          "href": "#workflow",
+          "section": "unnamed-section",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 414,
+            "y": 684,
+            "width": 200,
+            "height": 48
+          },
+          "blocker": null
+        },
+        {
+          "index": 12,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 141,
+            "y": 5096,
+            "width": 106,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 13,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Apply as a Design Partner",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 413,
+            "y": 5127,
+            "width": 176,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 14,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 685,
+            "y": 5127,
+            "width": 106,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 15,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 957,
+            "y": 5096,
+            "width": 106,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 16,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Apply as a Design Partner",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 1229,
+            "y": 5127,
+            "width": 176,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 17,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Contact sales",
+          "href": "mailto:hello@ydeck.ai",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 1501,
+            "y": 5096,
+            "width": 104,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 18,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 1773,
+            "y": 5096,
+            "width": 106,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 19,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Apply as a Design Partner",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 2045,
+            "y": 5127,
+            "width": 176,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 20,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 2317,
+            "y": 5127,
+            "width": 106,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 21,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 2589,
+            "y": 5096,
+            "width": 106,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 22,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Apply as a Design Partner",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 2861,
+            "y": 5127,
+            "width": 176,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 23,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Contact sales",
+          "href": "mailto:hello@ydeck.ai",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 3133,
+            "y": 5096,
+            "width": 104,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 24,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request a Reporting Process Audit",
+          "href": "/waitlist?lang=en",
+          "section": "final-cta",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 465,
+            "y": 5647,
+            "width": 298,
+            "height": 46
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 25,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "View Pilot Use Cases",
+          "href": "#use-cases",
+          "section": "final-cta",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 776,
+            "y": 5647,
+            "width": 199,
+            "height": 46
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 26,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "YDeck home",
+          "href": "/?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 113,
+            "y": 6129,
+            "width": 412,
+            "height": 44
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 27,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 113,
+            "y": 6431,
+            "width": 164,
+            "height": 48
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 28,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Private Reporting Agent",
+          "href": "#product",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 623,
+            "y": 6165,
+            "width": 213,
+            "height": 20
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 29,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Skills Studio",
+          "href": "#workflow",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 623,
+            "y": 6197,
+            "width": 213,
+            "height": 20
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 30,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Reporting Skills",
+          "href": "#reporting-skills",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 623,
+            "y": 6229,
+            "width": 213,
+            "height": 20
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 31,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Trust Model",
+          "href": "#privacy",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 623,
+            "y": 6261,
+            "width": 213,
+            "height": 20
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 32,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Mining operations",
+          "href": "#use-cases",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 869,
+            "y": 6165,
+            "width": 213,
+            "height": 20
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 33,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Industrial reporting",
+          "href": "#use-cases",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 869,
+            "y": 6197,
+            "width": 213,
+            "height": 20
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 34,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Accounting firms",
+          "href": "#use-cases",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 869,
+            "y": 6229,
+            "width": 213,
+            "height": 20
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 35,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Enterprise finance",
+          "href": "#use-cases",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 869,
+            "y": 6261,
+            "width": 213,
+            "height": 20
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 36,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 1114,
+            "y": 6165,
+            "width": 213,
+            "height": 20
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 37,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Design partner pilot",
+          "href": "/waitlist?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 1114,
+            "y": 6197,
+            "width": 213,
+            "height": 20
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 38,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Security notes",
+          "href": "/security?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 1114,
+            "y": 6229,
+            "width": 213,
+            "height": 20
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 39,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Contact",
+          "href": "mailto:hello@ydeck.ai",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 1114,
+            "y": 6261,
+            "width": 213,
+            "height": 20
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 40,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Privacy policy",
+          "href": "/privacy?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 1120,
+            "y": 6624,
+            "width": 98,
+            "height": 20
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 41,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Terms",
+          "href": "/terms?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 1238,
+            "y": 6624,
+            "width": 43,
+            "height": 20
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 42,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Security",
+          "href": "/security?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 1301,
+            "y": 6624,
+            "width": 59,
+            "height": 20
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        }
+      ],
+      "visibleCount": 43,
+      "hiddenCount": 0,
+      "smallTargets": [
+        {
+          "index": 0,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "YDeck home",
+          "href": "/?lang=en",
+          "section": "nav",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 97,
+            "y": 37,
+            "width": 99,
+            "height": 36
+          },
+          "blocker": null
+        },
+        {
+          "index": 1,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Product",
+          "href": "#product",
+          "section": "nav",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 424,
+            "y": 45,
+            "width": 57,
+            "height": 20
+          },
+          "blocker": null
+        },
+        {
+          "index": 2,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "How It Works",
+          "href": "#workflow",
+          "section": "nav",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 497,
+            "y": 45,
+            "width": 94,
+            "height": 20
+          },
+          "blocker": null
+        },
+        {
+          "index": 3,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Reporting Skills",
+          "href": "#reporting-skills",
+          "section": "nav",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 607,
+            "y": 45,
+            "width": 113,
+            "height": 20
+          },
+          "blocker": null
+        },
+        {
+          "index": 4,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Use Cases",
+          "href": "#use-cases",
+          "section": "nav",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 735,
+            "y": 45,
+            "width": 73,
+            "height": 20
+          },
+          "blocker": null
+        },
+        {
+          "index": 5,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Trust",
+          "href": "#privacy",
+          "section": "nav",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 825,
+            "y": 45,
+            "width": 36,
+            "height": 20
+          },
+          "blocker": null
+        },
+        {
+          "index": 6,
+          "tag": "button",
+          "type": "button",
+          "name": null,
+          "text": "EN",
+          "href": null,
+          "section": "nav",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": "true",
+          "rect": {
+            "x": 1092,
+            "y": 43,
+            "width": 36,
+            "height": 25
+          },
+          "blocker": null
+        },
+        {
+          "index": 7,
+          "tag": "button",
+          "type": "button",
+          "name": null,
+          "text": "RU",
+          "href": null,
+          "section": "nav",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": "false",
+          "rect": {
+            "x": 1128,
+            "y": 43,
+            "width": 36,
+            "height": 25
+          },
+          "blocker": null
+        },
+        {
+          "index": 8,
+          "tag": "button",
+          "type": "button",
+          "name": null,
+          "text": "UZ",
+          "href": null,
+          "section": "nav",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": "false",
+          "rect": {
+            "x": 1164,
+            "y": 43,
+            "width": 36,
+            "height": 25
+          },
+          "blocker": null
+        },
+        {
+          "index": 9,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "nav",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 1211,
+            "y": 37,
+            "width": 132,
+            "height": 36
+          },
+          "blocker": null
+        },
+        {
+          "index": 12,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 141,
+            "y": 5096,
+            "width": 106,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 13,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Apply as a Design Partner",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 413,
+            "y": 5127,
+            "width": 176,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 14,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 685,
+            "y": 5127,
+            "width": 106,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 15,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 957,
+            "y": 5096,
+            "width": 106,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 16,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Apply as a Design Partner",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 1229,
+            "y": 5127,
+            "width": 176,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 17,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Contact sales",
+          "href": "mailto:hello@ydeck.ai",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 1501,
+            "y": 5096,
+            "width": 104,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 18,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 1773,
+            "y": 5096,
+            "width": 106,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 19,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Apply as a Design Partner",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 2045,
+            "y": 5127,
+            "width": 176,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 20,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 2317,
+            "y": 5127,
+            "width": 106,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 21,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 2589,
+            "y": 5096,
+            "width": 106,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 22,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Apply as a Design Partner",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 2861,
+            "y": 5127,
+            "width": 176,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 23,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Contact sales",
+          "href": "mailto:hello@ydeck.ai",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 3133,
+            "y": 5096,
+            "width": 104,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 28,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Private Reporting Agent",
+          "href": "#product",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 623,
+            "y": 6165,
+            "width": 213,
+            "height": 20
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 29,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Skills Studio",
+          "href": "#workflow",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 623,
+            "y": 6197,
+            "width": 213,
+            "height": 20
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 30,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Reporting Skills",
+          "href": "#reporting-skills",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 623,
+            "y": 6229,
+            "width": 213,
+            "height": 20
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 31,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Trust Model",
+          "href": "#privacy",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 623,
+            "y": 6261,
+            "width": 213,
+            "height": 20
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 32,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Mining operations",
+          "href": "#use-cases",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 869,
+            "y": 6165,
+            "width": 213,
+            "height": 20
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 33,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Industrial reporting",
+          "href": "#use-cases",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 869,
+            "y": 6197,
+            "width": 213,
+            "height": 20
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 34,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Accounting firms",
+          "href": "#use-cases",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 869,
+            "y": 6229,
+            "width": 213,
+            "height": 20
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 35,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Enterprise finance",
+          "href": "#use-cases",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 869,
+            "y": 6261,
+            "width": 213,
+            "height": 20
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 36,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 1114,
+            "y": 6165,
+            "width": 213,
+            "height": 20
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 37,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Design partner pilot",
+          "href": "/waitlist?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 1114,
+            "y": 6197,
+            "width": 213,
+            "height": 20
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 38,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Security notes",
+          "href": "/security?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 1114,
+            "y": 6229,
+            "width": 213,
+            "height": 20
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 39,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Contact",
+          "href": "mailto:hello@ydeck.ai",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 1114,
+            "y": 6261,
+            "width": 213,
+            "height": 20
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 40,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Privacy policy",
+          "href": "/privacy?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 1120,
+            "y": 6624,
+            "width": 98,
+            "height": 20
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 41,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Terms",
+          "href": "/terms?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 1238,
+            "y": 6624,
+            "width": 43,
+            "height": 20
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 42,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Security",
+          "href": "/security?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 1301,
+            "y": 6624,
+            "width": 59,
+            "height": 20
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        }
+      ],
+      "blocked": [
+        {
+          "index": 12,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 141,
+            "y": 5096,
+            "width": 106,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 13,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Apply as a Design Partner",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 413,
+            "y": 5127,
+            "width": 176,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 14,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 685,
+            "y": 5127,
+            "width": 106,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 15,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 957,
+            "y": 5096,
+            "width": 106,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 16,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Apply as a Design Partner",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 1229,
+            "y": 5127,
+            "width": 176,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 17,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Contact sales",
+          "href": "mailto:hello@ydeck.ai",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 1501,
+            "y": 5096,
+            "width": 104,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 18,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 1773,
+            "y": 5096,
+            "width": 106,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 19,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Apply as a Design Partner",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 2045,
+            "y": 5127,
+            "width": 176,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 20,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 2317,
+            "y": 5127,
+            "width": 106,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 21,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 2589,
+            "y": 5096,
+            "width": 106,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 22,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Apply as a Design Partner",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 2861,
+            "y": 5127,
+            "width": 176,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 23,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Contact sales",
+          "href": "mailto:hello@ydeck.ai",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 3133,
+            "y": 5096,
+            "width": 104,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 24,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request a Reporting Process Audit",
+          "href": "/waitlist?lang=en",
+          "section": "final-cta",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 465,
+            "y": 5647,
+            "width": 298,
+            "height": 46
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 25,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "View Pilot Use Cases",
+          "href": "#use-cases",
+          "section": "final-cta",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 776,
+            "y": 5647,
+            "width": 199,
+            "height": 46
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 26,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "YDeck home",
+          "href": "/?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 113,
+            "y": 6129,
+            "width": 412,
+            "height": 44
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 27,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 113,
+            "y": 6431,
+            "width": 164,
+            "height": 48
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 28,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Private Reporting Agent",
+          "href": "#product",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 623,
+            "y": 6165,
+            "width": 213,
+            "height": 20
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 29,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Skills Studio",
+          "href": "#workflow",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 623,
+            "y": 6197,
+            "width": 213,
+            "height": 20
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 30,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Reporting Skills",
+          "href": "#reporting-skills",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 623,
+            "y": 6229,
+            "width": 213,
+            "height": 20
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 31,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Trust Model",
+          "href": "#privacy",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 623,
+            "y": 6261,
+            "width": 213,
+            "height": 20
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 32,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Mining operations",
+          "href": "#use-cases",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 869,
+            "y": 6165,
+            "width": 213,
+            "height": 20
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 33,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Industrial reporting",
+          "href": "#use-cases",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 869,
+            "y": 6197,
+            "width": 213,
+            "height": 20
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 34,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Accounting firms",
+          "href": "#use-cases",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 869,
+            "y": 6229,
+            "width": 213,
+            "height": 20
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 35,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Enterprise finance",
+          "href": "#use-cases",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 869,
+            "y": 6261,
+            "width": 213,
+            "height": 20
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 36,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 1114,
+            "y": 6165,
+            "width": 213,
+            "height": 20
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 37,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Design partner pilot",
+          "href": "/waitlist?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 1114,
+            "y": 6197,
+            "width": 213,
+            "height": 20
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 38,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Security notes",
+          "href": "/security?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 1114,
+            "y": 6229,
+            "width": 213,
+            "height": 20
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 39,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Contact",
+          "href": "mailto:hello@ydeck.ai",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 1114,
+            "y": 6261,
+            "width": 213,
+            "height": 20
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 40,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Privacy policy",
+          "href": "/privacy?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 1120,
+            "y": 6624,
+            "width": 98,
+            "height": 20
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 41,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Terms",
+          "href": "/terms?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 1238,
+            "y": 6624,
+            "width": 43,
+            "height": 20
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 42,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Security",
+          "href": "/security?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 1301,
+            "y": 6624,
+            "width": 59,
+            "height": 20
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        }
+      ],
+      "horizontalOverflow": false,
+      "navLinkVisibility": [
+        {
+          "text": "YDeck",
+          "href": "/?lang=en",
+          "visible": true
+        },
+        {
+          "text": "Product",
+          "href": "#product",
+          "visible": true
+        },
+        {
+          "text": "How It Works",
+          "href": "#workflow",
+          "visible": true
+        },
+        {
+          "text": "Reporting Skills",
+          "href": "#reporting-skills",
+          "visible": true
+        },
+        {
+          "text": "Use Cases",
+          "href": "#use-cases",
+          "visible": true
+        },
+        {
+          "text": "Trust",
+          "href": "#privacy",
+          "visible": true
+        },
+        {
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "visible": true
+        }
+      ],
+      "trialClicks": [
+        {
+          "section": "nav",
+          "text": "YDeck home",
+          "href": "/?lang=en",
+          "tag": "a",
+          "clickable": false,
+          "error": "locator.click: Timeout 1000ms exceeded.",
+          "blocker": null
+        },
+        {
+          "section": "nav",
+          "text": "Product",
+          "href": "#product",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "nav",
+          "text": "How It Works",
+          "href": "#workflow",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "nav",
+          "text": "Reporting Skills",
+          "href": "#reporting-skills",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "nav",
+          "text": "Use Cases",
+          "href": "#use-cases",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "nav",
+          "text": "Trust",
+          "href": "#privacy",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "nav",
+          "text": "EN",
+          "href": null,
+          "tag": "button",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "nav",
+          "text": "RU",
+          "href": null,
+          "tag": "button",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "nav",
+          "text": "UZ",
+          "href": null,
+          "tag": "button",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "nav",
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "unnamed-section",
+          "text": "Request a Reporting Process Audit",
+          "href": "/waitlist?lang=en",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "unnamed-section",
+          "text": "See How It Works",
+          "href": "#workflow",
+          "tag": "a",
+          "clickable": false,
+          "error": "locator.click: Timeout 1000ms exceeded.",
+          "blocker": null
+        },
+        {
+          "section": "reporting-skills",
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "tag": "a",
+          "clickable": false,
+          "error": "locator.click: Timeout 1000ms exceeded.",
+          "blocker": null
+        },
+        {
+          "section": "reporting-skills",
+          "text": "Apply as a Design Partner",
+          "href": "/waitlist?lang=en",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "reporting-skills",
+          "text": "Contact sales",
+          "href": "mailto:hello@ydeck.ai",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "final-cta",
+          "text": "Request a Reporting Process Audit",
+          "href": "/waitlist?lang=en",
+          "tag": "a",
+          "clickable": false,
+          "error": "locator.click: Timeout 1000ms exceeded.",
+          "blocker": "div.absolute.inset-0.bg-[radial-gradient(circle_at_50%_35%,rgba(34,211,238,0.12),transparent_34%),radial-gradient(circle_at_60%_70%,rgba(255,255,255,0.05),transparent_34%)]"
+        },
+        {
+          "section": "final-cta",
+          "text": "View Pilot Use Cases",
+          "href": "#use-cases",
+          "tag": "a",
+          "clickable": false,
+          "error": "locator.click: Timeout 1000ms exceeded.",
+          "blocker": "nav.fixed.left-3.right-3.top-4.z-50"
+        },
+        {
+          "section": "footer",
+          "text": "YDeck home",
+          "href": "/?lang=en",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "footer",
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "footer",
+          "text": "Private Reporting Agent",
+          "href": "#product",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "footer",
+          "text": "Skills Studio",
+          "href": "#workflow",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "footer",
+          "text": "Reporting Skills",
+          "href": "#reporting-skills",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "footer",
+          "text": "Trust Model",
+          "href": "#privacy",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "footer",
+          "text": "Mining operations",
+          "href": "#use-cases",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "footer",
+          "text": "Industrial reporting",
+          "href": "#use-cases",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "footer",
+          "text": "Accounting firms",
+          "href": "#use-cases",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "footer",
+          "text": "Enterprise finance",
+          "href": "#use-cases",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "footer",
+          "text": "Design partner pilot",
+          "href": "/waitlist?lang=en",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "footer",
+          "text": "Security notes",
+          "href": "/security?lang=en",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "footer",
+          "text": "Contact",
+          "href": "mailto:hello@ydeck.ai",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "footer",
+          "text": "Privacy policy",
+          "href": "/privacy?lang=en",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "footer",
+          "text": "Terms",
+          "href": "/terms?lang=en",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "footer",
+          "text": "Security",
+          "href": "/security?lang=en",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        }
+      ],
+      "hashClicks": [
+        {
+          "href": "#product",
+          "actualHash": "#product",
+          "targetExists": true,
+          "targetTop": 0,
+          "clickError": "locator.click: Timeout 1500ms exceeded."
+        },
+        {
+          "href": "#workflow",
+          "actualHash": "#workflow",
+          "targetExists": true,
+          "targetTop": 112,
+          "clickError": null
+        },
+        {
+          "href": "#reporting-skills",
+          "actualHash": "#reporting-skills",
+          "targetExists": true,
+          "targetTop": 0,
+          "clickError": null
+        },
+        {
+          "href": "#use-cases",
+          "actualHash": "#use-cases",
+          "targetExists": true,
+          "targetTop": 112,
+          "clickError": null
+        },
+        {
+          "href": "#privacy",
+          "actualHash": "#privacy",
+          "targetExists": true,
+          "targetTop": 0,
+          "clickError": null
+        }
+      ]
+    },
+    "tablet": {
+      "viewport": {
+        "name": "tablet",
+        "width": 768,
+        "height": 1024
+      },
+      "console": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": [],
+      "status": 200,
+      "interactions": [
+        {
+          "index": 0,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "YDeck home",
+          "href": "/?lang=en",
+          "section": "nav",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 33,
+            "y": 37,
+            "width": 92,
+            "height": 36
+          },
+          "blocker": null
+        },
+        {
+          "index": 1,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Product",
+          "href": "#product",
+          "section": "nav",
+          "visible": false,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "blocker": null
+        },
+        {
+          "index": 2,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "How It Works",
+          "href": "#workflow",
+          "section": "nav",
+          "visible": false,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "blocker": null
+        },
+        {
+          "index": 3,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Reporting Skills",
+          "href": "#reporting-skills",
+          "section": "nav",
+          "visible": false,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "blocker": null
+        },
+        {
+          "index": 4,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Use Cases",
+          "href": "#use-cases",
+          "section": "nav",
+          "visible": false,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "blocker": null
+        },
+        {
+          "index": 5,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Trust",
+          "href": "#privacy",
+          "section": "nav",
+          "visible": false,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "blocker": null
+        },
+        {
+          "index": 6,
+          "tag": "button",
+          "type": "button",
+          "name": null,
+          "text": "EN",
+          "href": null,
+          "section": "nav",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": "true",
+          "rect": {
+            "x": 484,
+            "y": 43,
+            "width": 36,
+            "height": 25
+          },
+          "blocker": null
+        },
+        {
+          "index": 7,
+          "tag": "button",
+          "type": "button",
+          "name": null,
+          "text": "RU",
+          "href": null,
+          "section": "nav",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": "false",
+          "rect": {
+            "x": 520,
+            "y": 43,
+            "width": 36,
+            "height": 25
+          },
+          "blocker": null
+        },
+        {
+          "index": 8,
+          "tag": "button",
+          "type": "button",
+          "name": null,
+          "text": "UZ",
+          "href": null,
+          "section": "nav",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": "false",
+          "rect": {
+            "x": 556,
+            "y": 43,
+            "width": 36,
+            "height": 25
+          },
+          "blocker": null
+        },
+        {
+          "index": 9,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "nav",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 603,
+            "y": 37,
+            "width": 132,
+            "height": 36
+          },
+          "blocker": null
+        },
+        {
+          "index": 10,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request a Reporting Process Audit",
+          "href": "/waitlist?lang=en",
+          "section": "unnamed-section",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 20,
+            "y": 352,
+            "width": 728,
+            "height": 44
+          },
+          "blocker": null
+        },
+        {
+          "index": 11,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "See How It Works",
+          "href": "#workflow",
+          "section": "unnamed-section",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 20,
+            "y": 408,
+            "width": 728,
+            "height": 44
+          },
+          "blocker": null
+        },
+        {
+          "index": 12,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 141,
+            "y": 6180,
+            "width": 106,
+            "height": 16
+          },
+          "blocker": "div.absolute.inset-0.bg-[linear-gradient(180deg,rgba(3,5,10,0)_42%,rgba(3,5,10,0.62)_100%)]"
+        },
+        {
+          "index": 13,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Apply as a Design Partner",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 413,
+            "y": 6211,
+            "width": 176,
+            "height": 16
+          },
+          "blocker": "div.absolute.inset-0.bg-[linear-gradient(180deg,rgba(3,5,10,0)_42%,rgba(3,5,10,0.62)_100%)]"
+        },
+        {
+          "index": 14,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 685,
+            "y": 6211,
+            "width": 106,
+            "height": 16
+          },
+          "blocker": "div.blueprint-grid.absolute.inset-0"
+        },
+        {
+          "index": 15,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 957,
+            "y": 6180,
+            "width": 106,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 16,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Apply as a Design Partner",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 1229,
+            "y": 6211,
+            "width": 176,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 17,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Contact sales",
+          "href": "mailto:hello@ydeck.ai",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 1501,
+            "y": 6180,
+            "width": 104,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 18,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 1773,
+            "y": 6180,
+            "width": 106,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 19,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Apply as a Design Partner",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 2045,
+            "y": 6211,
+            "width": 176,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 20,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 2317,
+            "y": 6211,
+            "width": 106,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 21,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 2589,
+            "y": 6180,
+            "width": 106,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 22,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Apply as a Design Partner",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 2861,
+            "y": 6211,
+            "width": 176,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 23,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Contact sales",
+          "href": "mailto:hello@ydeck.ai",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 3133,
+            "y": 6180,
+            "width": 104,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 24,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request a Reporting Process Audit",
+          "href": "/waitlist?lang=en",
+          "section": "final-cta",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 129,
+            "y": 6791,
+            "width": 298,
+            "height": 46
+          },
+          "blocker": "div.absolute.inset-0.bg-[linear-gradient(180deg,rgba(3,5,10,0)_42%,rgba(3,5,10,0.62)_100%)]"
+        },
+        {
+          "index": 25,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "View Pilot Use Cases",
+          "href": "#use-cases",
+          "section": "final-cta",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 440,
+            "y": 6791,
+            "width": 199,
+            "height": 46
+          },
+          "blocker": "div.absolute.inset-0.bg-[linear-gradient(180deg,rgba(3,5,10,0)_42%,rgba(3,5,10,0.62)_100%)]"
+        },
+        {
+          "index": 26,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "YDeck home",
+          "href": "/?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 65,
+            "y": 7502,
+            "width": 638,
+            "height": 44
+          },
+          "blocker": "div.absolute.inset-0.bg-[linear-gradient(180deg,rgba(3,5,10,0)_42%,rgba(3,5,10,0.62)_100%)]"
+        },
+        {
+          "index": 27,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 65,
+            "y": 7788,
+            "width": 164,
+            "height": 48
+          },
+          "blocker": "div.absolute.inset-0.bg-[linear-gradient(180deg,rgba(3,5,10,0)_42%,rgba(3,5,10,0.62)_100%)]"
+        },
+        {
+          "index": 28,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Private Reporting Agent",
+          "href": "#product",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 65,
+            "y": 7970,
+            "width": 191,
+            "height": 20
+          },
+          "blocker": "div.absolute.inset-0.bg-[linear-gradient(180deg,rgba(3,5,10,0)_42%,rgba(3,5,10,0.62)_100%)]"
+        },
+        {
+          "index": 29,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Skills Studio",
+          "href": "#workflow",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 65,
+            "y": 8002,
+            "width": 191,
+            "height": 20
+          },
+          "blocker": "div.absolute.inset-0.bg-[linear-gradient(180deg,rgba(3,5,10,0)_42%,rgba(3,5,10,0.62)_100%)]"
+        },
+        {
+          "index": 30,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Reporting Skills",
+          "href": "#reporting-skills",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 65,
+            "y": 8034,
+            "width": 191,
+            "height": 20
+          },
+          "blocker": "div.absolute.inset-0.bg-[linear-gradient(180deg,rgba(3,5,10,0)_42%,rgba(3,5,10,0.62)_100%)]"
+        },
+        {
+          "index": 31,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Trust Model",
+          "href": "#privacy",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 65,
+            "y": 8066,
+            "width": 191,
+            "height": 20
+          },
+          "blocker": "div.absolute.inset-0.bg-[linear-gradient(180deg,rgba(3,5,10,0)_42%,rgba(3,5,10,0.62)_100%)]"
+        },
+        {
+          "index": 32,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Mining operations",
+          "href": "#use-cases",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 288,
+            "y": 7970,
+            "width": 191,
+            "height": 20
+          },
+          "blocker": "div.absolute.inset-0.bg-[linear-gradient(180deg,rgba(3,5,10,0)_42%,rgba(3,5,10,0.62)_100%)]"
+        },
+        {
+          "index": 33,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Industrial reporting",
+          "href": "#use-cases",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 288,
+            "y": 8002,
+            "width": 191,
+            "height": 20
+          },
+          "blocker": "div.absolute.inset-0.bg-[linear-gradient(180deg,rgba(3,5,10,0)_42%,rgba(3,5,10,0.62)_100%)]"
+        },
+        {
+          "index": 34,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Accounting firms",
+          "href": "#use-cases",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 288,
+            "y": 8034,
+            "width": 191,
+            "height": 20
+          },
+          "blocker": "div.absolute.inset-0.bg-[linear-gradient(180deg,rgba(3,5,10,0)_42%,rgba(3,5,10,0.62)_100%)]"
+        },
+        {
+          "index": 35,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Enterprise finance",
+          "href": "#use-cases",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 288,
+            "y": 8066,
+            "width": 191,
+            "height": 20
+          },
+          "blocker": "div.absolute.inset-0.bg-[linear-gradient(180deg,rgba(3,5,10,0)_42%,rgba(3,5,10,0.62)_100%)]"
+        },
+        {
+          "index": 36,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 512,
+            "y": 7970,
+            "width": 191,
+            "height": 20
+          },
+          "blocker": "div.absolute.inset-0.bg-[linear-gradient(180deg,rgba(3,5,10,0)_42%,rgba(3,5,10,0.62)_100%)]"
+        },
+        {
+          "index": 37,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Design partner pilot",
+          "href": "/waitlist?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 512,
+            "y": 8002,
+            "width": 191,
+            "height": 20
+          },
+          "blocker": "div.absolute.inset-0.bg-[linear-gradient(180deg,rgba(3,5,10,0)_42%,rgba(3,5,10,0.62)_100%)]"
+        },
+        {
+          "index": 38,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Security notes",
+          "href": "/security?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 512,
+            "y": 8034,
+            "width": 191,
+            "height": 20
+          },
+          "blocker": "div.absolute.inset-0.bg-[linear-gradient(180deg,rgba(3,5,10,0)_42%,rgba(3,5,10,0.62)_100%)]"
+        },
+        {
+          "index": 39,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Contact",
+          "href": "mailto:hello@ydeck.ai",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 512,
+            "y": 8066,
+            "width": 191,
+            "height": 20
+          },
+          "blocker": "div.absolute.inset-0.bg-[linear-gradient(180deg,rgba(3,5,10,0)_42%,rgba(3,5,10,0.62)_100%)]"
+        },
+        {
+          "index": 40,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Privacy policy",
+          "href": "/privacy?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 496,
+            "y": 8521,
+            "width": 98,
+            "height": 20
+          },
+          "blocker": "div.absolute.inset-0.bg-[linear-gradient(180deg,rgba(3,5,10,0)_42%,rgba(3,5,10,0.62)_100%)]"
+        },
+        {
+          "index": 41,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Terms",
+          "href": "/terms?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 614,
+            "y": 8521,
+            "width": 43,
+            "height": 20
+          },
+          "blocker": "div.absolute.inset-0.bg-[linear-gradient(180deg,rgba(3,5,10,0)_42%,rgba(3,5,10,0.62)_100%)]"
+        },
+        {
+          "index": 42,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Security",
+          "href": "/security?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 677,
+            "y": 8521,
+            "width": 59,
+            "height": 20
+          },
+          "blocker": "div.absolute.inset-0.bg-[linear-gradient(180deg,rgba(3,5,10,0)_42%,rgba(3,5,10,0.62)_100%)]"
+        }
+      ],
+      "visibleCount": 38,
+      "hiddenCount": 5,
+      "smallTargets": [
+        {
+          "index": 0,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "YDeck home",
+          "href": "/?lang=en",
+          "section": "nav",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 33,
+            "y": 37,
+            "width": 92,
+            "height": 36
+          },
+          "blocker": null
+        },
+        {
+          "index": 6,
+          "tag": "button",
+          "type": "button",
+          "name": null,
+          "text": "EN",
+          "href": null,
+          "section": "nav",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": "true",
+          "rect": {
+            "x": 484,
+            "y": 43,
+            "width": 36,
+            "height": 25
+          },
+          "blocker": null
+        },
+        {
+          "index": 7,
+          "tag": "button",
+          "type": "button",
+          "name": null,
+          "text": "RU",
+          "href": null,
+          "section": "nav",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": "false",
+          "rect": {
+            "x": 520,
+            "y": 43,
+            "width": 36,
+            "height": 25
+          },
+          "blocker": null
+        },
+        {
+          "index": 8,
+          "tag": "button",
+          "type": "button",
+          "name": null,
+          "text": "UZ",
+          "href": null,
+          "section": "nav",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": "false",
+          "rect": {
+            "x": 556,
+            "y": 43,
+            "width": 36,
+            "height": 25
+          },
+          "blocker": null
+        },
+        {
+          "index": 9,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "nav",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 603,
+            "y": 37,
+            "width": 132,
+            "height": 36
+          },
+          "blocker": null
+        },
+        {
+          "index": 12,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 141,
+            "y": 6180,
+            "width": 106,
+            "height": 16
+          },
+          "blocker": "div.absolute.inset-0.bg-[linear-gradient(180deg,rgba(3,5,10,0)_42%,rgba(3,5,10,0.62)_100%)]"
+        },
+        {
+          "index": 13,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Apply as a Design Partner",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 413,
+            "y": 6211,
+            "width": 176,
+            "height": 16
+          },
+          "blocker": "div.absolute.inset-0.bg-[linear-gradient(180deg,rgba(3,5,10,0)_42%,rgba(3,5,10,0.62)_100%)]"
+        },
+        {
+          "index": 14,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 685,
+            "y": 6211,
+            "width": 106,
+            "height": 16
+          },
+          "blocker": "div.blueprint-grid.absolute.inset-0"
+        },
+        {
+          "index": 15,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 957,
+            "y": 6180,
+            "width": 106,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 16,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Apply as a Design Partner",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 1229,
+            "y": 6211,
+            "width": 176,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 17,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Contact sales",
+          "href": "mailto:hello@ydeck.ai",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 1501,
+            "y": 6180,
+            "width": 104,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 18,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 1773,
+            "y": 6180,
+            "width": 106,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 19,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Apply as a Design Partner",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 2045,
+            "y": 6211,
+            "width": 176,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 20,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 2317,
+            "y": 6211,
+            "width": 106,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 21,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 2589,
+            "y": 6180,
+            "width": 106,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 22,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Apply as a Design Partner",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 2861,
+            "y": 6211,
+            "width": 176,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 23,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Contact sales",
+          "href": "mailto:hello@ydeck.ai",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 3133,
+            "y": 6180,
+            "width": 104,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 28,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Private Reporting Agent",
+          "href": "#product",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 65,
+            "y": 7970,
+            "width": 191,
+            "height": 20
+          },
+          "blocker": "div.absolute.inset-0.bg-[linear-gradient(180deg,rgba(3,5,10,0)_42%,rgba(3,5,10,0.62)_100%)]"
+        },
+        {
+          "index": 29,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Skills Studio",
+          "href": "#workflow",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 65,
+            "y": 8002,
+            "width": 191,
+            "height": 20
+          },
+          "blocker": "div.absolute.inset-0.bg-[linear-gradient(180deg,rgba(3,5,10,0)_42%,rgba(3,5,10,0.62)_100%)]"
+        },
+        {
+          "index": 30,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Reporting Skills",
+          "href": "#reporting-skills",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 65,
+            "y": 8034,
+            "width": 191,
+            "height": 20
+          },
+          "blocker": "div.absolute.inset-0.bg-[linear-gradient(180deg,rgba(3,5,10,0)_42%,rgba(3,5,10,0.62)_100%)]"
+        },
+        {
+          "index": 31,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Trust Model",
+          "href": "#privacy",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 65,
+            "y": 8066,
+            "width": 191,
+            "height": 20
+          },
+          "blocker": "div.absolute.inset-0.bg-[linear-gradient(180deg,rgba(3,5,10,0)_42%,rgba(3,5,10,0.62)_100%)]"
+        },
+        {
+          "index": 32,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Mining operations",
+          "href": "#use-cases",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 288,
+            "y": 7970,
+            "width": 191,
+            "height": 20
+          },
+          "blocker": "div.absolute.inset-0.bg-[linear-gradient(180deg,rgba(3,5,10,0)_42%,rgba(3,5,10,0.62)_100%)]"
+        },
+        {
+          "index": 33,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Industrial reporting",
+          "href": "#use-cases",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 288,
+            "y": 8002,
+            "width": 191,
+            "height": 20
+          },
+          "blocker": "div.absolute.inset-0.bg-[linear-gradient(180deg,rgba(3,5,10,0)_42%,rgba(3,5,10,0.62)_100%)]"
+        },
+        {
+          "index": 34,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Accounting firms",
+          "href": "#use-cases",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 288,
+            "y": 8034,
+            "width": 191,
+            "height": 20
+          },
+          "blocker": "div.absolute.inset-0.bg-[linear-gradient(180deg,rgba(3,5,10,0)_42%,rgba(3,5,10,0.62)_100%)]"
+        },
+        {
+          "index": 35,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Enterprise finance",
+          "href": "#use-cases",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 288,
+            "y": 8066,
+            "width": 191,
+            "height": 20
+          },
+          "blocker": "div.absolute.inset-0.bg-[linear-gradient(180deg,rgba(3,5,10,0)_42%,rgba(3,5,10,0.62)_100%)]"
+        },
+        {
+          "index": 36,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 512,
+            "y": 7970,
+            "width": 191,
+            "height": 20
+          },
+          "blocker": "div.absolute.inset-0.bg-[linear-gradient(180deg,rgba(3,5,10,0)_42%,rgba(3,5,10,0.62)_100%)]"
+        },
+        {
+          "index": 37,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Design partner pilot",
+          "href": "/waitlist?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 512,
+            "y": 8002,
+            "width": 191,
+            "height": 20
+          },
+          "blocker": "div.absolute.inset-0.bg-[linear-gradient(180deg,rgba(3,5,10,0)_42%,rgba(3,5,10,0.62)_100%)]"
+        },
+        {
+          "index": 38,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Security notes",
+          "href": "/security?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 512,
+            "y": 8034,
+            "width": 191,
+            "height": 20
+          },
+          "blocker": "div.absolute.inset-0.bg-[linear-gradient(180deg,rgba(3,5,10,0)_42%,rgba(3,5,10,0.62)_100%)]"
+        },
+        {
+          "index": 39,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Contact",
+          "href": "mailto:hello@ydeck.ai",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 512,
+            "y": 8066,
+            "width": 191,
+            "height": 20
+          },
+          "blocker": "div.absolute.inset-0.bg-[linear-gradient(180deg,rgba(3,5,10,0)_42%,rgba(3,5,10,0.62)_100%)]"
+        },
+        {
+          "index": 40,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Privacy policy",
+          "href": "/privacy?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 496,
+            "y": 8521,
+            "width": 98,
+            "height": 20
+          },
+          "blocker": "div.absolute.inset-0.bg-[linear-gradient(180deg,rgba(3,5,10,0)_42%,rgba(3,5,10,0.62)_100%)]"
+        },
+        {
+          "index": 41,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Terms",
+          "href": "/terms?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 614,
+            "y": 8521,
+            "width": 43,
+            "height": 20
+          },
+          "blocker": "div.absolute.inset-0.bg-[linear-gradient(180deg,rgba(3,5,10,0)_42%,rgba(3,5,10,0.62)_100%)]"
+        },
+        {
+          "index": 42,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Security",
+          "href": "/security?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 677,
+            "y": 8521,
+            "width": 59,
+            "height": 20
+          },
+          "blocker": "div.absolute.inset-0.bg-[linear-gradient(180deg,rgba(3,5,10,0)_42%,rgba(3,5,10,0.62)_100%)]"
+        }
+      ],
+      "blocked": [
+        {
+          "index": 12,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 141,
+            "y": 6180,
+            "width": 106,
+            "height": 16
+          },
+          "blocker": "div.absolute.inset-0.bg-[linear-gradient(180deg,rgba(3,5,10,0)_42%,rgba(3,5,10,0.62)_100%)]"
+        },
+        {
+          "index": 13,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Apply as a Design Partner",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 413,
+            "y": 6211,
+            "width": 176,
+            "height": 16
+          },
+          "blocker": "div.absolute.inset-0.bg-[linear-gradient(180deg,rgba(3,5,10,0)_42%,rgba(3,5,10,0.62)_100%)]"
+        },
+        {
+          "index": 14,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 685,
+            "y": 6211,
+            "width": 106,
+            "height": 16
+          },
+          "blocker": "div.blueprint-grid.absolute.inset-0"
+        },
+        {
+          "index": 15,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 957,
+            "y": 6180,
+            "width": 106,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 16,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Apply as a Design Partner",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 1229,
+            "y": 6211,
+            "width": 176,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 17,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Contact sales",
+          "href": "mailto:hello@ydeck.ai",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 1501,
+            "y": 6180,
+            "width": 104,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 18,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 1773,
+            "y": 6180,
+            "width": 106,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 19,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Apply as a Design Partner",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 2045,
+            "y": 6211,
+            "width": 176,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 20,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 2317,
+            "y": 6211,
+            "width": 106,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 21,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 2589,
+            "y": 6180,
+            "width": 106,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 22,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Apply as a Design Partner",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 2861,
+            "y": 6211,
+            "width": 176,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 23,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Contact sales",
+          "href": "mailto:hello@ydeck.ai",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 3133,
+            "y": 6180,
+            "width": 104,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 24,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request a Reporting Process Audit",
+          "href": "/waitlist?lang=en",
+          "section": "final-cta",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 129,
+            "y": 6791,
+            "width": 298,
+            "height": 46
+          },
+          "blocker": "div.absolute.inset-0.bg-[linear-gradient(180deg,rgba(3,5,10,0)_42%,rgba(3,5,10,0.62)_100%)]"
+        },
+        {
+          "index": 25,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "View Pilot Use Cases",
+          "href": "#use-cases",
+          "section": "final-cta",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 440,
+            "y": 6791,
+            "width": 199,
+            "height": 46
+          },
+          "blocker": "div.absolute.inset-0.bg-[linear-gradient(180deg,rgba(3,5,10,0)_42%,rgba(3,5,10,0.62)_100%)]"
+        },
+        {
+          "index": 26,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "YDeck home",
+          "href": "/?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 65,
+            "y": 7502,
+            "width": 638,
+            "height": 44
+          },
+          "blocker": "div.absolute.inset-0.bg-[linear-gradient(180deg,rgba(3,5,10,0)_42%,rgba(3,5,10,0.62)_100%)]"
+        },
+        {
+          "index": 27,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 65,
+            "y": 7788,
+            "width": 164,
+            "height": 48
+          },
+          "blocker": "div.absolute.inset-0.bg-[linear-gradient(180deg,rgba(3,5,10,0)_42%,rgba(3,5,10,0.62)_100%)]"
+        },
+        {
+          "index": 28,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Private Reporting Agent",
+          "href": "#product",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 65,
+            "y": 7970,
+            "width": 191,
+            "height": 20
+          },
+          "blocker": "div.absolute.inset-0.bg-[linear-gradient(180deg,rgba(3,5,10,0)_42%,rgba(3,5,10,0.62)_100%)]"
+        },
+        {
+          "index": 29,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Skills Studio",
+          "href": "#workflow",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 65,
+            "y": 8002,
+            "width": 191,
+            "height": 20
+          },
+          "blocker": "div.absolute.inset-0.bg-[linear-gradient(180deg,rgba(3,5,10,0)_42%,rgba(3,5,10,0.62)_100%)]"
+        },
+        {
+          "index": 30,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Reporting Skills",
+          "href": "#reporting-skills",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 65,
+            "y": 8034,
+            "width": 191,
+            "height": 20
+          },
+          "blocker": "div.absolute.inset-0.bg-[linear-gradient(180deg,rgba(3,5,10,0)_42%,rgba(3,5,10,0.62)_100%)]"
+        },
+        {
+          "index": 31,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Trust Model",
+          "href": "#privacy",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 65,
+            "y": 8066,
+            "width": 191,
+            "height": 20
+          },
+          "blocker": "div.absolute.inset-0.bg-[linear-gradient(180deg,rgba(3,5,10,0)_42%,rgba(3,5,10,0.62)_100%)]"
+        },
+        {
+          "index": 32,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Mining operations",
+          "href": "#use-cases",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 288,
+            "y": 7970,
+            "width": 191,
+            "height": 20
+          },
+          "blocker": "div.absolute.inset-0.bg-[linear-gradient(180deg,rgba(3,5,10,0)_42%,rgba(3,5,10,0.62)_100%)]"
+        },
+        {
+          "index": 33,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Industrial reporting",
+          "href": "#use-cases",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 288,
+            "y": 8002,
+            "width": 191,
+            "height": 20
+          },
+          "blocker": "div.absolute.inset-0.bg-[linear-gradient(180deg,rgba(3,5,10,0)_42%,rgba(3,5,10,0.62)_100%)]"
+        },
+        {
+          "index": 34,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Accounting firms",
+          "href": "#use-cases",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 288,
+            "y": 8034,
+            "width": 191,
+            "height": 20
+          },
+          "blocker": "div.absolute.inset-0.bg-[linear-gradient(180deg,rgba(3,5,10,0)_42%,rgba(3,5,10,0.62)_100%)]"
+        },
+        {
+          "index": 35,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Enterprise finance",
+          "href": "#use-cases",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 288,
+            "y": 8066,
+            "width": 191,
+            "height": 20
+          },
+          "blocker": "div.absolute.inset-0.bg-[linear-gradient(180deg,rgba(3,5,10,0)_42%,rgba(3,5,10,0.62)_100%)]"
+        },
+        {
+          "index": 36,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 512,
+            "y": 7970,
+            "width": 191,
+            "height": 20
+          },
+          "blocker": "div.absolute.inset-0.bg-[linear-gradient(180deg,rgba(3,5,10,0)_42%,rgba(3,5,10,0.62)_100%)]"
+        },
+        {
+          "index": 37,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Design partner pilot",
+          "href": "/waitlist?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 512,
+            "y": 8002,
+            "width": 191,
+            "height": 20
+          },
+          "blocker": "div.absolute.inset-0.bg-[linear-gradient(180deg,rgba(3,5,10,0)_42%,rgba(3,5,10,0.62)_100%)]"
+        },
+        {
+          "index": 38,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Security notes",
+          "href": "/security?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 512,
+            "y": 8034,
+            "width": 191,
+            "height": 20
+          },
+          "blocker": "div.absolute.inset-0.bg-[linear-gradient(180deg,rgba(3,5,10,0)_42%,rgba(3,5,10,0.62)_100%)]"
+        },
+        {
+          "index": 39,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Contact",
+          "href": "mailto:hello@ydeck.ai",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 512,
+            "y": 8066,
+            "width": 191,
+            "height": 20
+          },
+          "blocker": "div.absolute.inset-0.bg-[linear-gradient(180deg,rgba(3,5,10,0)_42%,rgba(3,5,10,0.62)_100%)]"
+        },
+        {
+          "index": 40,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Privacy policy",
+          "href": "/privacy?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 496,
+            "y": 8521,
+            "width": 98,
+            "height": 20
+          },
+          "blocker": "div.absolute.inset-0.bg-[linear-gradient(180deg,rgba(3,5,10,0)_42%,rgba(3,5,10,0.62)_100%)]"
+        },
+        {
+          "index": 41,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Terms",
+          "href": "/terms?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 614,
+            "y": 8521,
+            "width": 43,
+            "height": 20
+          },
+          "blocker": "div.absolute.inset-0.bg-[linear-gradient(180deg,rgba(3,5,10,0)_42%,rgba(3,5,10,0.62)_100%)]"
+        },
+        {
+          "index": 42,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Security",
+          "href": "/security?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 677,
+            "y": 8521,
+            "width": 59,
+            "height": 20
+          },
+          "blocker": "div.absolute.inset-0.bg-[linear-gradient(180deg,rgba(3,5,10,0)_42%,rgba(3,5,10,0.62)_100%)]"
+        }
+      ],
+      "horizontalOverflow": false,
+      "navLinkVisibility": [
+        {
+          "text": "YDeck",
+          "href": "/?lang=en",
+          "visible": true
+        },
+        {
+          "text": "Product",
+          "href": "#product",
+          "visible": false
+        },
+        {
+          "text": "How It Works",
+          "href": "#workflow",
+          "visible": false
+        },
+        {
+          "text": "Reporting Skills",
+          "href": "#reporting-skills",
+          "visible": false
+        },
+        {
+          "text": "Use Cases",
+          "href": "#use-cases",
+          "visible": false
+        },
+        {
+          "text": "Trust",
+          "href": "#privacy",
+          "visible": false
+        },
+        {
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "visible": true
+        }
+      ],
+      "trialClicks": [
+        {
+          "section": "nav",
+          "text": "YDeck home",
+          "href": "/?lang=en",
+          "tag": "a",
+          "clickable": false,
+          "error": "locator.click: Timeout 1000ms exceeded.",
+          "blocker": null
+        },
+        {
+          "section": "nav",
+          "text": "EN",
+          "href": null,
+          "tag": "button",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "nav",
+          "text": "RU",
+          "href": null,
+          "tag": "button",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "nav",
+          "text": "UZ",
+          "href": null,
+          "tag": "button",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "nav",
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "unnamed-section",
+          "text": "Request a Reporting Process Audit",
+          "href": "/waitlist?lang=en",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "unnamed-section",
+          "text": "See How It Works",
+          "href": "#workflow",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "reporting-skills",
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "reporting-skills",
+          "text": "Apply as a Design Partner",
+          "href": "/waitlist?lang=en",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "reporting-skills",
+          "text": "Contact sales",
+          "href": "mailto:hello@ydeck.ai",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "final-cta",
+          "text": "Request a Reporting Process Audit",
+          "href": "/waitlist?lang=en",
+          "tag": "a",
+          "clickable": false,
+          "error": "locator.click: Timeout 1000ms exceeded.",
+          "blocker": "nav.fixed.left-3.right-3.top-4.z-50"
+        },
+        {
+          "section": "final-cta",
+          "text": "View Pilot Use Cases",
+          "href": "#use-cases",
+          "tag": "a",
+          "clickable": false,
+          "error": "locator.click: Timeout 1000ms exceeded.",
+          "blocker": "div.absolute.inset-0.bg-[radial-gradient(circle_at_50%_35%,rgba(34,211,238,0.12),transparent_34%),radial-gradient(circle_at_60%_70%,rgba(255,255,255,0.05),transparent_34%)]"
+        },
+        {
+          "section": "footer",
+          "text": "YDeck home",
+          "href": "/?lang=en",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "footer",
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "tag": "a",
+          "clickable": false,
+          "error": "locator.click: Timeout 1000ms exceeded.",
+          "blocker": null
+        },
+        {
+          "section": "footer",
+          "text": "Private Reporting Agent",
+          "href": "#product",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "footer",
+          "text": "Skills Studio",
+          "href": "#workflow",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "footer",
+          "text": "Reporting Skills",
+          "href": "#reporting-skills",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "footer",
+          "text": "Trust Model",
+          "href": "#privacy",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "footer",
+          "text": "Mining operations",
+          "href": "#use-cases",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "footer",
+          "text": "Industrial reporting",
+          "href": "#use-cases",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "footer",
+          "text": "Accounting firms",
+          "href": "#use-cases",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "footer",
+          "text": "Enterprise finance",
+          "href": "#use-cases",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "footer",
+          "text": "Design partner pilot",
+          "href": "/waitlist?lang=en",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "footer",
+          "text": "Security notes",
+          "href": "/security?lang=en",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "footer",
+          "text": "Contact",
+          "href": "mailto:hello@ydeck.ai",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "footer",
+          "text": "Privacy policy",
+          "href": "/privacy?lang=en",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "footer",
+          "text": "Terms",
+          "href": "/terms?lang=en",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "footer",
+          "text": "Security",
+          "href": "/security?lang=en",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        }
+      ],
+      "hashClicks": [
+        {
+          "href": "#workflow",
+          "actualHash": "#workflow",
+          "targetExists": true,
+          "targetTop": 112,
+          "clickError": null
+        },
+        {
+          "href": "#use-cases",
+          "actualHash": "",
+          "targetExists": true,
+          "targetTop": -2435,
+          "clickError": "locator.click: Timeout 1500ms exceeded."
+        },
+        {
+          "href": "#product",
+          "actualHash": "#product",
+          "targetExists": true,
+          "targetTop": 0,
+          "clickError": null
+        },
+        {
+          "href": "#reporting-skills",
+          "actualHash": "#reporting-skills",
+          "targetExists": true,
+          "targetTop": 0,
+          "clickError": null
+        },
+        {
+          "href": "#privacy",
+          "actualHash": "#privacy",
+          "targetExists": true,
+          "targetTop": 0,
+          "clickError": null
+        }
+      ]
+    },
+    "mobile": {
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "console": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": [],
+      "status": 200,
+      "interactions": [
+        {
+          "index": 0,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "YDeck home",
+          "href": "/?lang=en",
+          "section": "nav",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 21,
+            "y": 37,
+            "width": 78,
+            "height": 32
+          },
+          "blocker": null
+        },
+        {
+          "index": 1,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Product",
+          "href": "#product",
+          "section": "nav",
+          "visible": false,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "blocker": null
+        },
+        {
+          "index": 2,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "How It Works",
+          "href": "#workflow",
+          "section": "nav",
+          "visible": false,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "blocker": null
+        },
+        {
+          "index": 3,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Reporting Skills",
+          "href": "#reporting-skills",
+          "section": "nav",
+          "visible": false,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "blocker": null
+        },
+        {
+          "index": 4,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Use Cases",
+          "href": "#use-cases",
+          "section": "nav",
+          "visible": false,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "blocker": null
+        },
+        {
+          "index": 5,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Trust",
+          "href": "#privacy",
+          "section": "nav",
+          "visible": false,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "blocker": null
+        },
+        {
+          "index": 6,
+          "tag": "button",
+          "type": "button",
+          "name": null,
+          "text": "EN",
+          "href": null,
+          "section": "nav",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": "true",
+          "rect": {
+            "x": 158,
+            "y": 42,
+            "width": 31,
+            "height": 23
+          },
+          "blocker": null
+        },
+        {
+          "index": 7,
+          "tag": "button",
+          "type": "button",
+          "name": null,
+          "text": "RU",
+          "href": null,
+          "section": "nav",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": "false",
+          "rect": {
+            "x": 189,
+            "y": 42,
+            "width": 31,
+            "height": 23
+          },
+          "blocker": null
+        },
+        {
+          "index": 8,
+          "tag": "button",
+          "type": "button",
+          "name": null,
+          "text": "UZ",
+          "href": null,
+          "section": "nav",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": "false",
+          "rect": {
+            "x": 220,
+            "y": 42,
+            "width": 30,
+            "height": 23
+          },
+          "blocker": null
+        },
+        {
+          "index": 9,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "nav",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 259,
+            "y": 37,
+            "width": 110,
+            "height": 32
+          },
+          "blocker": null
+        },
+        {
+          "index": 10,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request a Reporting Process Audit",
+          "href": "/waitlist?lang=en",
+          "section": "unnamed-section",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 20,
+            "y": 486,
+            "width": 350,
+            "height": 44
+          },
+          "blocker": null
+        },
+        {
+          "index": 11,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "See How It Works",
+          "href": "#workflow",
+          "section": "unnamed-section",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 20,
+            "y": 542,
+            "width": 350,
+            "height": 44
+          },
+          "blocker": null
+        },
+        {
+          "index": 12,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 97,
+            "y": 7029,
+            "width": 106,
+            "height": 16
+          },
+          "blocker": "div.relative.z-10.rounded-[1.25rem]"
+        },
+        {
+          "index": 13,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Apply as a Design Partner",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 385,
+            "y": 7060,
+            "width": 176,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 14,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 673,
+            "y": 7060,
+            "width": 106,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 15,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 961,
+            "y": 7029,
+            "width": 106,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 16,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Apply as a Design Partner",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 1249,
+            "y": 7060,
+            "width": 176,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 17,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Contact sales",
+          "href": "mailto:hello@ydeck.ai",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 1537,
+            "y": 7029,
+            "width": 104,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 18,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 1825,
+            "y": 7029,
+            "width": 106,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 19,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Apply as a Design Partner",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 2113,
+            "y": 7060,
+            "width": 176,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 20,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 2401,
+            "y": 7060,
+            "width": 106,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 21,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 2689,
+            "y": 7029,
+            "width": 106,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 22,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Apply as a Design Partner",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 2977,
+            "y": 7060,
+            "width": 176,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 23,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Contact sales",
+          "href": "mailto:hello@ydeck.ai",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 3265,
+            "y": 7029,
+            "width": 104,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 24,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request a Reporting Process Audit",
+          "href": "/waitlist?lang=en",
+          "section": "final-cta",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 20,
+            "y": 7620,
+            "width": 350,
+            "height": 44
+          },
+          "blocker": "div.relative.z-10.rounded-[1.25rem]"
+        },
+        {
+          "index": 25,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "View Pilot Use Cases",
+          "href": "#use-cases",
+          "section": "final-cta",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 20,
+            "y": 7676,
+            "width": 350,
+            "height": 46
+          },
+          "blocker": "div.relative.z-10.rounded-[1.25rem]"
+        },
+        {
+          "index": 26,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "YDeck home",
+          "href": "/?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 45,
+            "y": 8324,
+            "width": 300,
+            "height": 44
+          },
+          "blocker": "div.relative.z-10.rounded-[1.25rem]"
+        },
+        {
+          "index": 27,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 45,
+            "y": 8626,
+            "width": 164,
+            "height": 48
+          },
+          "blocker": "div.relative.z-10.rounded-[1.25rem]"
+        },
+        {
+          "index": 28,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Private Reporting Agent",
+          "href": "#product",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 45,
+            "y": 8792,
+            "width": 300,
+            "height": 20
+          },
+          "blocker": "div.relative.z-10.rounded-[1.25rem]"
+        },
+        {
+          "index": 29,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Skills Studio",
+          "href": "#workflow",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 45,
+            "y": 8824,
+            "width": 300,
+            "height": 20
+          },
+          "blocker": "div.relative.z-10.rounded-[1.25rem]"
+        },
+        {
+          "index": 30,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Reporting Skills",
+          "href": "#reporting-skills",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 45,
+            "y": 8856,
+            "width": 300,
+            "height": 20
+          },
+          "blocker": "div.relative.z-10.rounded-[1.25rem]"
+        },
+        {
+          "index": 31,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Trust Model",
+          "href": "#privacy",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 45,
+            "y": 8888,
+            "width": 300,
+            "height": 20
+          },
+          "blocker": "div.relative.z-10.rounded-[1.25rem]"
+        },
+        {
+          "index": 32,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Mining operations",
+          "href": "#use-cases",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 45,
+            "y": 8976,
+            "width": 300,
+            "height": 20
+          },
+          "blocker": "div.relative.z-10.rounded-[1.25rem]"
+        },
+        {
+          "index": 33,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Industrial reporting",
+          "href": "#use-cases",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 45,
+            "y": 9008,
+            "width": 300,
+            "height": 20
+          },
+          "blocker": "div.relative.z-10.rounded-[1.25rem]"
+        },
+        {
+          "index": 34,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Accounting firms",
+          "href": "#use-cases",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 45,
+            "y": 9040,
+            "width": 300,
+            "height": 20
+          },
+          "blocker": "div.relative.z-10.rounded-[1.25rem]"
+        },
+        {
+          "index": 35,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Enterprise finance",
+          "href": "#use-cases",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 45,
+            "y": 9072,
+            "width": 300,
+            "height": 20
+          },
+          "blocker": "div.relative.z-10.rounded-[1.25rem]"
+        },
+        {
+          "index": 36,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 45,
+            "y": 9160,
+            "width": 300,
+            "height": 20
+          },
+          "blocker": "div.relative.z-10.rounded-[1.25rem]"
+        },
+        {
+          "index": 37,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Design partner pilot",
+          "href": "/waitlist?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 45,
+            "y": 9192,
+            "width": 300,
+            "height": 20
+          },
+          "blocker": "div.relative.z-10.rounded-[1.25rem]"
+        },
+        {
+          "index": 38,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Security notes",
+          "href": "/security?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 45,
+            "y": 9224,
+            "width": 300,
+            "height": 20
+          },
+          "blocker": "div.relative.z-10.rounded-[1.25rem]"
+        },
+        {
+          "index": 39,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Contact",
+          "href": "mailto:hello@ydeck.ai",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 45,
+            "y": 9256,
+            "width": 300,
+            "height": 20
+          },
+          "blocker": "div.relative.z-10.rounded-[1.25rem]"
+        },
+        {
+          "index": 40,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Privacy policy",
+          "href": "/privacy?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 20,
+            "y": 9695,
+            "width": 98,
+            "height": 20
+          },
+          "blocker": "div.relative.z-10.rounded-[1.25rem]"
+        },
+        {
+          "index": 41,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Terms",
+          "href": "/terms?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 138,
+            "y": 9695,
+            "width": 43,
+            "height": 20
+          },
+          "blocker": "div.relative.z-10.rounded-[1.25rem]"
+        },
+        {
+          "index": 42,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Security",
+          "href": "/security?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 201,
+            "y": 9695,
+            "width": 59,
+            "height": 20
+          },
+          "blocker": "div.relative.z-10.rounded-[1.25rem]"
+        }
+      ],
+      "visibleCount": 38,
+      "hiddenCount": 5,
+      "smallTargets": [
+        {
+          "index": 0,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "YDeck home",
+          "href": "/?lang=en",
+          "section": "nav",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 21,
+            "y": 37,
+            "width": 78,
+            "height": 32
+          },
+          "blocker": null
+        },
+        {
+          "index": 6,
+          "tag": "button",
+          "type": "button",
+          "name": null,
+          "text": "EN",
+          "href": null,
+          "section": "nav",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": "true",
+          "rect": {
+            "x": 158,
+            "y": 42,
+            "width": 31,
+            "height": 23
+          },
+          "blocker": null
+        },
+        {
+          "index": 7,
+          "tag": "button",
+          "type": "button",
+          "name": null,
+          "text": "RU",
+          "href": null,
+          "section": "nav",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": "false",
+          "rect": {
+            "x": 189,
+            "y": 42,
+            "width": 31,
+            "height": 23
+          },
+          "blocker": null
+        },
+        {
+          "index": 8,
+          "tag": "button",
+          "type": "button",
+          "name": null,
+          "text": "UZ",
+          "href": null,
+          "section": "nav",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": "false",
+          "rect": {
+            "x": 220,
+            "y": 42,
+            "width": 30,
+            "height": 23
+          },
+          "blocker": null
+        },
+        {
+          "index": 9,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "nav",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 259,
+            "y": 37,
+            "width": 110,
+            "height": 32
+          },
+          "blocker": null
+        },
+        {
+          "index": 12,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 97,
+            "y": 7029,
+            "width": 106,
+            "height": 16
+          },
+          "blocker": "div.relative.z-10.rounded-[1.25rem]"
+        },
+        {
+          "index": 13,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Apply as a Design Partner",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 385,
+            "y": 7060,
+            "width": 176,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 14,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 673,
+            "y": 7060,
+            "width": 106,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 15,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 961,
+            "y": 7029,
+            "width": 106,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 16,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Apply as a Design Partner",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 1249,
+            "y": 7060,
+            "width": 176,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 17,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Contact sales",
+          "href": "mailto:hello@ydeck.ai",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 1537,
+            "y": 7029,
+            "width": 104,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 18,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 1825,
+            "y": 7029,
+            "width": 106,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 19,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Apply as a Design Partner",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 2113,
+            "y": 7060,
+            "width": 176,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 20,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 2401,
+            "y": 7060,
+            "width": 106,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 21,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 2689,
+            "y": 7029,
+            "width": 106,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 22,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Apply as a Design Partner",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 2977,
+            "y": 7060,
+            "width": 176,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 23,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Contact sales",
+          "href": "mailto:hello@ydeck.ai",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 3265,
+            "y": 7029,
+            "width": 104,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 28,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Private Reporting Agent",
+          "href": "#product",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 45,
+            "y": 8792,
+            "width": 300,
+            "height": 20
+          },
+          "blocker": "div.relative.z-10.rounded-[1.25rem]"
+        },
+        {
+          "index": 29,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Skills Studio",
+          "href": "#workflow",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 45,
+            "y": 8824,
+            "width": 300,
+            "height": 20
+          },
+          "blocker": "div.relative.z-10.rounded-[1.25rem]"
+        },
+        {
+          "index": 30,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Reporting Skills",
+          "href": "#reporting-skills",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 45,
+            "y": 8856,
+            "width": 300,
+            "height": 20
+          },
+          "blocker": "div.relative.z-10.rounded-[1.25rem]"
+        },
+        {
+          "index": 31,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Trust Model",
+          "href": "#privacy",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 45,
+            "y": 8888,
+            "width": 300,
+            "height": 20
+          },
+          "blocker": "div.relative.z-10.rounded-[1.25rem]"
+        },
+        {
+          "index": 32,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Mining operations",
+          "href": "#use-cases",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 45,
+            "y": 8976,
+            "width": 300,
+            "height": 20
+          },
+          "blocker": "div.relative.z-10.rounded-[1.25rem]"
+        },
+        {
+          "index": 33,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Industrial reporting",
+          "href": "#use-cases",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 45,
+            "y": 9008,
+            "width": 300,
+            "height": 20
+          },
+          "blocker": "div.relative.z-10.rounded-[1.25rem]"
+        },
+        {
+          "index": 34,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Accounting firms",
+          "href": "#use-cases",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 45,
+            "y": 9040,
+            "width": 300,
+            "height": 20
+          },
+          "blocker": "div.relative.z-10.rounded-[1.25rem]"
+        },
+        {
+          "index": 35,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Enterprise finance",
+          "href": "#use-cases",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 45,
+            "y": 9072,
+            "width": 300,
+            "height": 20
+          },
+          "blocker": "div.relative.z-10.rounded-[1.25rem]"
+        },
+        {
+          "index": 36,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 45,
+            "y": 9160,
+            "width": 300,
+            "height": 20
+          },
+          "blocker": "div.relative.z-10.rounded-[1.25rem]"
+        },
+        {
+          "index": 37,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Design partner pilot",
+          "href": "/waitlist?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 45,
+            "y": 9192,
+            "width": 300,
+            "height": 20
+          },
+          "blocker": "div.relative.z-10.rounded-[1.25rem]"
+        },
+        {
+          "index": 38,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Security notes",
+          "href": "/security?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 45,
+            "y": 9224,
+            "width": 300,
+            "height": 20
+          },
+          "blocker": "div.relative.z-10.rounded-[1.25rem]"
+        },
+        {
+          "index": 39,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Contact",
+          "href": "mailto:hello@ydeck.ai",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 45,
+            "y": 9256,
+            "width": 300,
+            "height": 20
+          },
+          "blocker": "div.relative.z-10.rounded-[1.25rem]"
+        },
+        {
+          "index": 40,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Privacy policy",
+          "href": "/privacy?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 20,
+            "y": 9695,
+            "width": 98,
+            "height": 20
+          },
+          "blocker": "div.relative.z-10.rounded-[1.25rem]"
+        },
+        {
+          "index": 41,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Terms",
+          "href": "/terms?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 138,
+            "y": 9695,
+            "width": 43,
+            "height": 20
+          },
+          "blocker": "div.relative.z-10.rounded-[1.25rem]"
+        },
+        {
+          "index": 42,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Security",
+          "href": "/security?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 201,
+            "y": 9695,
+            "width": 59,
+            "height": 20
+          },
+          "blocker": "div.relative.z-10.rounded-[1.25rem]"
+        }
+      ],
+      "blocked": [
+        {
+          "index": 12,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 97,
+            "y": 7029,
+            "width": 106,
+            "height": 16
+          },
+          "blocker": "div.relative.z-10.rounded-[1.25rem]"
+        },
+        {
+          "index": 13,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Apply as a Design Partner",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 385,
+            "y": 7060,
+            "width": 176,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 14,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 673,
+            "y": 7060,
+            "width": 106,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 15,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 961,
+            "y": 7029,
+            "width": 106,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 16,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Apply as a Design Partner",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 1249,
+            "y": 7060,
+            "width": 176,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 17,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Contact sales",
+          "href": "mailto:hello@ydeck.ai",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 1537,
+            "y": 7029,
+            "width": 104,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 18,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 1825,
+            "y": 7029,
+            "width": 106,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 19,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Apply as a Design Partner",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 2113,
+            "y": 7060,
+            "width": 176,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 20,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 2401,
+            "y": 7060,
+            "width": 106,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 21,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 2689,
+            "y": 7029,
+            "width": 106,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 22,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Apply as a Design Partner",
+          "href": "/waitlist?lang=en",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 2977,
+            "y": 7060,
+            "width": 176,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 23,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Contact sales",
+          "href": "mailto:hello@ydeck.ai",
+          "section": "reporting-skills",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 3265,
+            "y": 7029,
+            "width": 104,
+            "height": 16
+          },
+          "blocker": "section.relative.px-5.pb-14"
+        },
+        {
+          "index": 24,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request a Reporting Process Audit",
+          "href": "/waitlist?lang=en",
+          "section": "final-cta",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 20,
+            "y": 7620,
+            "width": 350,
+            "height": 44
+          },
+          "blocker": "div.relative.z-10.rounded-[1.25rem]"
+        },
+        {
+          "index": 25,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "View Pilot Use Cases",
+          "href": "#use-cases",
+          "section": "final-cta",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 20,
+            "y": 7676,
+            "width": 350,
+            "height": 46
+          },
+          "blocker": "div.relative.z-10.rounded-[1.25rem]"
+        },
+        {
+          "index": 26,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "YDeck home",
+          "href": "/?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 45,
+            "y": 8324,
+            "width": 300,
+            "height": 44
+          },
+          "blocker": "div.relative.z-10.rounded-[1.25rem]"
+        },
+        {
+          "index": 27,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 45,
+            "y": 8626,
+            "width": 164,
+            "height": 48
+          },
+          "blocker": "div.relative.z-10.rounded-[1.25rem]"
+        },
+        {
+          "index": 28,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Private Reporting Agent",
+          "href": "#product",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 45,
+            "y": 8792,
+            "width": 300,
+            "height": 20
+          },
+          "blocker": "div.relative.z-10.rounded-[1.25rem]"
+        },
+        {
+          "index": 29,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Skills Studio",
+          "href": "#workflow",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 45,
+            "y": 8824,
+            "width": 300,
+            "height": 20
+          },
+          "blocker": "div.relative.z-10.rounded-[1.25rem]"
+        },
+        {
+          "index": 30,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Reporting Skills",
+          "href": "#reporting-skills",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 45,
+            "y": 8856,
+            "width": 300,
+            "height": 20
+          },
+          "blocker": "div.relative.z-10.rounded-[1.25rem]"
+        },
+        {
+          "index": 31,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Trust Model",
+          "href": "#privacy",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 45,
+            "y": 8888,
+            "width": 300,
+            "height": 20
+          },
+          "blocker": "div.relative.z-10.rounded-[1.25rem]"
+        },
+        {
+          "index": 32,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Mining operations",
+          "href": "#use-cases",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 45,
+            "y": 8976,
+            "width": 300,
+            "height": 20
+          },
+          "blocker": "div.relative.z-10.rounded-[1.25rem]"
+        },
+        {
+          "index": 33,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Industrial reporting",
+          "href": "#use-cases",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 45,
+            "y": 9008,
+            "width": 300,
+            "height": 20
+          },
+          "blocker": "div.relative.z-10.rounded-[1.25rem]"
+        },
+        {
+          "index": 34,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Accounting firms",
+          "href": "#use-cases",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 45,
+            "y": 9040,
+            "width": 300,
+            "height": 20
+          },
+          "blocker": "div.relative.z-10.rounded-[1.25rem]"
+        },
+        {
+          "index": 35,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Enterprise finance",
+          "href": "#use-cases",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 45,
+            "y": 9072,
+            "width": 300,
+            "height": 20
+          },
+          "blocker": "div.relative.z-10.rounded-[1.25rem]"
+        },
+        {
+          "index": 36,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 45,
+            "y": 9160,
+            "width": 300,
+            "height": 20
+          },
+          "blocker": "div.relative.z-10.rounded-[1.25rem]"
+        },
+        {
+          "index": 37,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Design partner pilot",
+          "href": "/waitlist?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 45,
+            "y": 9192,
+            "width": 300,
+            "height": 20
+          },
+          "blocker": "div.relative.z-10.rounded-[1.25rem]"
+        },
+        {
+          "index": 38,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Security notes",
+          "href": "/security?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 45,
+            "y": 9224,
+            "width": 300,
+            "height": 20
+          },
+          "blocker": "div.relative.z-10.rounded-[1.25rem]"
+        },
+        {
+          "index": 39,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Contact",
+          "href": "mailto:hello@ydeck.ai",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 45,
+            "y": 9256,
+            "width": 300,
+            "height": 20
+          },
+          "blocker": "div.relative.z-10.rounded-[1.25rem]"
+        },
+        {
+          "index": 40,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Privacy policy",
+          "href": "/privacy?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 20,
+            "y": 9695,
+            "width": 98,
+            "height": 20
+          },
+          "blocker": "div.relative.z-10.rounded-[1.25rem]"
+        },
+        {
+          "index": 41,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Terms",
+          "href": "/terms?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 138,
+            "y": 9695,
+            "width": 43,
+            "height": 20
+          },
+          "blocker": "div.relative.z-10.rounded-[1.25rem]"
+        },
+        {
+          "index": 42,
+          "tag": "a",
+          "type": null,
+          "name": null,
+          "text": "Security",
+          "href": "/security?lang=en",
+          "section": "footer",
+          "visible": true,
+          "disabled": false,
+          "ariaPressed": null,
+          "rect": {
+            "x": 201,
+            "y": 9695,
+            "width": 59,
+            "height": 20
+          },
+          "blocker": "div.relative.z-10.rounded-[1.25rem]"
+        }
+      ],
+      "horizontalOverflow": false,
+      "navLinkVisibility": [
+        {
+          "text": "YDeck",
+          "href": "/?lang=en",
+          "visible": true
+        },
+        {
+          "text": "Product",
+          "href": "#product",
+          "visible": false
+        },
+        {
+          "text": "How It Works",
+          "href": "#workflow",
+          "visible": false
+        },
+        {
+          "text": "Reporting Skills",
+          "href": "#reporting-skills",
+          "visible": false
+        },
+        {
+          "text": "Use Cases",
+          "href": "#use-cases",
+          "visible": false
+        },
+        {
+          "text": "Trust",
+          "href": "#privacy",
+          "visible": false
+        },
+        {
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "visible": true
+        }
+      ],
+      "trialClicks": [
+        {
+          "section": "nav",
+          "text": "YDeck home",
+          "href": "/?lang=en",
+          "tag": "a",
+          "clickable": false,
+          "error": "locator.click: Timeout 1000ms exceeded.",
+          "blocker": null
+        },
+        {
+          "section": "nav",
+          "text": "EN",
+          "href": null,
+          "tag": "button",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "nav",
+          "text": "RU",
+          "href": null,
+          "tag": "button",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "nav",
+          "text": "UZ",
+          "href": null,
+          "tag": "button",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "nav",
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "unnamed-section",
+          "text": "Request a Reporting Process Audit",
+          "href": "/waitlist?lang=en",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "unnamed-section",
+          "text": "See How It Works",
+          "href": "#workflow",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "reporting-skills",
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "reporting-skills",
+          "text": "Apply as a Design Partner",
+          "href": "/waitlist?lang=en",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "reporting-skills",
+          "text": "Contact sales",
+          "href": "mailto:hello@ydeck.ai",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "final-cta",
+          "text": "Request a Reporting Process Audit",
+          "href": "/waitlist?lang=en",
+          "tag": "a",
+          "clickable": false,
+          "error": "locator.click: Timeout 1000ms exceeded.",
+          "blocker": "nav.fixed.left-3.right-3.top-4.z-50"
+        },
+        {
+          "section": "final-cta",
+          "text": "View Pilot Use Cases",
+          "href": "#use-cases",
+          "tag": "a",
+          "clickable": false,
+          "error": "locator.click: Timeout 1000ms exceeded.",
+          "blocker": "div.absolute.inset-0.bg-[radial-gradient(circle_at_50%_35%,rgba(34,211,238,0.12),transparent_34%),radial-gradient(circle_at_60%_70%,rgba(255,255,255,0.05),transparent_34%)]"
+        },
+        {
+          "section": "footer",
+          "text": "YDeck home",
+          "href": "/?lang=en",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "footer",
+          "text": "Request audit",
+          "href": "/waitlist?lang=en",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "footer",
+          "text": "Private Reporting Agent",
+          "href": "#product",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "footer",
+          "text": "Skills Studio",
+          "href": "#workflow",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "footer",
+          "text": "Reporting Skills",
+          "href": "#reporting-skills",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "footer",
+          "text": "Trust Model",
+          "href": "#privacy",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "footer",
+          "text": "Mining operations",
+          "href": "#use-cases",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "footer",
+          "text": "Industrial reporting",
+          "href": "#use-cases",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "footer",
+          "text": "Accounting firms",
+          "href": "#use-cases",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "footer",
+          "text": "Enterprise finance",
+          "href": "#use-cases",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "footer",
+          "text": "Design partner pilot",
+          "href": "/waitlist?lang=en",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "footer",
+          "text": "Security notes",
+          "href": "/security?lang=en",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "footer",
+          "text": "Contact",
+          "href": "mailto:hello@ydeck.ai",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "footer",
+          "text": "Privacy policy",
+          "href": "/privacy?lang=en",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "footer",
+          "text": "Terms",
+          "href": "/terms?lang=en",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        },
+        {
+          "section": "footer",
+          "text": "Security",
+          "href": "/security?lang=en",
+          "tag": "a",
+          "clickable": true,
+          "error": null,
+          "blocker": null
+        }
+      ],
+      "hashClicks": [
+        {
+          "href": "#workflow",
+          "actualHash": "#workflow",
+          "targetExists": true,
+          "targetTop": 112,
+          "clickError": null
+        },
+        {
+          "href": "#use-cases",
+          "actualHash": "",
+          "targetExists": true,
+          "targetTop": -3081,
+          "clickError": "locator.click: Timeout 1500ms exceeded."
+        },
+        {
+          "href": "#product",
+          "actualHash": "#product",
+          "targetExists": true,
+          "targetTop": 0,
+          "clickError": null
+        },
+        {
+          "href": "#reporting-skills",
+          "actualHash": "#reporting-skills",
+          "targetExists": true,
+          "targetTop": 0,
+          "clickError": null
+        },
+        {
+          "href": "#privacy",
+          "actualHash": "#privacy",
+          "targetExists": true,
+          "targetTop": 0,
+          "clickError": null
+        }
+      ]
+    }
+  },
+  "routes": {
+    "https://www.ydeck.app/?lang=en": {
+      "kind": "http",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://www.ydeck.app/?lang=en"
+    },
+    "https://www.ydeck.app/waitlist?lang=en": {
+      "kind": "http",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://www.ydeck.app/waitlist?lang=en"
+    },
+    "mailto:hello@ydeck.ai": {
+      "kind": "mailto",
+      "syntacticallyValid": true
+    },
+    "https://www.ydeck.app/security?lang=en": {
+      "kind": "http",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://www.ydeck.app/security?lang=en"
+    },
+    "https://www.ydeck.app/privacy?lang=en": {
+      "kind": "http",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://www.ydeck.app/privacy?lang=en"
+    },
+    "https://www.ydeck.app/terms?lang=en": {
+      "kind": "http",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://www.ydeck.app/terms?lang=en"
+    }
+  },
+  "language": {},
+  "waitlist": {}
+}

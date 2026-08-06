@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useEffect, useMemo, useState } from "react";
+import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
 import { ArrowLeft, ArrowRight, CheckCircle2, Send } from "lucide-react";
 import { defaultLocale, translations, type Locale } from "@/lib/i18n";
 import { getSupabaseBrowserClient } from "@/lib/supabase";
@@ -17,6 +17,7 @@ export function WaitlistForm({ compact = false, locale = defaultLocale }: Waitli
   const copy = translations[locale].waitlistForm;
   const [mode, setMode] = useState<string>(copy.modes[2]);
   const [mobileStep, setMobileStep] = useState(1);
+  const formRef = useRef<HTMLFormElement>(null);
 
   useEffect(() => {
     setMode(copy.modes[2]);
@@ -27,8 +28,40 @@ export function WaitlistForm({ compact = false, locale = defaultLocale }: Waitli
     [copy.submit, copy.submitted, copy.submitting, submitted, loading],
   );
 
+  function validateRequiredFields(form: HTMLFormElement) {
+    const invalidControl = Array.from(
+      form.querySelectorAll<HTMLInputElement>("input[required]"),
+    ).find((control) => !control.checkValidity());
+
+    if (!invalidControl) {
+      return true;
+    }
+
+    setMobileStep(1);
+    window.requestAnimationFrame(() => {
+      invalidControl.focus();
+      invalidControl.reportValidity();
+    });
+    return false;
+  }
+
+  function handleMobileContinue() {
+    const form = formRef.current;
+    if (!form || !validateRequiredFields(form)) {
+      return;
+    }
+    setMobileStep(2);
+  }
+
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    if (!validateRequiredFields(event.currentTarget)) {
+      return;
+    }
+    if (mobileStep === 1 && window.matchMedia("(max-width: 760px)").matches) {
+      setMobileStep(2);
+      return;
+    }
     setSubmitError(null);
     setLoading(true);
 
@@ -65,7 +98,12 @@ export function WaitlistForm({ compact = false, locale = defaultLocale }: Waitli
   }
 
   return (
-    <form className={compact ? "waitlist-form compact" : "waitlist-form"} onSubmit={handleSubmit}>
+    <form
+      className={compact ? "waitlist-form compact" : "waitlist-form"}
+      noValidate
+      onSubmit={handleSubmit}
+      ref={formRef}
+    >
       <div className="mobile-stepper" aria-label={copy.progress}>
         <span className={mobileStep === 1 ? "active" : ""}>1</span>
         <span className={mobileStep === 2 ? "active" : ""}>2</span>
@@ -96,7 +134,7 @@ export function WaitlistForm({ compact = false, locale = defaultLocale }: Waitli
           <input name="contact" type="text" placeholder={copy.placeholders.contact} />
         </label>
 
-        <button className="secondary-action mobile-next" type="button" onClick={() => setMobileStep(2)}>
+        <button className="secondary-action mobile-next" type="button" onClick={handleMobileContinue}>
           {copy.continue} <ArrowRight size={18} />
         </button>
       </div>

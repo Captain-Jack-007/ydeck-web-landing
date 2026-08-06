@@ -844,6 +844,19 @@ p {
   }
 }
 
+@media (max-width: 400px) {
+  .mobile-form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .mobile-form-actions .secondary-action,
+  .mobile-form-actions .form-action {
+    flex: 0 0 auto;
+    min-height: 50px;
+    width: 100%;
+  }
+}
+
 .ydeck-page :is(h1, h2, h3, h4, p) {
   color: inherit;
   font-size: inherit;

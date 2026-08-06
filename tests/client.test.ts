@@ -176,6 +176,37 @@ test("normalizeApiError keeps backend code and request id", () => {
   assert.equal(error.requestId, "req_123");
 });
 
+test("credential failures use privacy-safe sign-in guidance", () => {
+  const error = normalizeApiError(
+    new Response(null, { status: 401 }),
+    {
+      error: {
+        code: "AUTH_INVALID_CREDENTIALS",
+        message: "Authentication failed",
+      },
+    },
+  );
+
+  assert.equal(getHumanErrorMessage(error), "The email or password is not correct.");
+});
+
+test("Desktop daemon responses explain the local proxy collision", () => {
+  const error = normalizeApiError(
+    new Response(null, { status: 401 }),
+    {
+      error: {
+        code: "DESKTOP_AUTHENTICATION_REQUIRED",
+        message: "Desktop Cloud authentication is required",
+      },
+    },
+  );
+
+  const message = getHumanErrorMessage(error);
+  assert.match(message, /Desktop daemon/u);
+  assert.match(message, /YDECK_API_PROXY_TARGET=http:\/\/localhost:2026/u);
+  assert.equal(message.includes("Desktop Cloud authentication is required"), false);
+});
+
 test("getHumanErrorMessage explains local auth email delivery failures", () => {
   const error = normalizeApiError(
     new Response(null, { status: 503, headers: { "x-request-id": "req_mail" } }),

@@ -14,6 +14,7 @@ import {
   TrendingUp,
   UploadCloud,
 } from 'lucide-react';
+import { contactHref } from '../constants';
 
 export const localeContent = {
   en: {
@@ -29,6 +30,8 @@ export const localeContent = {
       join: 'Request audit',
       homeLabel: 'YDeck home',
       languageLabel: 'Language',
+      openMenuLabel: 'Open navigation',
+      closeMenuLabel: 'Close navigation',
     },
     hero: {
       eyebrow: 'Private AI for recurring enterprise reporting',
@@ -242,7 +245,7 @@ export const localeContent = {
             ['Request audit', '#final-cta'],
             ['Design partner pilot', '#final-cta'],
             ['Security notes', '/security'],
-            ['Contact', 'mailto:hello@ydeck.ai'],
+            ['Contact', contactHref],
           ],
         },
       ],
@@ -266,6 +269,8 @@ export const localeContent = {
       join: 'Пилот',
       homeLabel: 'YDeck главная',
       languageLabel: 'Язык',
+      openMenuLabel: 'Открыть навигацию',
+      closeMenuLabel: 'Закрыть навигацию',
     },
     hero: {
       eyebrow: 'Приватный ИИ для регулярной корпоративной отчетности',
@@ -479,7 +484,7 @@ export const localeContent = {
             ['Запросить аудит', '#final-cta'],
             ['Пилот для дизайн-партнеров', '#final-cta'],
             ['Безопасность', '/security'],
-            ['Контакт', 'mailto:hello@ydeck.ai'],
+            ['Контакт', contactHref],
           ],
         },
       ],
@@ -503,6 +508,8 @@ export const localeContent = {
       join: 'Hisobot auditi',
       homeLabel: 'YDeck bosh sahifa',
       languageLabel: 'Til',
+      openMenuLabel: 'Navigatsiyani ochish',
+      closeMenuLabel: 'Navigatsiyani yopish',
     },
     hero: {
       eyebrow: 'Takroriy korporativ hisobotlar uchun maxfiy AI',
@@ -716,7 +723,7 @@ export const localeContent = {
             ['Hisobot auditini so‘rash', '#final-cta'],
             ['Design-partner piloti', '#final-cta'],
             ['Xavfsizlik qaydlari', '/security'],
-            ['Aloqa', 'mailto:hello@ydeck.ai'],
+            ['Aloqa', contactHref],
           ],
         },
       ],

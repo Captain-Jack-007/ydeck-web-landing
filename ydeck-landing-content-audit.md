@@ -311,7 +311,7 @@ Implication: the future landing page must not present Skills Studio, agent catal
 | Manage devices | Account summary | Goes to settings/devices. | Existing user only. | Keep in app only. |
 | Billing and plan | Account summary/topbar | Goes to billing/settings. | Existing customer only. | Keep in app only. |
 | Request Early Access | Waitlist form | Inserts into Supabase waitlist. | Useful mechanic, wrong fields. | Change later to pilot/design-partner application with reporting workflow fields. |
-| Contact | Footer/legal | `mailto:hello@ydeck.ai`. | Useful fallback. | Keep, possibly label Contact Sales or Pilot Inquiry. |
+| Contact | Footer/legal | `mailto:hello@ydeck.app`. | Useful fallback. | Keep, possibly label Contact Sales or Pilot Inquiry. |
 
 The future enterprise conversion path should prioritize:
 

@@ -1,0 +1,164 @@
+{
+  "landing": {
+    "desktop": {
+      "consoleErrors": [],
+      "pageErrors": [],
+      "navDimensions": {
+        "clientWidth": 1278,
+        "scrollWidth": 1278,
+        "viewportWidth": 1440
+      },
+      "menuButtonVisible": false,
+      "desktopLinksVisible": true,
+      "finalPrimaryClickable": true,
+      "finalSecondaryHitTarget": true,
+      "finalSecondaryHash": "#use-cases",
+      "localeAfterClick": {
+        "lang": "ru",
+        "search": "?lang=ru"
+      },
+      "localeAfterReload": {
+        "lang": "ru",
+        "search": "?lang=ru"
+      },
+      "contactHrefs": [
+        "/waitlist?lang=en",
+        "/waitlist?lang=en",
+        "/waitlist?lang=en"
+      ]
+    },
+    "tablet": {
+      "consoleErrors": [],
+      "pageErrors": [],
+      "navDimensions": {
+        "clientWidth": 726,
+        "scrollWidth": 726,
+        "viewportWidth": 768
+      },
+      "menuButtonVisible": true,
+      "menuButtonHitTarget": true,
+      "mobileLinks": [
+        "Product",
+        "How It Works",
+        "Reporting Skills",
+        "Use Cases",
+        "Trust"
+      ],
+      "escapeClosed": true,
+      "escapeReturnedFocus": true,
+      "mobileLinkHash": "#workflow",
+      "finalPrimaryClickable": true,
+      "finalSecondaryHitTarget": true,
+      "finalSecondaryHash": "#use-cases",
+      "localeAfterClick": {
+        "lang": "ru",
+        "search": "?lang=ru"
+      },
+      "localeAfterReload": {
+        "lang": "ru",
+        "search": "?lang=ru"
+      },
+      "contactHrefs": [
+        "/waitlist?lang=en",
+        "/waitlist?lang=en",
+        "/waitlist?lang=en"
+      ]
+    },
+    "mobile": {
+      "consoleErrors": [],
+      "pageErrors": [],
+      "navDimensions": {
+        "clientWidth": 364,
+        "scrollWidth": 364,
+        "viewportWidth": 390
+      },
+      "menuButtonVisible": true,
+      "menuButtonHitTarget": true,
+      "mobileLinks": [
+        "Product",
+        "How It Works",
+        "Reporting Skills",
+        "Use Cases",
+        "Trust"
+      ],
+      "escapeClosed": true,
+      "escapeReturnedFocus": true,
+      "mobileLinkHash": "#workflow",
+      "finalPrimaryClickable": true,
+      "finalSecondaryHitTarget": true,
+      "finalSecondaryHash": "#use-cases",
+      "localeAfterClick": {
+        "lang": "ru",
+        "search": "?lang=ru"
+      },
+      "localeAfterReload": {
+        "lang": "ru",
+        "search": "?lang=ru"
+      },
+      "contactHrefs": [
+        "/waitlist?lang=en",
+        "/waitlist?lang=en",
+        "/waitlist?lang=en"
+      ]
+    },
+    "narrow": {
+      "consoleErrors": [],
+      "pageErrors": [],
+      "navDimensions": {
+        "clientWidth": 294,
+        "scrollWidth": 294,
+        "viewportWidth": 320
+      },
+      "menuButtonVisible": true,
+      "menuButtonHitTarget": true,
+      "mobileLinks": [
+        "Product",
+        "How It Works",
+        "Reporting Skills",
+        "Use Cases",
+        "Trust"
+      ],
+      "escapeClosed": true,
+      "escapeReturnedFocus": true,
+      "mobileLinkHash": "#workflow",
+      "finalPrimaryClickable": true,
+      "finalSecondaryHitTarget": true,
+      "finalSecondaryHash": "#use-cases",
+      "localeAfterClick": {
+        "lang": "ru",
+        "search": "?lang=ru"
+      },
+      "localeAfterReload": {
+        "lang": "ru",
+        "search": "?lang=ru"
+      },
+      "contactHrefs": [
+        "/waitlist?lang=en",
+        "/waitlist?lang=en",
+        "/waitlist?lang=en"
+      ]
+    }
+  },
+  "form": {
+    "desktop": {
+      "consoleErrors": [],
+      "pageErrors": [],
+      "emptyValidation": {
+        "stepOneVisible": true,
+        "activeName": "name",
+        "nameInvalid": true
+      }
+    },
+    "mobile": {
+      "consoleErrors": [],
+      "pageErrors": [],
+      "emptyValidation": {
+        "stepOneVisible": true,
+        "activeName": "name",
+        "nameInvalid": true
+      },
+      "invalidEmailFocus": "email",
+      "validAdvance": true
+    }
+  }
+}

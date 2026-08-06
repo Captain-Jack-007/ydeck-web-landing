@@ -1,0 +1,79 @@
+{
+  "desktop": {
+    "renderedAnchorCount": 40,
+    "uniqueDestinationCount": 11,
+    "routeStatuses": {
+      "/?lang=en": "internal-route",
+      "#product": "section-present",
+      "#workflow": "section-present",
+      "#reporting-skills": "section-present",
+      "#use-cases": "section-present",
+      "#privacy": "section-present",
+      "/waitlist?lang=en": "internal-route",
+      "mailto:hello@ydeck.app": "canonical-contact",
+      "/security?lang=en": "internal-route",
+      "/privacy?lang=en": "internal-route",
+      "/terms?lang=en": "internal-route"
+    },
+    "localeResults": {
+      "RU": "true",
+      "UZ": "true",
+      "EN": "true"
+    },
+    "navigation": {
+      "labels": [
+        "Product",
+        "How It Works",
+        "Reporting Skills",
+        "Use Cases",
+        "Trust"
+      ],
+      "visible": true
+    },
+    "navDimensions": {
+      "clientWidth": 1278,
+      "scrollWidth": 1278
+    },
+    "consoleErrors": [],
+    "pageErrors": []
+  },
+  "mobile": {
+    "renderedAnchorCount": 35,
+    "uniqueDestinationCount": 11,
+    "routeStatuses": {
+      "/?lang=en": "internal-route",
+      "/waitlist?lang=en": "internal-route",
+      "#workflow": "section-present",
+      "mailto:hello@ydeck.app": "canonical-contact",
+      "#use-cases": "section-present",
+      "#product": "section-present",
+      "#reporting-skills": "section-present",
+      "#privacy": "section-present",
+      "/security?lang=en": "internal-route",
+      "/privacy?lang=en": "internal-route",
+      "/terms?lang=en": "internal-route"
+    },
+    "localeResults": {
+      "RU": "true",
+      "UZ": "true",
+      "EN": "true"
+    },
+    "navigation": {
+      "labels": [
+        "Product",
+        "How It Works",
+        "Reporting Skills",
+        "Use Cases",
+        "Trust"
+      ],
+      "escapeClosed": true,
+      "escapeReturnedFocus": true
+    },
+    "navDimensions": {
+      "clientWidth": 364,
+      "scrollWidth": 364
+    },
+    "consoleErrors": [],
+    "pageErrors": []
+  }
+}

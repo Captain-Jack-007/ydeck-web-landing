@@ -5,6 +5,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 
 import { FadeUp } from '../components/Motion';
+import { contactHref } from '../constants';
 import { getFallbackReportTemplates } from '../data/reportTemplateFallback';
 import type { LocaleContent } from '../i18n/localeContent';
 import type { Locale } from '../types';
@@ -361,6 +362,6 @@ function getCtaLabel(content: TemplatesContent, ctaType: ReportTemplateCta) {
 }
 
 function getCtaHref(ctaType: ReportTemplateCta, locale: Locale) {
-  if (ctaType === 'contact_sales') return 'mailto:hello@ydeck.ai';
+  if (ctaType === 'contact_sales') return contactHref;
   return localizedPath('/waitlist', locale);
 }

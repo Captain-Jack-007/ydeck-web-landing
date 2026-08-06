@@ -216,5 +216,7 @@ test("landing carousel no longer uses old presentation-template preview data", a
   assert.doesNotMatch(section, /Run this report|Generate now|Use template|Start report/i);
   assert.match(section, /getReportTemplates/);
   assert.match(section, /publiclyExecutable/);
-  assert.match(section, /mailto:hello@ydeck.ai/);
+  assert.match(section, /if \(ctaType === 'contact_sales'\) return contactHref/);
+  assert.match(section, /localizedPath\('\/waitlist', locale\)/);
+  assert.doesNotMatch(section, /ydeck\.ai/);
 });

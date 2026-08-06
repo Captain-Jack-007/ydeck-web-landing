@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowLeft, Mail } from 'lucide-react';
 
+import { contactHref } from './constants';
 import { legalCopy, type LegalPageKey } from './data/legalPages';
 import type { Locale } from './types';
 import { localizedPath } from './utils/routes';
@@ -83,7 +84,7 @@ export function LegalPage({
 
         <footer className="border-t border-white/10 py-8 text-sm text-ydeck-muted">
           <a
-            href="mailto:hello@ydeck.ai"
+            href={contactHref}
             className="inline-flex items-center gap-2 transition hover:text-white"
           >
             <Mail className="h-4 w-4" />

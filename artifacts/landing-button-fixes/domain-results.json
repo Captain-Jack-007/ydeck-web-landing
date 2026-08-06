@@ -1,0 +1,28 @@
+{
+  "desktop": {
+    "landingHrefs": [
+      "mailto:hello@ydeck.app",
+      "mailto:hello@ydeck.app",
+      "mailto:hello@ydeck.app"
+    ],
+    "legalHrefs": {
+      "en": "mailto:hello@ydeck.app",
+      "ru": "mailto:hello@ydeck.app",
+      "uz": "mailto:hello@ydeck.app"
+    },
+    "browserErrors": []
+  },
+  "mobile": {
+    "landingHrefs": [
+      "mailto:hello@ydeck.app",
+      "mailto:hello@ydeck.app",
+      "mailto:hello@ydeck.app"
+    ],
+    "legalHrefs": {
+      "en": "mailto:hello@ydeck.app",
+      "ru": "mailto:hello@ydeck.app",
+      "uz": "mailto:hello@ydeck.app"
+    },
+    "browserErrors": []
+  }
+}

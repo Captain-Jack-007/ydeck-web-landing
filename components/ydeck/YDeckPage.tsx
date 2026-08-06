@@ -57,6 +57,13 @@ export function YDeckPage({
   const gridY = useTransform(scrollYProgress, [0, 1], [0, -120]);
   const slidesY = useTransform(scrollYProgress, [0, 1], [0, -90]);
 
+  function handleLocaleChange(nextLocale: Locale) {
+    const url = new URL(window.location.href);
+    url.searchParams.set('lang', nextLocale);
+    window.history.replaceState({}, '', url);
+    setLocale(nextLocale);
+  }
+
   useEffect(() => {
     document.documentElement.lang = locale;
     window.localStorage.setItem('ydeck-locale', locale);
@@ -70,7 +77,7 @@ export function YDeckPage({
         content={content.nav}
         locale={locale}
         onJoinWaitlist={onJoinWaitlist}
-        onLocaleChange={setLocale}
+        onLocaleChange={handleLocaleChange}
       />
 
       <section
