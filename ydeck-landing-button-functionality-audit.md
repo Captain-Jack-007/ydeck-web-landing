@@ -18,7 +18,7 @@ The count treats repeated marquee CTAs as separate rendered controls because eac
 
 ## Remediation Update — 2026-08-04
 
-The five findings in this report have been remediated in the current source. The public contact identity is now centralized as `hello@ydeck.app`; landing contact actions, template `Contact sales` actions, and EN/RU/UZ legal pages use that address. Browser verification covers desktop and mobile rendering with no console errors. The historical YD-005 evidence below describes the pre-remediation `ydeck.ai` destination; current DNS still needs an MX record before mailbox delivery can be considered operational.
+The five findings in this report have been remediated in the current source. The public contact identity is now centralized as `founder@globance.co`; landing contact actions, template `Contact sales` actions, and EN/RU/UZ legal pages use that address. Browser verification covers desktop and mobile rendering with no console errors. The historical YD-005 evidence below describes the pre-remediation `ydeck.ai` destination.
 
 ## Broken Interaction Report
 

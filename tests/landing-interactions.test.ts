@@ -52,14 +52,14 @@ test("landing locale changes update the current URL before reload", async () => 
   assert.match(page, /onLocaleChange=\{handleLocaleChange\}/);
 });
 
-test("public contact actions use the canonical ydeck.app email identity", async () => {
+test("public contact actions use the canonical Globance email identity", async () => {
   const constants = await source("../components/ydeck/constants.ts");
   const templates = await source("../components/ydeck/sections/TemplatesSection.tsx");
   const content = await source("../components/ydeck/i18n/localeContent.tsx");
   const legalPage = await source("../components/ydeck/LegalPage.tsx");
   const legalCopy = await source("../components/ydeck/data/legalPages.ts");
 
-  assert.match(constants, /contactEmail = 'hello@ydeck\.app'/);
+  assert.match(constants, /contactEmail = 'founder@globance\.co'/);
   assert.match(constants, /contactHref = `mailto:\$\{contactEmail\}`/);
   assert.match(templates, /if \(ctaType === 'contact_sales'\) return contactHref/);
   assert.equal((content.match(/\['(?:Contact|Контакт|Aloqa)', contactHref\]/g) ?? []).length, 3);
