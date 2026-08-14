@@ -54,8 +54,8 @@ export async function setAccountPassword(input: { newPassword: string }) {
 }
 
 export async function requestAccountDeletion(input: { confirmation: "DELETE"; currentPassword?: string }) {
-  return apiRequest<{ deletionScheduledFor?: string | null }>("/api/v1/account/deletion/request", {
-    method: "POST",
+  return apiRequest<{ deletionScheduledFor?: string | null }>("/api/v1/account", {
+    method: "DELETE",
     body: input,
   });
 }

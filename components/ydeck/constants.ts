@@ -2,7 +2,7 @@ import type { Locale } from './types';
 
 export const ease = [0.16, 1, 0.3, 1] as const;
 
-export const contactEmail = 'founder@globance.co';
+export const contactEmail = 'admin@globance.co';
 export const contactHref = `mailto:${contactEmail}`;
 
 export const languageOptions: { locale: Locale; label: string }[] = [

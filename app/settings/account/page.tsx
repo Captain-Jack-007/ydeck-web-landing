@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter, useSearchParams } from "next/navigation";
 import { CalendarClock, MailCheck, UserRound } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   Alert,
   Button,
@@ -23,11 +24,14 @@ import { useAccount } from "@/src/providers/account-provider";
 
 export default function AccountPage() {
   const { profile, security, profileStatus, securityStatus, profileError, refreshAccount } = useAccount();
+  const router = useRouter();
+  const searchParams = useSearchParams();
   const [currentPassword, setCurrentPassword] = useState("");
   const [deleteConfirm, setDeleteConfirm] = useState("");
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
   const [accountAction, setAccountAction] = useState<"request-deletion" | "cancel-deletion" | null>(null);
   const [feedback, setFeedback] = useState<{ tone: "success" | "danger"; message: string } | null>(null);
+  const handledDeleteAction = useRef(false);
   const accountBusy = accountAction !== null;
   const accountStatusLabel = profile?.accountStatus === "active"
     ? "Active"
@@ -37,7 +41,34 @@ export default function AccountPage() {
         ? "Deleted"
         : profile?.accountStatus ?? "Unavailable";
 
+  useEffect(() => {
+    if (
+      handledDeleteAction.current ||
+      searchParams.get("action") !== "delete-account" ||
+      profileStatus !== "ready" ||
+      securityStatus !== "ready" ||
+      !profile ||
+      !security
+    ) {
+      return;
+    }
+
+    handledDeleteAction.current = true;
+    if (profile.accountStatus !== "deletion_pending") {
+      setDeleteDialogOpen(true);
+    }
+    router.replace("/settings/account", { scroll: false });
+  }, [profile, profileStatus, router, searchParams, security, securityStatus]);
+
   async function handleDeletionRequest() {
+    if (securityStatus !== "ready" || !security) {
+      setFeedback({
+        tone: "danger",
+        message: "Security details must be loaded before account deletion can be requested.",
+      });
+      return;
+    }
+
     setAccountAction("request-deletion");
     setFeedback(null);
     try {
@@ -133,7 +164,12 @@ export default function AccountPage() {
         </ul>
         <div className="account-actions">
           {profile?.accountStatus !== "deletion_pending" ? (
-            <Button variant="danger" type="button" disabled={accountBusy || profileStatus !== "ready"} onClick={() => setDeleteDialogOpen(true)}>
+            <Button
+              variant="danger"
+              type="button"
+              disabled={accountBusy || profileStatus !== "ready" || securityStatus !== "ready" || !security}
+              onClick={() => setDeleteDialogOpen(true)}
+            >
               Request deletion
             </Button>
           ) : (
@@ -156,7 +192,12 @@ export default function AccountPage() {
         description="This starts the personal account deletion lifecycle. Workspace deletion is a separate action."
         confirmLabel="Request deletion"
         loading={accountAction === "request-deletion"}
-        disabled={deleteConfirm !== "DELETE" || (security?.passwordConfigured === true && !currentPassword)}
+        disabled={
+          securityStatus !== "ready" ||
+          !security ||
+          deleteConfirm !== "DELETE" ||
+          (security.passwordConfigured && !currentPassword)
+        }
         onCancel={() => {
           setDeleteDialogOpen(false);
           setDeleteConfirm("");

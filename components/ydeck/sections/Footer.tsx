@@ -24,8 +24,8 @@ export function Footer({
   }
 
   function getLegalHref(index: number) {
-    const legalPaths = ['/privacy', '/terms', '/security'];
-    return localizedPath(legalPaths[index] ?? '/', locale);
+    const legalPaths = ['/privacy', '/terms', '/security', '/data-deletion'];
+    return legalPaths[index] ?? '/';
   }
 
   function getFooterHref(href: string) {

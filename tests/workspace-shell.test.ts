@@ -129,6 +129,10 @@ test("settings pages present product language instead of raw backend data", asyn
   assert.match(security, /visibleSessions/);
   assert.doesNotMatch(security, /<StatusSummary>|Show password fields/);
   assert.match(layout, /settings-production\.css/);
+  assert.match(account, /searchParams\.get\("action"\) !== "delete-account"/);
+  assert.match(account, /setDeleteDialogOpen\(true\)/);
+  assert.match(account, /securityStatus !== "ready" \|\|/);
+  assert.match(account, /security\.passwordConfigured && !currentPassword/);
 });
 
 test("workspace bootstrap trusts the backend current workspace", async () => {

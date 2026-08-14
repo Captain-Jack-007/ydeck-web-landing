@@ -1,10 +1,43 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
+import { requestAccountDeletion } from "@/src/api/account";
 import { listPlans } from "@/src/api/billing";
 import { listDesktopDevices, revokeAllDesktopDevices, revokeDesktopDevice } from "@/src/api/devices";
 import { createWorkspace } from "@/src/api/workspace";
 
 process.env.NEXT_PUBLIC_YDECK_API_BASE_URL = "https://api.ydeck.test";
+
+test("account deletion uses the confirmed DELETE contract", async () => {
+  const originalFetch = globalThis.fetch;
+  let requestedUrl = "";
+  let method = "";
+  let body = "";
+  globalThis.fetch = (async (input: RequestInfo | URL, init?: RequestInit) => {
+    requestedUrl = String(input);
+    method = init?.method ?? "GET";
+    body = String(init?.body ?? "");
+    return new Response(JSON.stringify({ deletionScheduledFor: "2026-08-21T00:00:00.000Z" }), {
+      status: 200,
+      headers: { "content-type": "application/json" },
+    });
+  }) as typeof fetch;
+
+  try {
+    const response = await requestAccountDeletion({
+      confirmation: "DELETE",
+      currentPassword: "configured-password",
+    });
+    assert.equal(requestedUrl, "/api/v1/account");
+    assert.equal(method, "DELETE");
+    assert.deepEqual(JSON.parse(body), {
+      confirmation: "DELETE",
+      currentPassword: "configured-password",
+    });
+    assert.equal(response.deletionScheduledFor, "2026-08-21T00:00:00.000Z");
+  } finally {
+    globalThis.fetch = originalFetch;
+  }
+});
 
 test("revoke-all desktop devices sends the expected payload", async () => {
   const originalFetch = globalThis.fetch;

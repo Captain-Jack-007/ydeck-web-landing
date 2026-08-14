@@ -252,8 +252,8 @@ export const localeContent = {
       closingTitle: 'Built for reports that need evidence, memory, and approval.',
       closingBody: 'YDeck prepares reporting drafts and reusable skills. Official business decisions and final report approval stay with authorized people.',
       badges: ['Desktop beta foundation', 'Fact-to-source links', 'Decision memory'],
-      copyright: 'Copyright 2026 YDeck. All rights reserved.',
-      legal: ['Privacy policy', 'Terms', 'Security'],
+      copyright: 'Copyright 2026 GLOBANCE GROUP LIMITED. YDeck. All rights reserved.',
+      legal: ['Privacy', 'Terms', 'Security', 'Data Deletion'],
     },
   },
   ru: {
@@ -491,8 +491,8 @@ export const localeContent = {
       closingTitle: 'Для отчетов, которым нужны факты, память и утверждение.',
       closingBody: 'YDeck готовит черновики отчетов и переиспользуемые навыки. Официальные бизнес-решения и финальное утверждение остаются у уполномоченных людей.',
       badges: ['Основа Desktop beta', 'Связь с источниками', 'Память решений'],
-      copyright: 'Copyright 2026 YDeck. Все права защищены.',
-      legal: ['Политика приватности', 'Условия', 'Безопасность'],
+      copyright: 'Copyright 2026 GLOBANCE GROUP LIMITED. YDeck. Все права защищены.',
+      legal: ['Конфиденциальность', 'Условия', 'Безопасность', 'Удаление данных'],
     },
   },
   uz: {
@@ -730,8 +730,8 @@ export const localeContent = {
       closingTitle: 'Dalil, xotira va tasdiq talab qiladigan hisobotlar uchun.',
       closingBody: 'YDeck loyiha hisobotlar va qayta ishlatiladigan skill’lar tayyorlaydi. Rasmiy biznes qarorlari va yakuniy hisobot tasdig‘i vakolatli odamlar qo‘lida qoladi.',
       badges: ['Desktop beta asosi', 'Manba bog‘lanishi', 'Qarorlar xotirasi'],
-      copyright: 'Copyright 2026 YDeck. Barcha huquqlar himoyalangan.',
-      legal: ['Maxfiylik siyosati', 'Shartlar', 'Xavfsizlik'],
+      copyright: 'Copyright 2026 GLOBANCE GROUP LIMITED. YDeck. Barcha huquqlar himoyalangan.',
+      legal: ['Maxfiylik', 'Shartlar', 'Xavfsizlik', 'Ma’lumotlarni o‘chirish'],
     },
   },
 } as const;
