@@ -11,6 +11,7 @@ import {
   Loader2,
   LockKeyhole,
   LogOut,
+  MessageSquareText,
   Settings,
   Sparkles,
   User,
@@ -161,6 +162,8 @@ export function ProductTopBar() {
               </div>
 
               <nav className="portal-topbar__settings" aria-label="Account settings">
+                <span>Workspace</span>
+                <Link href="/sales-operator/channels" role="menuitem" onClick={() => setActivePopover(null)}><MessageSquareText aria-hidden size={17} /><span><strong>Sales Operator channels</strong><small>Instagram, Facebook Messenger, and Telegram</small></span></Link>
                 <span>Settings</span>
                 <Link href="/settings/profile" role="menuitem" onClick={() => setActivePopover(null)}><User aria-hidden size={17} /><span><strong>Profile</strong><small>Name, avatar, and preferences</small></span></Link>
                 <Link href="/settings/security" role="menuitem" onClick={() => setActivePopover(null)}><LockKeyhole aria-hidden size={17} /><span><strong>Security</strong><small>Password and active sessions</small></span></Link>

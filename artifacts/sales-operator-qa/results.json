@@ -1,0 +1,190 @@
+[
+  {
+    "name": "empty-desktop",
+    "title": "YDeck — Private AI for Recurring Enterprise Reporting",
+    "url": "http://localhost:3017/sales-operator/channels",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "height": 1000,
+    "scrollHeight": 1000,
+    "text": "YDeck\nM\nydeck.sales-operator\nSales Operator\nsales.operator.v1\nSales Agent\nChannels\nAll channels\nInstagram\nFacebook Messenger\nTelegram\nActive workspace\nNorthstar Retail Operations\nWorkspace access\nSales Operator / Channels\nConnected customer channels\n\nConnect Instagram business accounts and manage the channels Sales Agent can use in Northstar Retail Operations.\n\nRefresh\nConnect Instagram\nInstagram business messaging\n\nInstagram connection requires an eligible professional account linked through Meta's supported business configuration. Personal accounts are not automatically eligible.\n\nOAuth and credentials are handled by YDeck Cloud\nNo customer channels connected\n\nConnect an eligible Instagram professional account. Automated replies remain off until you explicitly enable them and Cloud confirms readiness.\n\nConnect Instagram",
+    "dialogs": 0,
+    "disabledButtons": [],
+    "disabledInputs": [],
+    "cards": 0,
+    "assets": 0
+  },
+  {
+    "name": "connected-desktop",
+    "title": "YDeck — Private AI for Recurring Enterprise Reporting",
+    "url": "http://localhost:3017/sales-operator/channels",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "height": 1000,
+    "scrollHeight": 1000,
+    "text": "YDeck\nM\nydeck.sales-operator\nSales Operator\nsales.operator.v1\nSales Agent\nChannels\nAll channels\nInstagram\nFacebook Messenger\nTelegram\nActive workspace\nNorthstar Retail Operations\nWorkspace access\nSales Operator / Channels\nConnected customer channels\n\nConnect Instagram business accounts and manage the channels Sales Agent can use in Northstar Retail Operations.\n\nRefresh\nConnect Instagram\nInstagram business messaging\n\nInstagram connection requires an eligible professional account linked through Meta's supported business configuration. Personal accounts are not automatically eligible.\n\nOAuth and credentials are handled by YDeck Cloud\nInstagram\n1 connected account\nInstagram\nNorthstar Home & Living — Tashkent Flagship\n\n@northstar.home.uz\n\nConnected\nAutomated replies off\nLast healthy\n15 Aug 2026, 14:00\nLast inbound activity\n15 Aug 2026, 13:42\nAuthorization\nExpires 22 Aug 2026, 14:00\nAuthorization expires soon.\nRefresh authorization to avoid interrupted message processing.\nTest connection\nRefresh authorization\nPause\nAutomated replies\nDisconnect",
+    "dialogs": 0,
+    "disabledButtons": [],
+    "disabledInputs": [],
+    "cards": 1,
+    "assets": 0
+  },
+  {
+    "name": "attention-desktop",
+    "title": "YDeck — Private AI for Recurring Enterprise Reporting",
+    "url": "http://localhost:3017/sales-operator/channels",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "height": 1000,
+    "scrollHeight": 1459,
+    "text": "YDeck\nM\nydeck.sales-operator\nSales Operator\nsales.operator.v1\nSales Agent\nChannels\nAll channels\nInstagram\nFacebook Messenger\nTelegram\nActive workspace\nNorthstar Retail Operations\nWorkspace access\nSales Operator / Channels\nConnected customer channels\n\nConnect Instagram business accounts and manage the channels Sales Agent can use in Northstar Retail Operations.\n\nRefresh\nConnect Instagram\nInstagram business messaging\n\nInstagram connection requires an eligible professional account linked through Meta's supported business configuration. Personal accounts are not automatically eligible.\n\nOAuth and credentials are handled by YDeck Cloud\nInstagram\n3 connected accounts\nInstagram\nNorthstar Home & Living — Wholesale and Commercial Orders\n\n@northstar.wholesale.central.asia\n\nPaused\nAutomated replies on\nLast healthy\n15 Aug 2026, 14:00\nLast inbound activity\n15 Aug 2026, 13:42\nAuthorization\nExpires 22 Aug 2026, 14:00\nAuthorization expires soon.\nRefresh authorization to avoid interrupted message processing.\nTest connection\nRefresh authorization\nResume\nAutomated replies\nDisconnect\nInstagram\nNorthstar Seasonal Campaigns\n\n@northstar.seasonal\n\nNeeds Attention\nAutomated replies off\nLast healthy\n12 Aug 2026, 14:00\nLast inbound activity\n15 Aug 2026, 13:42\nAuthorization\nExpires 22 Aug 2026, 14:00\nAuthorization expires soon.\nRefresh authorization to avoid interrupted message processing.\nThe messaging provider is temporarily unavailable.\nTry again in a few minutes.\nTest connection\nRefresh authorization\nPause\nAutomated replies\nDisconnect\nInstagram\nNorthstar Outlet\n\n@northstar.outlet\n\nAuthorization Expired\nAutomated replies off\nLast healthy\n15 Aug 2026, 14:00\nLast inbound activity\n15 Aug 2026, 13:42\nAuthorization\nExpires 10 Aug 2026, 14:00\nThe channel authorization expired.\nReconnect the affected account.\nTest connection\nReconnect Instagram\nPause\nAutomated replies\nDisconnect",
+    "dialogs": 0,
+    "disabledButtons": [],
+    "disabledInputs": [
+      "checkbox",
+      "checkbox"
+    ],
+    "cards": 3,
+    "assets": 0
+  },
+  {
+    "name": "disabled-desktop",
+    "title": "YDeck — Private AI for Recurring Enterprise Reporting",
+    "url": "http://localhost:3017/sales-operator/channels",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "height": 1000,
+    "scrollHeight": 1000,
+    "text": "YDeck\nM\nydeck.sales-operator\nSales Operator\nsales.operator.v1\nSales Agent\nChannels\nAll channels\nInstagram\nFacebook Messenger\nTelegram\nActive workspace\nNorthstar Retail Operations\nWorkspace access\nSales Operator / Channels\nConnected customer channels\n\nConnect Instagram business accounts and manage the channels Sales Agent can use in Northstar Retail Operations.\n\nRefresh\nConnect Instagram\nRead-only channel access\nConnecting Instagram requires sales_operator.channel.manage permission.\nInstagram business messaging\n\nInstagram connection requires an eligible professional account linked through Meta's supported business configuration. Personal accounts are not automatically eligible.\n\nOAuth and credentials are handled by YDeck Cloud\nInstagram\n1 connected account\nInstagram\nNorthstar Home & Living\n\n@northstar.home\n\nConnected\nAutomated replies off\nLast healthy\n15 Aug 2026, 14:00\nLast inbound activity\n15 Aug 2026, 13:42\nAuthorization\nExpires 22 Aug 2026, 14:00\nAuthorization expires soon.\nRefresh authorization to avoid interrupted message processing.\n\nChannel management requires sales_operator.channel.manage. You can still review connection status.\n\nTest connection\nRefresh authorization\nPause\nAutomated replies\nDisconnect",
+    "dialogs": 0,
+    "disabledButtons": [
+      "Connect Instagram",
+      "Test connection",
+      "Refresh authorization",
+      "Pause",
+      "Disconnect"
+    ],
+    "disabledInputs": [
+      "checkbox"
+    ],
+    "cards": 1,
+    "assets": 0
+  },
+  {
+    "name": "feature-disabled-desktop",
+    "title": "YDeck — Private AI for Recurring Enterprise Reporting",
+    "url": "http://localhost:3017/sales-operator/channels",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "height": 1000,
+    "scrollHeight": 1000,
+    "text": "YDeck\nM\nydeck.sales-operator\nSales Operator\nsales.operator.v1\nSales Agent\nChannels\nAll channels\nInstagram\nFacebook Messenger\nTelegram\nActive workspace\nNorthstar Retail Operations\nWorkspace access\nSales Operator / Channels\nConnected customer channels\n\nConnect Instagram business accounts and manage the channels Sales Agent can use in Northstar Retail Operations.\n\nRefresh\nConnect Instagram\nInstagram unavailable\nInstagram is not enabled for this workspace by the agents.sales_operator.instagram_enabled Cloud feature.\nInstagram business messaging\n\nInstagram connection requires an eligible professional account linked through Meta's supported business configuration. Personal accounts are not automatically eligible.\n\nOAuth and credentials are handled by YDeck Cloud\nInstagram\n1 connected account\nInstagram\nNorthstar Home & Living\n\n@northstar.home\n\nConnected\nAutomated replies off\nLast healthy\n15 Aug 2026, 14:00\nLast inbound activity\n15 Aug 2026, 13:42\nAuthorization\nExpires 22 Aug 2026, 14:00\nAuthorization expires soon.\nRefresh authorization to avoid interrupted message processing.\n\nInstagram management is disabled by the workspace Cloud feature. You can still review connection status.\n\nTest connection\nRefresh authorization\nPause\nAutomated replies\nDisconnect",
+    "dialogs": 0,
+    "disabledButtons": [
+      "Connect Instagram",
+      "Test connection",
+      "Refresh authorization",
+      "Pause",
+      "Disconnect"
+    ],
+    "disabledInputs": [
+      "checkbox"
+    ],
+    "cards": 1,
+    "assets": 0
+  },
+  {
+    "name": "connected-tablet",
+    "title": "YDeck — Private AI for Recurring Enterprise Reporting",
+    "url": "http://localhost:3017/sales-operator/channels",
+    "width": 820,
+    "scrollWidth": 820,
+    "height": 1180,
+    "scrollHeight": 1180,
+    "text": "YDeck\nM\nydeck.sales-operator\nSales Operator\nsales.operator.v1\nSales Agent\nChannels\nAll channels\nInstagram\nFacebook Messenger\nTelegram\nActive workspace\nNorthstar Retail Operations\nWorkspace access\nSales Operator / Channels\nConnected customer channels\n\nConnect Instagram business accounts and manage the channels Sales Agent can use in Northstar Retail Operations.\n\nRefresh\nConnect Instagram\nInstagram business messaging\n\nInstagram connection requires an eligible professional account linked through Meta's supported business configuration. Personal accounts are not automatically eligible.\n\nOAuth and credentials are handled by YDeck Cloud\nInstagram\n1 connected account\nInstagram\nNorthstar Home & Living — Tashkent Flagship\n\n@northstar.home.uz\n\nConnected\nAutomated replies off\nLast healthy\n15 Aug 2026, 14:00\nLast inbound activity\n15 Aug 2026, 13:42\nAuthorization\nExpires 22 Aug 2026, 14:00\nAuthorization expires soon.\nRefresh authorization to avoid interrupted message processing.\nTest connection\nRefresh authorization\nPause\nAutomated replies\nDisconnect",
+    "dialogs": 0,
+    "disabledButtons": [],
+    "disabledInputs": [],
+    "cards": 1,
+    "assets": 0
+  },
+  {
+    "name": "connected-mobile",
+    "title": "YDeck — Private AI for Recurring Enterprise Reporting",
+    "url": "http://localhost:3017/sales-operator/channels",
+    "width": 390,
+    "scrollWidth": 390,
+    "height": 844,
+    "scrollHeight": 1439,
+    "text": "M\nAll channels\nInstagram\nFacebook Messenger\nTelegram\nSales Operator / Channels\nConnected customer channels\n\nConnect Instagram business accounts and manage the channels Sales Agent can use in Northstar Retail Operations.\n\nRefresh\nConnect Instagram\nInstagram business messaging\n\nInstagram connection requires an eligible professional account linked through Meta's supported business configuration. Personal accounts are not automatically eligible.\n\nOAuth and credentials are handled by YDeck Cloud\nInstagram\n1 connected account\nInstagram\nNorthstar Home & Living — Tashkent Flagship\n\n@northstar.home.uz\n\nConnected\nAutomated replies off\nLast healthy\n15 Aug 2026, 14:00\nLast inbound activity\n15 Aug 2026, 13:42\nAuthorization\nExpires 22 Aug 2026, 14:00\nAuthorization expires soon.\nRefresh authorization to avoid interrupted message processing.\nTest connection\nRefresh authorization\nPause\nAutomated replies\nDisconnect",
+    "dialogs": 0,
+    "disabledButtons": [],
+    "disabledInputs": [],
+    "cards": 1,
+    "assets": 0
+  },
+  {
+    "name": "disconnect-desktop",
+    "title": "YDeck — Private AI for Recurring Enterprise Reporting",
+    "url": "http://localhost:3017/sales-operator/channels",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "height": 1000,
+    "scrollHeight": 1000,
+    "text": "YDeck\nM\nydeck.sales-operator\nSales Operator\nsales.operator.v1\nSales Agent\nChannels\nAll channels\nInstagram\nFacebook Messenger\nTelegram\nActive workspace\nNorthstar Retail Operations\nWorkspace access\nSales Operator / Channels\nConnected customer channels\n\nConnect Instagram business accounts and manage the channels Sales Agent can use in Northstar Retail Operations.\n\nRefresh\nConnect Instagram\nInstagram business messaging\n\nInstagram connection requires an eligible professional account linked through Meta's supported business configuration. Personal accounts are not automatically eligible.\n\nOAuth and credentials are handled by YDeck Cloud\nInstagram\n1 connected account\nInstagram\nNorthstar Home & Living — Tashkent Flagship\n\n@northstar.home.uz\n\nConnected\nAutomated replies off\nLast healthy\n15 Aug 2026, 14:00\nLast inbound activity\n15 Aug 2026, 13:42\nAuthorization\nExpires 22 Aug 2026, 14:00\nAuthorization expires soon.\nRefresh authorization to avoid interrupted message processing.\nTest connection\nRefresh authorization\nPause\nAutomated replies\nDisconnect\nDisconnect Instagram?\n\nSales Operator will stop using this account and Cloud will revoke or invalidate provider authorization according to policy. CRM customers, leads, conversations, messages, and audit history are not deleted.\n\nCancel\nDisconnect channel",
+    "dialogs": 1,
+    "disabledButtons": [],
+    "disabledInputs": [],
+    "cards": 1,
+    "assets": 0
+  },
+  {
+    "name": "selection-desktop",
+    "title": "YDeck — Private AI for Recurring Enterprise Reporting",
+    "url": "http://localhost:3017/sales-operator/channels/instagram/return",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "height": 1000,
+    "scrollHeight": 1000,
+    "text": "YDeck\nM\nydeck.sales-operator\nSales Operator\nsales.operator.v1\nSales Agent\nChannels\nAll channels\nInstagram\nFacebook Messenger\nTelegram\nActive workspace\nNorthstar Retail Operations\nWorkspace access\nInstagram connection\nChoose business accounts\n\nSelect one or more eligible Instagram professional accounts for Northstar Retail Operations. Automated replies will remain off.\n\nYDeck Cloud completed the Meta callback and keeps provider credentials server-side. This page receives only safe account fields.\n3 eligible accounts\nNorthstar Home & Living — Tashkent Flagship\n@northstar.home.uz\nNorthstar Retail Operations Central Asia\nNorthstar Outlet and Clearance Store with a Very Long Account Name\n@northstar.outlet.clearance.central.asia\nNorthstar Retail Operations Central Asia and Regional Franchises\nNorthstar Wholesale\nUsername unavailable\nLinked business not named\nCancel\nConnect selected accounts",
+    "dialogs": 0,
+    "disabledButtons": [
+      "Connect selected accounts"
+    ],
+    "disabledInputs": [],
+    "cards": 0,
+    "assets": 3
+  },
+  {
+    "name": "selection-mobile",
+    "title": "YDeck — Private AI for Recurring Enterprise Reporting",
+    "url": "http://localhost:3017/sales-operator/channels/instagram/return",
+    "width": 390,
+    "scrollWidth": 390,
+    "height": 844,
+    "scrollHeight": 975,
+    "text": "M\nAll channels\nInstagram\nFacebook Messenger\nTelegram\nInstagram connection\nChoose business accounts\n\nSelect one or more eligible Instagram professional accounts for Northstar Retail Operations. Automated replies will remain off.\n\nYDeck Cloud completed the Meta callback and keeps provider credentials server-side. This page receives only safe account fields.\n3 eligible accounts\nNorthstar Home & Living — Tashkent Flagship\n@northstar.home.uz\nNorthstar Retail Operations Central Asia\nNorthstar Outlet and Clearance Store with a Very Long Account Name\n@northstar.outlet.clearance.central.asia\nNorthstar Retail Operations Central Asia and Regional Franchises\nNorthstar Wholesale\nUsername unavailable\nLinked business not named\nCancel\nConnect selected accounts",
+    "dialogs": 0,
+    "disabledButtons": [
+      "Connect selected accounts"
+    ],
+    "disabledInputs": [],
+    "cards": 0,
+    "assets": 3
+  },
+  {
+    "name": "no-assets-desktop",
+    "title": "YDeck — Private AI for Recurring Enterprise Reporting",
+    "url": "http://localhost:3017/sales-operator/channels/instagram/return",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "height": 1000,
+    "scrollHeight": 1000,
+    "text": "YDeck\nM\nydeck.sales-operator\nSales Operator\nsales.operator.v1\nSales Agent\nChannels\nAll channels\nInstagram\nFacebook Messenger\nTelegram\nActive workspace\nNorthstar Retail Operations\nWorkspace access\nInstagram connection\nChoose business accounts\n\nSelect one or more eligible Instagram professional accounts for Northstar Retail Operations. Automated replies will remain off.\n\nYDeck Cloud completed the Meta callback and keeps provider credentials server-side. This page receives only safe account fields.\nNo eligible Instagram business accounts\n\nNo eligible Instagram business accounts were returned. Confirm that the Instagram account is professional, linked to the correct Meta business assets, and that the required permissions were approved.\n\nStart again",
+    "dialogs": 0,
+    "disabledButtons": [],
+    "disabledInputs": [],
+    "cards": 0,
+    "assets": 0
+  }
+]

@@ -184,7 +184,7 @@ export function useAuth() {
   return context;
 }
 
-export function RequireAuth({ children }: { children: ReactNode }) {
+export function RequireAuth({ children, preserveSearchParams = true }: { children: ReactNode; preserveSearchParams?: boolean }) {
   const { status } = useAuth();
   const router = useRouter();
   const pathname = usePathname();
@@ -192,10 +192,10 @@ export function RequireAuth({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     if (status === "unauthenticated") {
-      const query = searchParams.toString();
+      const query = preserveSearchParams ? searchParams.toString() : "";
       router.replace(`/auth/sign-in${authReturnToParam(`${pathname}${query ? `?${query}` : ""}`)}`);
     }
-  }, [pathname, router, searchParams, status]);
+  }, [pathname, preserveSearchParams, router, searchParams, status]);
 
   if (status === "loading") {
     return (

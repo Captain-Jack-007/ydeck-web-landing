@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowLeft, Mail } from 'lucide-react';
+import { Mail } from 'lucide-react';
 
 import { contactHref } from './constants';
 import { legalCopy, type LegalPageKey } from './data/legalPages';
@@ -24,14 +24,7 @@ export function LegalPage({
       <div className="radial-glow fixed inset-0" />
 
       <div className="relative mx-auto max-w-5xl">
-        <nav className="flex items-center justify-between gap-4">
-          <Link
-            href={localizedPath('/', locale)}
-            className="glass-panel inline-flex min-h-11 items-center gap-2 rounded-full px-4 text-sm font-semibold text-white transition hover:border-cyan-300/40"
-          >
-            <ArrowLeft className="h-4 w-4" />
-            {copy.back}
-          </Link>
+        <nav className="flex items-center">
           <Link
             href={localizedPath('/', locale)}
             className="flex items-center gap-3"

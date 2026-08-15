@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowLeft, ChevronDown, Mail } from 'lucide-react';
+import { ChevronDown, Mail } from 'lucide-react';
 import type { ReactNode } from 'react';
 
 import {
@@ -100,14 +100,7 @@ export function LegalDocument({
 
       <main id="legal-content" className="relative px-5 pb-16 md:px-8 md:pb-24">
         <header className="mx-auto max-w-7xl border-b border-white/10 py-16 md:py-24">
-          <Link
-            href="/"
-            className="inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-ydeck-cyan transition hover:text-cyan-200"
-          >
-            <ArrowLeft aria-hidden="true" className="h-4 w-4" />
-            Back to YDeck
-          </Link>
-          <p className="mt-10 text-sm font-semibold text-ydeck-cyan">Legal</p>
+          <p className="text-sm font-semibold text-ydeck-cyan">Legal</p>
           <h1 className="mt-4 max-w-4xl text-balance text-4xl font-semibold leading-[1.05] tracking-[-0.035em] text-white sm:text-5xl md:text-7xl">
             {title}
           </h1>
