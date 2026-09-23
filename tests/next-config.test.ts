@@ -1,6 +1,14 @@
 import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
 import { test } from "node:test";
 import createNextConfig, { resolveApiProxyTarget } from "../next.config.mjs";
+
+test("PostCSS config uses CommonJS for Vercel compatibility", async () => {
+  const config = await readFile(new URL("../postcss.config.cjs", import.meta.url), "utf8");
+
+  assert.match(config, /module\.exports/);
+  assert.doesNotMatch(config, /createRequire|export default/);
+});
 
 test("development API proxy targets the local YDeck server", () => {
   assert.equal(resolveApiProxyTarget("phase-development-server", ""), "http://localhost:8085");
