@@ -689,6 +689,66 @@
 
 .instagram-assets__error { display: grid; gap: 12px; }
 
+.instagram-completion {
+  background: #fff;
+  border: 1px solid var(--so-line);
+  border-radius: 12px;
+  margin: 6vh auto 0;
+  max-width: 620px;
+  padding: 42px 34px;
+  text-align: center;
+}
+
+.instagram-completion__icon {
+  align-items: center;
+  background: #eaf6ef;
+  border-radius: 50%;
+  color: var(--so-success);
+  display: inline-flex;
+  height: 62px;
+  justify-content: center;
+  margin-bottom: 18px;
+  width: 62px;
+}
+
+.instagram-completion__brand {
+  color: var(--so-muted);
+  font-size: 12px;
+  font-weight: 700;
+  margin: 0 0 7px;
+}
+
+.instagram-completion h1 {
+  font-size: 30px;
+  letter-spacing: -0.02em;
+  line-height: 1.16;
+  margin: 0 0 14px;
+}
+
+.instagram-completion > p:not(.instagram-completion__brand, .instagram-completion__hint) {
+  color: var(--so-text);
+  line-height: 1.6;
+  margin: 0 auto 7px;
+  max-width: 56ch;
+}
+
+.instagram-completion__actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 26px;
+}
+
+.instagram-completion__actions .account-button {
+  min-height: 44px;
+}
+
+.instagram-completion__hint {
+  color: var(--so-muted);
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 18px auto 0;
+}
+
 @keyframes so-pulse {
   0%, 100% { opacity: 0.62; }
   50% { opacity: 1; }
@@ -752,6 +812,9 @@
   .instagram-asset { padding: 11px; }
   .instagram-assets__actions { align-items: stretch; flex-direction: column-reverse; }
   .instagram-assets__actions .account-button { width: 100%; }
+  .instagram-completion { margin-top: 2vh; padding: 32px 20px; }
+  .instagram-completion h1 { font-size: 26px; }
+  .instagram-completion__actions .account-button { width: 100%; }
 }
 
 @media (prefers-reduced-motion: reduce) {

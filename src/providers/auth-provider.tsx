@@ -23,6 +23,7 @@ import * as authApi from "@/src/api/auth";
 import type { CurrentUser } from "@/src/api/types";
 import { broadcastAuthInvalidation, subscribeAuthInvalidation } from "@/src/lib/auth-channel";
 import { authReturnToParam } from "@/src/lib/auth-return";
+import { captureInstagramCompletionContext } from "@/src/lib/instagram-oauth-completion";
 
 export type AuthSessionStatus = "loading" | "authenticated" | "unauthenticated" | "error";
 
@@ -184,7 +185,15 @@ export function useAuth() {
   return context;
 }
 
-export function RequireAuth({ children, preserveSearchParams = true }: { children: ReactNode; preserveSearchParams?: boolean }) {
+export function RequireAuth({
+  children,
+  preserveSearchParams = true,
+  preserveInstagramCompletionContext = false,
+}: {
+  children: ReactNode;
+  preserveSearchParams?: boolean;
+  preserveInstagramCompletionContext?: boolean;
+}) {
   const { status } = useAuth();
   const router = useRouter();
   const pathname = usePathname();
@@ -192,10 +201,13 @@ export function RequireAuth({ children, preserveSearchParams = true }: { childre
 
   useEffect(() => {
     if (status === "unauthenticated") {
+      if (preserveInstagramCompletionContext) {
+        captureInstagramCompletionContext(new URLSearchParams(searchParams.toString()));
+      }
       const query = preserveSearchParams ? searchParams.toString() : "";
       router.replace(`/auth/sign-in${authReturnToParam(`${pathname}${query ? `?${query}` : ""}`)}`);
     }
-  }, [pathname, preserveSearchParams, router, searchParams, status]);
+  }, [pathname, preserveInstagramCompletionContext, preserveSearchParams, router, searchParams, status]);
 
   if (status === "loading") {
     return (

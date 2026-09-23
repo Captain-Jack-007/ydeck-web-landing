@@ -10,33 +10,33 @@ type HomePageProps = {
 
 const homeMetadata: Record<Locale, Metadata> = {
   en: {
-    title: "YDeck — Private AI for Recurring Enterprise Reporting",
+    title: "YDeck — AI Agent Workspace for Companies",
     description:
-      "Automate recurring management reports, learn reporting rules, and build evidence-linked decision memory for a private company brain.",
+      "Deploy AI agents, connect customer channels, and keep your team in control. Start with YDeck Sales Agent and Sales Operator.",
     openGraph: {
-      title: "YDeck — Private AI for Recurring Enterprise Reporting",
+      title: "YDeck — AI Agent Workspace for Companies",
       description:
-        "YDeck Private Reporting Agent helps teams turn recurring reports, source data, templates, and review rules into reusable reporting memory.",
+        "Your company’s workspace for AI agents—starting with sales.",
     },
   },
   ru: {
-    title: "YDeck — приватный ИИ для регулярной корпоративной отчетности",
+    title: "YDeck — рабочее пространство ИИ-агентов для компаний",
     description:
-      "Автоматизируйте регулярные управленческие отчеты, изучайте правила отчетности и формируйте память решений с привязкой к источникам для приватного корпоративного мозга.",
+      "Подключайте ИИ-агентов и клиентские каналы, сохраняя контроль команды. Начните с Sales Agent и Sales Operator.",
     openGraph: {
-      title: "YDeck — приватный ИИ для регулярной корпоративной отчетности",
+      title: "YDeck — рабочее пространство ИИ-агентов для компаний",
       description:
-        "YDeck Private Reporting Agent помогает превращать повторяющиеся отчеты, исходные данные, шаблоны и правила проверки в переиспользуемую память отчетности.",
+        "Рабочее пространство ИИ-агентов вашей компании — начните с продаж.",
     },
   },
   uz: {
-    title: "YDeck — takroriy korporativ hisobotlar uchun maxfiy AI",
+    title: "YDeck — kompaniyalar uchun AI agentlar ish maydoni",
     description:
-      "Takroriy boshqaruv hisobotlarini avtomatlashtiring, hisobot qoidalarini o‘rganing va manba bilan bog‘langan qarorlar xotirasini maxfiy korporativ miya uchun yarating.",
+      "AI agentlar va mijoz kanallarini ulang, jamoa nazoratini saqlang. Sales Agent va Sales Operator’dan boshlang.",
     openGraph: {
-      title: "YDeck — takroriy korporativ hisobotlar uchun maxfiy AI",
+      title: "YDeck — kompaniyalar uchun AI agentlar ish maydoni",
       description:
-        "YDeck maxfiy hisobot agenti takroriy hisobotlar, manba ma’lumotlari, shablonlar va tekshiruv qoidalarini qayta ishlatiladigan hisobot xotirasiga aylantirishga yordam beradi.",
+        "Kompaniyangizning AI agentlar ish maydoni — savdodan boshlang.",
     },
   },
 };

@@ -1,22 +1,86 @@
 "use client";
 
+import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
-import { AlertCircle, Building2, Camera, Check, Loader2, RefreshCw, ShieldCheck } from "lucide-react";
+import { AlertCircle, Building2, Camera, Check, CheckCircle2, ExternalLink, Loader2, RefreshCw, ShieldCheck } from "lucide-react";
 import { Alert, Button, EmptyState, ErrorDetails } from "@/components/account/ui";
+import type { SalesChannelConnection } from "@/src/api/sales-operator";
 import {
-  INSTAGRAM_RETURN_PATH,
-  parseInstagramCallback,
-  safeProviderImageUrl,
-} from "@/src/lib/sales-operator-channels";
+  INSTAGRAM_DESKTOP_CHANNELS_URL,
+  captureInstagramCompletionContext,
+  clearInstagramCompletionContext,
+  isDesktopDeepLinkEnabled,
+  isInstagramSessionExpiredCode,
+  markInstagramConfirmationStarted,
+  readInstagramCompletionContext,
+  readInstagramConnectedReceipt,
+  rememberConnectedInstagram,
+  resolveConnectedInstagramChannel,
+  type InstagramCompletionContext,
+  type InstagramCompletionState,
+} from "@/src/lib/instagram-oauth-completion";
+import { INSTAGRAM_RETURN_PATH, safeProviderImageUrl } from "@/src/lib/sales-operator-channels";
 import { useSalesOperatorChannels } from "@/src/providers/sales-operator-channels-provider";
 import { useWorkspace } from "@/src/providers/workspace-provider";
 
+function removeSensitiveQuery() {
+  if (window.location.pathname === INSTAGRAM_RETURN_PATH && window.location.search) {
+    window.history.replaceState(window.history.state, "", INSTAGRAM_RETURN_PATH);
+  }
+}
+
+function InstagramProgress({ state }: { state: InstagramCompletionState }) {
+  const label = state === "CONFIRMING"
+    ? "Confirming connection…"
+    : state === "VERIFYING_CHANNEL"
+      ? "Checking connection…"
+      : "Loading Instagram account…";
+  return (
+    <div className="instagram-assets-loading" role="status" aria-live="polite" data-state={state}>
+      <Loader2 aria-hidden className="workspace-spin" size={20} /> {label}
+    </div>
+  );
+}
+
+function ConnectedExperience({ connection }: { connection: SalesChannelConnection }) {
+  const desktopEnabled = isDesktopDeepLinkEnabled();
+  const identity = connection.username
+    ? `@${connection.username.replace(/^@/, "")}`
+    : connection.accountName;
+  return (
+    <section className="instagram-completion" aria-labelledby="instagram-connected-title" data-state="CONNECTED">
+      <span className="instagram-completion__icon instagram-completion__icon--success"><CheckCircle2 aria-hidden size={28} /></span>
+      <p className="instagram-completion__brand">YDeck · Sales Operator</p>
+      <h1 id="instagram-connected-title">Instagram connected</h1>
+      <p><strong>{identity}</strong> is now connected to YDeck Sales Operator.</p>
+      <p>New Instagram conversations can now be handled through YDeck.</p>
+      <div className="instagram-completion__actions">
+        {desktopEnabled ? (
+          <a className="account-button account-button--primary" href={INSTAGRAM_DESKTOP_CHANNELS_URL}>
+            Continue in YDeck <ExternalLink aria-hidden size={16} />
+          </a>
+        ) : (
+          <Link className="account-button account-button--primary" href="/sales-operator/channels">
+            View connected channels
+          </Link>
+        )}
+      </div>
+      <p className="instagram-completion__hint">
+        {desktopEnabled
+          ? "If YDeck doesn’t open, return to the YDeck Desktop app. You can also close this window."
+          : "Return to the YDeck Desktop app when you’re ready. You can also close this window."}
+      </p>
+    </section>
+  );
+}
+
 export function InstagramAssetSelection() {
-  const router = useRouter();
   const searchParams = useSearchParams();
   const { workspace, status: workspaceStatus } = useWorkspace();
   const {
+    status: channelsStatus,
+    connections,
     canManage,
     instagramEnabled,
     pendingAction,
@@ -26,180 +90,228 @@ export function InstagramAssetSelection() {
     confirmInstagramAssets,
     beginInstagramConnection,
   } = useSalesOperatorChannels();
-  const [selectedIds, setSelectedIds] = useState<string[]>([]);
+  const [completionContext, setCompletionContext] = useState<InstagramCompletionContext | null>(null);
+  const [selectedId, setSelectedId] = useState("");
+  const [state, setState] = useState<InstagramCompletionState>("INITIALIZING");
   const [callbackError, setCallbackError] = useState<string | null>(null);
+  const [connectedChannel, setConnectedChannel] = useState<SalesChannelConnection | null>(null);
   const consumedRef = useRef<string | null>(null);
+  const submissionRef = useRef(false);
 
   useEffect(() => {
-    if (workspaceStatus !== "ready" || !workspace) return;
-    const metaStatus = searchParams.get("metaStatus");
-    const authorizationSessionId = searchParams.get("authorizationSessionId");
-    const flowWorkspaceId = searchParams.get("flowWorkspaceId");
-    if (!metaStatus && !authorizationSessionId && !flowWorkspaceId && consumedRef.current) return;
-    const parsed = parseInstagramCallback({
-      metaStatus,
-      authorizationSessionId,
-      flowWorkspaceId,
-    });
-    const removeOAuthQuery = () => {
-      if (window.location.pathname === INSTAGRAM_RETURN_PATH && window.location.search) {
-        window.history.replaceState(window.history.state, "", INSTAGRAM_RETURN_PATH);
+    const hasCallbackQuery = searchParams.has("metaStatus")
+      || searchParams.has("authorizationSessionId")
+      || searchParams.has("flowWorkspaceId");
+    if (hasCallbackQuery) {
+      const parsed = captureInstagramCompletionContext(new URLSearchParams(searchParams.toString()));
+      removeSensitiveQuery();
+      if (!parsed.ok) {
+        clearInstagramCompletionContext();
+        setCallbackError("The Instagram return request was incomplete or unexpected. Start a new connection from YDeck.");
+        setState("ERROR");
+        return;
       }
-    };
-    router.replace(INSTAGRAM_RETURN_PATH, { scroll: false });
-    removeOAuthQuery();
-    window.requestAnimationFrame(removeOAuthQuery);
-    window.setTimeout(removeOAuthQuery, 250);
-    if (!parsed.ok) {
-      setCallbackError("The Instagram return request was incomplete or unexpected. Start a new connection safely.");
-      clearInstagramAuthorization();
+      setCompletionContext(parsed.context);
       return;
     }
-    if (consumedRef.current === parsed.authorizationSessionId) return;
-    consumedRef.current = parsed.authorizationSessionId;
-    setCallbackError(null);
-    void consumeInstagramCallback({
-      workspaceId: parsed.flowWorkspaceId,
-      authorizationSessionId: parsed.authorizationSessionId,
-    });
-  }, [clearInstagramAuthorization, consumeInstagramCallback, router, searchParams, workspace, workspaceStatus]);
+
+    const stored = readInstagramCompletionContext();
+    if (stored) {
+      setCompletionContext(stored);
+      return;
+    }
+    if (readInstagramConnectedReceipt()) return;
+    setCallbackError("This Instagram connection request is no longer available. Start again from YDeck.");
+    setState("EXPIRED");
+  }, [searchParams]);
 
   useEffect(() => {
-    setSelectedIds([]);
-  }, [instagramAuthorization?.workspaceId, instagramAuthorization?.authorizationSessionId]);
+    if (!completionContext || state === "CONNECTED" || state === "ERROR" || state === "EXPIRED") return;
+    const remaining = completionContext.expiresAt - Date.now();
+    if (remaining <= 0) {
+      clearInstagramCompletionContext();
+      setState("EXPIRED");
+      return;
+    }
+    const timeout = window.setTimeout(() => {
+      clearInstagramCompletionContext();
+      setState("EXPIRED");
+    }, remaining);
+    return () => window.clearTimeout(timeout);
+  }, [completionContext, state]);
+
+  useEffect(() => {
+    if (workspaceStatus !== "ready" || !workspace || state === "ERROR" || state === "EXPIRED") return;
+    const receipt = readInstagramConnectedReceipt();
+    if (receipt?.workspaceId === workspace.id && channelsStatus === "ready") {
+      const connected = resolveConnectedInstagramChannel(connections, receipt.externalAccountIds);
+      if (connected) {
+        clearInstagramCompletionContext();
+        setConnectedChannel(connected);
+        setState("CONNECTED");
+        return;
+      }
+    }
+
+    if (!completionContext) return;
+    if (completionContext.flowWorkspaceId && completionContext.flowWorkspaceId !== workspace.id) {
+      setCallbackError("This Instagram connection was started in a different YDeck workspace.");
+      setState("ERROR");
+      return;
+    }
+    if (completionContext.confirmationStarted && !submissionRef.current) {
+      if (channelsStatus === "loading" || channelsStatus === "idle") {
+        setState("VERIFYING_CHANNEL");
+        return;
+      }
+      const connected = resolveConnectedInstagramChannel(connections, completionContext.selectedExternalAccountIds);
+      if (connected) {
+        rememberConnectedInstagram(workspace.id, [connected.externalAccountId]);
+        setConnectedChannel(connected);
+        setState("CONNECTED");
+      } else if (channelsStatus === "ready" || channelsStatus === "error") {
+        setCallbackError("YDeck could not verify a completed Instagram connection. Check your channels before starting again.");
+        setState("ERROR");
+      }
+      return;
+    }
+    if (consumedRef.current === completionContext.authorizationSessionId) return;
+    consumedRef.current = completionContext.authorizationSessionId;
+    setState("LOADING_ASSETS");
+    void consumeInstagramCallback({
+      workspaceId: completionContext.flowWorkspaceId ?? workspace.id,
+      authorizationSessionId: completionContext.authorizationSessionId,
+    });
+  }, [channelsStatus, completionContext, connections, consumeInstagramCallback, state, workspace, workspaceStatus]);
 
   const assets = instagramAuthorization?.assets ?? [];
-  const selectedSet = useMemo(() => new Set(selectedIds), [selectedIds]);
+  const selectedAsset = useMemo(
+    () => assets.find((asset) => asset.externalAccountId === selectedId) ?? null,
+    [assets, selectedId],
+  );
   const permissionDescriptionId = "instagram-confirm-permission";
   const canConfirm = canManage && instagramEnabled;
 
+  useEffect(() => {
+    if (instagramAuthorization?.status === "loading") setState("LOADING_ASSETS");
+    if (instagramAuthorization?.status === "ready") {
+      setSelectedId((current) => current || (instagramAuthorization.assets.length === 1
+        ? instagramAuthorization.assets[0]?.externalAccountId ?? ""
+        : ""));
+      setState("ASSET_SELECTION");
+    }
+    if (instagramAuthorization?.status === "error") {
+      setState(isInstagramSessionExpiredCode(instagramAuthorization.error?.code ?? "") ? "EXPIRED" : "ERROR");
+    }
+  }, [instagramAuthorization]);
+
+  useEffect(() => {
+    if (pendingAction === "instagram:confirm") setState("CONFIRMING");
+    if (pendingAction === "instagram:verify") setState("VERIFYING_CHANNEL");
+  }, [pendingAction]);
+
   async function restart() {
+    clearInstagramCompletionContext();
     clearInstagramAuthorization();
     setCallbackError(null);
     if (canConfirm) await beginInstagramConnection();
   }
 
-  if (workspaceStatus === "loading" || workspaceStatus === "idle") {
-    return <div className="instagram-assets-loading"><Loader2 aria-hidden className="workspace-spin" size={20} /> Restoring workspace…</div>;
+  async function confirmSelection() {
+    if (!completionContext || !selectedAsset || submissionRef.current || pendingAction) return;
+    submissionRef.current = true;
+    setState("CONFIRMING");
+    const submittedContext = markInstagramConfirmationStarted(completionContext, [selectedAsset.externalAccountId]);
+    setCompletionContext(submittedContext);
+    const connected = await confirmInstagramAssets([selectedAsset.externalAccountId]);
+    if (connected && workspace) {
+      rememberConnectedInstagram(workspace.id, [connected.externalAccountId]);
+      setConnectedChannel(connected);
+      setState("CONNECTED");
+      return;
+    }
+    const errorCode = instagramAuthorization?.error?.code ?? "";
+    setState(isInstagramSessionExpiredCode(errorCode) ? "EXPIRED" : "ERROR");
+  }
+
+  if (connectedChannel) return <ConnectedExperience connection={connectedChannel} />;
+
+  if (workspaceStatus === "loading" || workspaceStatus === "idle" || state === "INITIALIZING") {
+    return <InstagramProgress state="INITIALIZING" />;
+  }
+
+  if (["LOADING_ASSETS", "CONFIRMING", "VERIFYING_CHANNEL"].includes(state)) {
+    return <InstagramProgress state={state} />;
+  }
+
+  const safeError = instagramAuthorization?.error;
+  if (state === "ERROR" || state === "EXPIRED") {
+    const expired = state === "EXPIRED";
+    return (
+      <section className="instagram-assets" aria-labelledby="instagram-assets-title" data-state={state}>
+        <EmptyState
+          icon={<AlertCircle aria-hidden size={21} />}
+          title={expired ? "Instagram session expired" : "Instagram connection could not continue"}
+          action={canConfirm ? <Button type="button" onClick={() => void restart()}><RefreshCw aria-hidden size={15} /> Start again from YDeck</Button> : undefined}
+        >
+          {expired
+            ? "This secure completion session has expired. Start a new Instagram connection from YDeck."
+            : callbackError ?? safeError?.message ?? "YDeck could not finish connecting Instagram."}
+          {safeError?.remediation && !expired ? <span className="instagram-assets__permission">{safeError.remediation}</span> : null}
+        </EmptyState>
+        {safeError?.requestId ? (
+          <ErrorDetails requestId={safeError.requestId} category={safeError.code.toLowerCase()} timestamp={new Date().toISOString()} />
+        ) : null}
+      </section>
+    );
   }
 
   return (
-    <section className="instagram-assets" aria-labelledby="instagram-assets-title">
+    <section className="instagram-assets" aria-labelledby="instagram-assets-title" data-state="ASSET_SELECTION">
       <header className="instagram-assets__header">
         <span className="instagram-assets__icon"><Camera aria-hidden size={22} /></span>
         <div>
           <span>Instagram connection</span>
-          <h1 id="instagram-assets-title">Choose business accounts</h1>
-          <p>Select one or more eligible Instagram professional accounts for <strong>{workspace?.name ?? "this workspace"}</strong>. Automated replies will remain off.</p>
+          <h1 id="instagram-assets-title">{assets.length === 1 ? "Confirm Instagram account" : "Choose an Instagram account"}</h1>
+          <p>Connect an eligible Instagram Professional account to <strong>{workspace?.name ?? "this workspace"}</strong>. Automated replies will remain off.</p>
         </div>
       </header>
 
       <div className="instagram-assets__security">
         <ShieldCheck aria-hidden size={17} />
-        <span>YDeck Cloud completed the Meta callback and keeps provider credentials server-side. This page receives only safe account fields.</span>
+        <span>YDeck Cloud keeps provider credentials server-side. Only safe account details are shown here.</span>
       </div>
 
-      {callbackError ? (
-        <EmptyState
-          icon={<AlertCircle aria-hidden size={21} />}
-          title="Instagram authorization could not continue"
-          action={<Button type="button" disabled={!canConfirm} aria-describedby={!canConfirm ? permissionDescriptionId : undefined} onClick={() => void restart()}><RefreshCw aria-hidden size={15} /> Start again</Button>}
-        >
-          {callbackError}
-          {!canConfirm ? (
-            <span className="instagram-assets__permission" id={permissionDescriptionId} role="note">
-              {!instagramEnabled
-                ? "Instagram is not enabled for this workspace."
-                : "Channel management permission is required to start again."}
-            </span>
-          ) : null}
-        </EmptyState>
-      ) : instagramAuthorization?.status === "loading" || !instagramAuthorization ? (
-        <div className="instagram-assets-loading" role="status" aria-live="polite">
-          <Loader2 aria-hidden className="workspace-spin" size={20} /> Loading eligible Instagram accounts…
-        </div>
-      ) : instagramAuthorization.status === "error" ? (
-        <div className="instagram-assets__error">
-          <Alert tone="danger" title={instagramAuthorization.error?.message ?? "Instagram accounts could not load"}>
-            {instagramAuthorization.error?.remediation ?? "Start the Instagram connection again."}
-          </Alert>
-          {instagramAuthorization.error?.requestId ? (
-            <ErrorDetails
-              requestId={instagramAuthorization.error.requestId}
-              category={instagramAuthorization.error.code.toLowerCase()}
-              timestamp={new Date().toISOString()}
-            />
-          ) : null}
-          {!canConfirm ? (
-            <p className="instagram-assets__permission" id={permissionDescriptionId} role="note">
-              {!instagramEnabled
-                ? "Instagram is no longer enabled for this workspace. Start a new connection after the Cloud feature is restored."
-                : "Your workspace access changed. Channel management permission is required to continue."}
-            </p>
-          ) : null}
-          <Button type="button" disabled={!canConfirm} aria-describedby={!canConfirm ? permissionDescriptionId : undefined} onClick={() => void restart()}><RefreshCw aria-hidden size={15} /> Reconnect Instagram</Button>
-        </div>
-      ) : assets.length === 0 ? (
+      {assets.length === 0 ? (
         <EmptyState
           icon={<Camera aria-hidden size={21} />}
-          title="No eligible Instagram business accounts"
-          action={<Button type="button" disabled={!canConfirm} aria-describedby={!canConfirm ? permissionDescriptionId : undefined} onClick={() => void restart()}><RefreshCw aria-hidden size={15} /> Start again</Button>}
+          title="No eligible Instagram Professional account"
+          action={<Button type="button" disabled={!canConfirm} onClick={() => void restart()}><RefreshCw aria-hidden size={15} /> Start again</Button>}
         >
-          No eligible Instagram business accounts were returned. Confirm that the Instagram account is professional, linked to the correct Meta business assets, and that the required permissions were approved.
-          {!canConfirm ? (
-            <span className="instagram-assets__permission" id={permissionDescriptionId} role="note">
-              {!instagramEnabled
-                ? "Instagram is no longer enabled for this workspace."
-                : "Channel management permission is required to start again."}
-            </span>
-          ) : null}
+          We couldn’t find an eligible Instagram Professional account. Confirm the account type and required permissions, then try again from YDeck.
         </EmptyState>
       ) : (
-        <form className="instagram-assets__form" onSubmit={(event) => {
-          event.preventDefault();
-          void confirmInstagramAssets(selectedIds).then((confirmed) => {
-            if (confirmed) router.replace("/sales-operator/channels");
-          });
-        }}>
-          {instagramAuthorization.error ? (
-            <div className="instagram-assets__confirm-error" role="alert">
-              <Alert tone="danger" title={instagramAuthorization.error.message}>
-                {instagramAuthorization.error.remediation}
-              </Alert>
-              {instagramAuthorization.error.requestId ? (
-                <ErrorDetails
-                  requestId={instagramAuthorization.error.requestId}
-                  category={instagramAuthorization.error.code.toLowerCase()}
-                  timestamp={new Date().toISOString()}
-                />
-              ) : null}
-            </div>
-          ) : null}
+        <form className="instagram-assets__form" onSubmit={(event) => { event.preventDefault(); void confirmSelection(); }}>
+          {safeError ? <Alert tone="danger" title={safeError.message}>{safeError.remediation}</Alert> : null}
           <fieldset>
-            <legend>{assets.length === 1 ? "Eligible account" : `${assets.length} eligible accounts`}</legend>
+            <legend>{assets.length === 1 ? "Instagram account" : `${assets.length} eligible accounts`}</legend>
             <div className="instagram-asset-list">
               {assets.map((asset) => {
-                const selected = selectedSet.has(asset.externalAccountId);
+                const selected = selectedId === asset.externalAccountId;
                 const imageUrl = safeProviderImageUrl(asset.imageUrl);
                 return (
                   <label className={`instagram-asset${selected ? " instagram-asset--selected" : ""}`} key={asset.externalAccountId}>
-                    <input
-                      type="checkbox"
-                      checked={selected}
-                      onChange={(event) => setSelectedIds((current) => event.target.checked
-                        ? [...new Set([...current, asset.externalAccountId])]
-                        : current.filter((id) => id !== asset.externalAccountId))}
-                    />
+                    <input type="radio" name="instagram-account" checked={selected} onChange={() => setSelectedId(asset.externalAccountId)} />
                     <span className="instagram-asset__check" aria-hidden>{selected ? <Check size={15} /> : null}</span>
                     <span className="instagram-asset__image">
                       {imageUrl ? <img src={imageUrl} alt="" referrerPolicy="no-referrer" /> : <Camera aria-hidden size={20} />}
                     </span>
                     <span className="instagram-asset__identity">
-                      <strong title={asset.name}>{asset.name}</strong>
-                      <small title={asset.username ?? undefined}>{asset.username ? `@${asset.username.replace(/^@/, "")}` : "Username unavailable"}</small>
+                      <strong title={asset.username ?? asset.name}>{asset.username ? `@${asset.username.replace(/^@/, "")}` : asset.name}</strong>
+                      <small title={asset.name}>{asset.name}</small>
                     </span>
                     <span className="instagram-asset__business" title={asset.linkedBusinessName ?? undefined}>
-                      <Building2 aria-hidden size={15} /> {asset.linkedBusinessName ?? "Linked business not named"}
+                      <Building2 aria-hidden size={15} /> {asset.linkedBusinessName ?? "Professional account"}
                     </span>
                   </label>
                 );
@@ -209,27 +321,20 @@ export function InstagramAssetSelection() {
 
           {!canConfirm ? (
             <p className="instagram-assets__permission" id={permissionDescriptionId} role="note">
-              {!instagramEnabled
-                ? "Instagram is no longer enabled for this workspace. Start a new connection after the Cloud feature is restored."
-                : "Your workspace access changed. Channel management permission is required to confirm these accounts."}
+              {!instagramEnabled ? "Instagram is not enabled for this workspace." : "Channel management permission is required to continue."}
             </p>
           ) : null}
 
           <div className="instagram-assets__actions">
-            <Button type="button" variant="secondary" disabled={pendingAction === "instagram:confirm"} onClick={() => {
-              clearInstagramAuthorization();
-              router.replace("/sales-operator/channels");
-            }}>
-              Cancel
-            </Button>
+            <Link className="account-button account-button--secondary" href="/sales-operator/channels" onClick={clearInstagramCompletionContext}>Cancel</Link>
             <Button
               type="submit"
-              loading={pendingAction === "instagram:confirm"}
-              loadingLabel="Connecting accounts…"
-              disabled={!canConfirm || selectedIds.length === 0 || Boolean(pendingAction)}
+              loading={pendingAction === "instagram:confirm" || pendingAction === "instagram:verify"}
+              loadingLabel={pendingAction === "instagram:verify" ? "Checking connection…" : "Connecting Instagram…"}
+              disabled={!canConfirm || !selectedId || Boolean(pendingAction) || submissionRef.current}
               aria-describedby={!canConfirm ? permissionDescriptionId : undefined}
             >
-              Connect {selectedIds.length || "selected"} {selectedIds.length === 1 ? "account" : "accounts"}
+              {assets.length === 1 ? "Connect Instagram" : "Connect selected account"}
             </Button>
           </div>
         </form>

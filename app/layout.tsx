@@ -8,19 +8,19 @@ import "./desktop-portal.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ydeck.app"),
-  title: "YDeck — Private AI for Recurring Enterprise Reporting",
+  title: "YDeck — AI Agent Workspace for Companies",
   description:
-    "Automate recurring management reports, learn reporting rules, and build evidence-linked decision memory for a private company brain.",
+    "Deploy AI agents, connect customer channels, and keep your team in control. Start with YDeck Sales Agent and Sales Operator.",
   openGraph: {
-    title: "YDeck — Private AI for Recurring Enterprise Reporting",
+    title: "YDeck — AI Agent Workspace for Companies",
     description:
-      "YDeck Private Reporting Agent helps teams turn recurring reports, source data, templates, and review rules into reusable reporting memory.",
+      "Your company’s workspace for AI agents—starting with sales.",
     images: [
       {
         url: "/ydeck.png",
         width: 360,
         height: 360,
-        alt: "YDeck Private Reporting Agent logo",
+        alt: "YDeck AI Agent Workspace logo",
       },
     ],
   },

@@ -27,29 +27,40 @@ test("final CTA decorations cannot intercept pointer input", async () => {
 });
 
 test("landing navigation exposes an accessible mobile disclosure", async () => {
-  const navbar = await source("../components/ydeck/components/Navbar.tsx");
-  const content = await source("../components/ydeck/i18n/localeContent.tsx");
+  const page = await source("../components/ydeck/YDeckPage.tsx");
 
-  assert.match(navbar, /Menu, X/);
-  assert.match(navbar, /aria-controls="ydeck-mobile-navigation"/);
-  assert.match(navbar, /aria-expanded=\{mobileMenuOpen\}/);
-  assert.match(navbar, /id="ydeck-mobile-navigation"/);
-  assert.match(navbar, /xl:hidden/);
-  assert.match(navbar, /event\.key !== 'Escape'/);
-  assert.match(navbar, /menuButtonRef\.current\?\.focus\(\)/);
-  assert.match(navbar, /onClick=\{\(\) => setMobileMenuOpen\(false\)\}/);
-  assert.match(content, /openMenuLabel: 'Open navigation'/);
-  assert.match(content, /openMenuLabel: 'Открыть навигацию'/);
-  assert.match(content, /openMenuLabel: 'Navigatsiyani ochish'/);
+  assert.match(page, /Menu,/);
+  assert.match(page, /X,/);
+  assert.match(page, /aria-controls="agent-mobile-nav"/);
+  assert.match(page, /aria-expanded=\{menuOpen\}/);
+  assert.match(page, /id="agent-mobile-nav"/);
+  assert.match(page, /event\.key !== "Escape"/);
+  assert.match(page, /menuButtonRef\.current\?\.focus\(\)/);
+  assert.match(page, /onClick=\{\(\) => setMenuOpen\(false\)\}/);
+  assert.match(page, /openMenu: "Open navigation"/);
+  assert.match(page, /openMenu: "Открыть навигацию"/);
+  assert.match(page, /openMenu: "Navigatsiyani ochish"/);
+});
+
+test("landing navigation sends authenticated users to the console", async () => {
+  const page = await source("../components/ydeck/YDeckPage.tsx");
+
+  assert.match(page, /const \{ status: authStatus \} = useAuth\(\)/);
+  assert.match(page, /authStatus === "authenticated"/);
+  assert.match(page, /authStatus === "unauthenticated" \|\| authStatus === "error"/);
+  assert.match(page, /href="\/workspace"/);
+  assert.match(page, /goToConsole: "Go to console"/);
+  assert.match(page, /goToConsole: "Перейти в консоль"/);
+  assert.match(page, /goToConsole: "Konsolga o‘tish"/);
 });
 
 test("landing locale changes update the current URL before reload", async () => {
   const page = await source("../components/ydeck/YDeckPage.tsx");
 
   assert.match(page, /function handleLocaleChange\(nextLocale: Locale\)/);
-  assert.match(page, /url\.searchParams\.set\('lang', nextLocale\)/);
-  assert.match(page, /window\.history\.replaceState\(\{\}, '', url\)/);
-  assert.match(page, /onLocaleChange=\{handleLocaleChange\}/);
+  assert.match(page, /url\.searchParams\.set\("lang", nextLocale\)/);
+  assert.match(page, /window\.history\.replaceState\(\{\}, "", url\)/);
+  assert.match(page, /onClick=\{\(\) => handleLocaleChange\(option\.locale\)\}/);
 });
 
 test("public contact actions use the canonical Globance legal email identity", async () => {

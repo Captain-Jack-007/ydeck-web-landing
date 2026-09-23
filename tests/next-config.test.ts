@@ -3,7 +3,7 @@ import { test } from "node:test";
 import createNextConfig, { resolveApiProxyTarget } from "../next.config.mjs";
 
 test("development API proxy targets the local YDeck server", () => {
-  assert.equal(resolveApiProxyTarget("phase-development-server", ""), "http://localhost:2026");
+  assert.equal(resolveApiProxyTarget("phase-development-server", ""), "http://localhost:8085");
 });
 
 test("production API proxy targets YDeck Cloud", () => {
@@ -33,11 +33,11 @@ test("report-template thumbnail assets are proxied through the trusted API origi
   assert.deepEqual(rewrites, [
     {
       source: "/api/v1/:path*",
-      destination: "http://localhost:2026/api/v1/:path*",
+      destination: "http://localhost:8085/api/v1/:path*",
     },
     {
       source: "/assets/report-templates/:path*",
-      destination: "http://localhost:2026/assets/report-templates/:path*",
+      destination: "http://localhost:8085/assets/report-templates/:path*",
     },
   ]);
 });

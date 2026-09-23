@@ -6,7 +6,7 @@
     "predev": "lsof -ti tcp:3005 | xargs kill -9 2>/dev/null || true; rm -rf .next",
     "dev": "next dev --webpack -p 3005",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 3005",
     "typecheck": "tsc --noEmit",
     "test": "node --import tsx --test tests/*.test.ts"
   },

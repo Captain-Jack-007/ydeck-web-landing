@@ -203,7 +203,7 @@ test("Desktop daemon responses explain the local proxy collision", () => {
 
   const message = getHumanErrorMessage(error);
   assert.match(message, /Desktop daemon/u);
-  assert.match(message, /YDECK_API_PROXY_TARGET=http:\/\/localhost:2026/u);
+  assert.match(message, /YDECK_API_PROXY_TARGET=http:\/\/localhost:8085/u);
   assert.equal(message.includes("Desktop Cloud authentication is required"), false);
 });
 

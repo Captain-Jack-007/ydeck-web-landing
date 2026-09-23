@@ -14,6 +14,7 @@ export default function SignInClient({ appOrigin }: { appOrigin: string }) {
   const router = useRouter();
   const searchParams = useSearchParams();
   const returnTo = safeAuthReturnTo(searchParams.get("returnTo"));
+  const finishingInstagram = returnTo === "/sales-operator/channels/instagram/return";
   const { setAuthenticatedUser } = useAuth();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -38,8 +39,10 @@ export default function SignInClient({ appOrigin }: { appOrigin: string }) {
 
   return (
     <AuthShell
-      title="Sign in to YDeck"
-      subtitle="Continue to your YDeck workspace."
+      title={finishingInstagram ? "Sign in to finish connecting Instagram" : "Sign in to YDeck"}
+      subtitle={finishingInstagram
+        ? "Your Instagram authorization is waiting. Sign in to YDeck to choose the account and finish securely."
+        : "Continue to your YDeck workspace."}
       footer={
         <div>
           New here? <Link href={`/auth/sign-up${authReturnToParam(returnTo)}`}>Create an account</Link>
