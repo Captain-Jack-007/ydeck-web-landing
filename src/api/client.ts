@@ -278,7 +278,7 @@ export function getHumanErrorMessage(error: unknown) {
         return "The email or password is not correct.";
       case "DESKTOP_AUTHENTICATION_REQUIRED":
         return process.env.NODE_ENV !== "production"
-          ? `The local web app reached the YDeck Desktop daemon instead of the main API. Set YDECK_API_PROXY_TARGET=http://localhost:2026, then restart the frontend.${support}`
+          ? `The local web app reached the YDeck Desktop daemon instead of the main API. Set YDECK_API_PROXY_TARGET=http://localhost:8085, then restart the frontend.${support}`
           : `Unable to sign in right now. Please try again later.${support}`;
       case "AUTH_EMAIL_NOT_VERIFIED":
         return "Please verify your email before continuing.";

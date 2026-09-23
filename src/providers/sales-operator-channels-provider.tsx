@@ -12,6 +12,7 @@ import {
   validateCloudAuthorizationUrl,
   type SafeChannelError,
 } from "@/src/lib/sales-operator-channels";
+import { resolveConnectedInstagramChannel } from "@/src/lib/instagram-oauth-completion";
 import { useAuth } from "@/src/providers/auth-provider";
 import { useBilling } from "@/src/providers/billing-provider";
 import { useWorkspace } from "@/src/providers/workspace-provider";
@@ -40,7 +41,7 @@ type SalesOperatorChannelsContextValue = {
   beginInstagramConnection: () => Promise<void>;
   consumeInstagramCallback: (input: { workspaceId: string; authorizationSessionId: string }) => Promise<void>;
   clearInstagramAuthorization: () => void;
-  confirmInstagramAssets: (externalAccountIds: string[]) => Promise<boolean>;
+  confirmInstagramAssets: (externalAccountIds: string[]) => Promise<SalesChannelConnection | null>;
   testConnection: (connectionId: string) => Promise<void>;
   refreshAuthorization: (connectionId: string) => Promise<void>;
   pauseConnection: (connectionId: string) => Promise<void>;
@@ -70,7 +71,7 @@ export function SalesOperatorChannelsProvider({ children }: { children: ReactNod
   const activeController = useRef<AbortController | null>(null);
   const beginPromise = useRef<Promise<void> | null>(null);
   const assetLoadPromise = useRef<Promise<void> | null>(null);
-  const confirmPromise = useRef<Promise<boolean> | null>(null);
+  const confirmPromise = useRef<Promise<SalesChannelConnection | null> | null>(null);
   const connectionActionPromises = useRef(new Map<string, Promise<void>>());
   const activeConnectionAction = useRef<string | null>(null);
   const currentWorkspaceId = workspace?.id ?? null;
@@ -248,33 +249,55 @@ export function SalesOperatorChannelsProvider({ children }: { children: ReactNod
       authorization.workspaceId !== workspaceId ||
       authorization.status !== "ready" ||
       externalAccountIds.length === 0
-    ) return false;
+    ) return null;
     const eligibleIds = new Set(authorization.assets.map((asset) => asset.externalAccountId));
     const selectedIds = [...new Set(externalAccountIds)].filter((id) => eligibleIds.has(id));
-    if (selectedIds.length !== new Set(externalAccountIds).size) return false;
+    if (selectedIds.length !== new Set(externalAccountIds).size) return null;
 
     const run = (async () => {
       setPendingAction("instagram:confirm");
       setError(null);
       try {
         await salesOperatorApi.confirmInstagramAssets(workspaceId, authorization.authorizationSessionId, selectedIds);
-        if (currentWorkspaceIdRef.current !== workspaceId || !instagramEnabledRef.current) return false;
+        if (currentWorkspaceIdRef.current !== workspaceId || !instagramEnabledRef.current) return null;
+        setPendingAction("instagram:verify");
+        const [channelResponse] = await Promise.all([
+          salesOperatorApi.listChannelConnections(workspaceId),
+          refreshDependents(workspaceId),
+        ]);
+        if (currentWorkspaceIdRef.current !== workspaceId || !instagramEnabledRef.current) return null;
+        const connected = resolveConnectedInstagramChannel(channelResponse.connections, selectedIds);
+        setConnections(channelResponse.connections);
+        setConnectionsWorkspaceId(workspaceId);
+        setStatus("ready");
+        if (!connected) {
+          setInstagramAuthorization((current) => current ? {
+            ...current,
+            error: {
+              code: "CHANNEL_VERIFICATION_FAILED",
+              message: "YDeck could not verify the Instagram connection yet.",
+              remediation: "Check your channels before trying the connection again.",
+              retryable: false,
+              requestId: null,
+            },
+          } : current);
+          return null;
+        }
         clearInstagramAuthorization();
-        await Promise.all([refreshChannels(), refreshDependents(workspaceId)]);
-        return true;
+        return connected;
       } catch (confirmError) {
         if (currentWorkspaceIdRef.current === workspaceId && instagramEnabledRef.current) {
           setInstagramAuthorization((current) => current ? { ...current, error: safeSalesOperatorError(confirmError) } : current);
         }
-        return false;
+        return null;
       } finally {
-        setPendingAction((current) => current === "instagram:confirm" ? null : current);
+        setPendingAction((current) => ["instagram:confirm", "instagram:verify"].includes(current ?? "") ? null : current);
         confirmPromise.current = null;
       }
     })();
     confirmPromise.current = run;
     return run;
-  }, [canManage, clearInstagramAuthorization, currentWorkspaceId, instagramAuthorization, instagramEnabled, refreshChannels, refreshDependents]);
+  }, [canManage, clearInstagramAuthorization, currentWorkspaceId, instagramAuthorization, instagramEnabled, refreshDependents]);
 
   const runConnectionAction = useCallback(async (
     connectionId: string,

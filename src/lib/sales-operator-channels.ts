@@ -1,5 +1,6 @@
 import { YDeckApiError } from "@/src/api/client";
 import type { InstagramAsset, SalesChannelConnection } from "@/src/api/sales-operator";
+import { parseInstagramCompletionContext } from "@/src/lib/instagram-oauth-completion";
 
 export const INSTAGRAM_CALLBACK_STATUS = "asset_selection_required" as const;
 export const INSTAGRAM_RETURN_PATH = "/sales-operator/channels/instagram/return" as const;
@@ -157,19 +158,12 @@ export function parseInstagramCallback(input: {
   authorizationSessionId: string | null;
   flowWorkspaceId: string | null;
 }) {
-  if (input.metaStatus !== INSTAGRAM_CALLBACK_STATUS) {
-    return { ok: false as const, reason: "invalid_status" as const };
-  }
-  if (!input.authorizationSessionId || input.authorizationSessionId.length > 80) {
-    return { ok: false as const, reason: "invalid_session" as const };
-  }
-  if (!input.flowWorkspaceId) {
-    return { ok: false as const, reason: "missing_workspace" as const };
-  }
+  const parsed = parseInstagramCompletionContext(input);
+  if (!parsed.ok) return parsed;
   return {
     ok: true as const,
-    authorizationSessionId: input.authorizationSessionId,
-    flowWorkspaceId: input.flowWorkspaceId,
+    authorizationSessionId: parsed.context.authorizationSessionId,
+    flowWorkspaceId: parsed.context.flowWorkspaceId,
   };
 }
 

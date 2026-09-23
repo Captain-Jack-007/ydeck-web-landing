@@ -6,32 +6,43 @@ brand
 
 ## Users
 
-YDeck is aimed at large and data-sensitive organizations that rebuild recurring management reports from internal data, prior report packs, templates, and review rules. Initial customer-discovery segments are mining and industrial companies, accounting firms, and enterprise finance or FP&A teams. Public visitors need to understand the reporting-agent direction, the pilot maturity, and the reporting-audit CTA without entering the authenticated workspace.
+YDeck is aimed at companies that want AI agents to perform business work without removing human accountability. The first working product is for sales teams, managers, and customer-facing operations that handle incoming conversations through business messaging channels.
 
 ## Product Purpose
 
-YDeck Private Reporting Agent helps teams turn recurring reporting processes into reviewed, reusable company reporting skills. Skills Studio analyzes previous report packs, source data, KPI definitions, company templates, comments, and reporting rules so future cycles can produce draft PowerPoint reports, with PDF reporting and broader Reporting OS capabilities treated as pilot/planned vision where not yet implemented.
+YDeck is an AI agent workspace for companies. It provides the environment where companies deploy, supervise, and work with specialized agents. Sales Agent is the first major agent available today. Sales Operator is the workspace where teams manage connected channels, inspect agent state, and keep human control over automated replies and customer interactions.
+
+The broader platform direction includes specialized agents for reporting, finance, 1C, SAP, and company operations. These must be presented as coming soon until they are implemented. Presentation and reporting remain possible agent output categories, not YDeck’s primary identity.
+
+## Product Reality
+
+- Sales Agent: available as the first YDeck agent.
+- Sales Operator: working authenticated workspace and channel-management surface.
+- Instagram business messaging: beta connection flow with explicit permission, health, pause, and automated-reply controls.
+- Facebook Messenger and Telegram: represented in the Sales Operator channel model, but not marketed as live connection flows on the public page.
+- WhatsApp: coming soon; no live integration claim.
+- Reporting Agent, 1C Agents, SAP Agents, Finance Agent, and Operations Agent: coming soon.
 
 ## Brand Personality
 
-Professional, precise, and evidence-aware. The brand should feel like a serious reporting workstation: calm enough for confidential management data, sharp enough for executive and board reporting, and concrete enough for a reporting owner, CFO, operations leader, IT stakeholder, or design partner to understand in seconds.
+Professional, precise, calm, technical, and accountable. The brand should feel like real enterprise operations software: product-led, concrete, and trustworthy enough for a sales manager, operations leader, IT stakeholder, or company owner to understand within seconds.
 
 ## Anti-references
 
-Avoid generic AI SaaS visuals, vague purple/blue AI gradients, inflated fake metrics, abstract productivity claims, and repeated card grids. Avoid implying social proof, customer counts, compliance status, or security certifications that the product has not earned.
+Avoid generic AI SaaS visuals, glowing robot heads, vague purple/blue gradients, fake dashboards, unsupported metrics, imaginary agent marketplaces, autonomous-sales claims, and integrations that are not implemented. Avoid making future agents look available.
 
 ## Design Principles
 
-Make the product category obvious within five seconds: private recurring-reporting automation, not generic AI slide generation.
+Make the category obvious within five seconds: an AI agent workspace for companies.
 
-Make the product mechanism explicit: previous report packs plus source data, rules, templates, and review produce a reusable reporting skill.
+Make current availability obvious: Sales Agent is the first agent available now, and Sales Operator gives the team control.
 
-Separate available/beta capabilities from design-partner development, planned capabilities, and long-term Reporting OS vision.
+Show the operating model concretely: customer channel → Sales Agent → Sales Operator → team visibility and intervention.
 
-Prefer concrete evidence and maturity labels over hype.
+Use status labels such as Available, Beta, and Coming Soon wherever product maturity matters.
 
-Keep the reporting-audit/design-partner path always available but never desperate.
+Preserve the authenticated Sales Operator, account, Desktop, and legacy presentation/report functionality while changing only the public landing-page narrative.
 
 ## Accessibility & Inclusion
 
-Target WCAG AA contrast, keyboard-accessible navigation and forms, clear focus states, reduced-motion support, and responsive layouts for booth phones, tablets, laptops, and desktop displays.
+Target WCAG AA contrast, keyboard-accessible navigation, visible focus states, reduced-motion support, semantic structure, and responsive layouts for phones, tablets, laptops, and desktop displays.

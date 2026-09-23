@@ -99,7 +99,7 @@ The development server runs on:
 http://localhost:3005
 ```
 
-Required environment variables are documented in `.env.local.example`. Local development can use the default API proxy target when paired with the YDeck backend running on `http://localhost:2026`.
+Required environment variables are documented in `.env.local.example`. Local development runs the frontend on `http://localhost:3005` and can proxy API requests to the local server at `http://localhost:8085`.
 
 ## Verification Commands
 

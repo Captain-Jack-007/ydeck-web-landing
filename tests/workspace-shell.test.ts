@@ -245,18 +245,16 @@ test("root route renders the public landing instead of the protected workspace",
   assert.match(authReturn, /DEFAULT_AUTH_RETURN_TO = "\/workspace"/);
 });
 
-test("public landing navigation exposes the waitlist without advertising authentication", async () => {
-  const navbar = await readFile(
-    new URL("../components/ydeck/components/Navbar.tsx", import.meta.url),
+test("public landing navigation exposes authentication and the working Sales Operator entry point", async () => {
+  const landing = await readFile(
+    new URL("../components/ydeck/YDeckPage.tsx", import.meta.url),
     "utf8",
   );
 
-  assert.match(navbar, /localizedPath\('\/waitlist', locale\)/);
-  assert.doesNotMatch(navbar, /localizedPath\('\/auth\/sign-(?:in|up)', locale\)/);
-  assert.match(
-    navbar,
-    /className="inline-flex[^\"]*"\s+href=\{localizedPath\('\/waitlist', locale\)\}/,
-  );
+  assert.match(landing, /href="\/auth\/sign-in"/);
+  assert.match(landing, /href="\/sales-operator\/channels"/);
+  assert.match(landing, /tryYDeck: "Try YDeck"/);
+  assert.match(landing, /primary: "Try Sales Agent"/);
 });
 
 test("waitlist intake stays focused and fixes the initial locale before hydration", async () => {
@@ -446,7 +444,7 @@ test("Russian landing, waitlist, metadata, and legal copy avoid mixed English fa
   assert.equal(translations.ru.waitlistForm.fields.presentationType, "Регулярный отчетный процесс");
   assert.equal(legalCopy.ru.pages.terms.title, "Условия пилотного доступа.");
   assert.doesNotMatch(formatMiniSlideAlt(web3TemplateSlides[0], "ru"), /reporting workflow/);
-  assert.match(russianMetadataSource, /YDeck — приватный ИИ/);
+  assert.match(russianMetadataSource, /YDeck — рабочее пространство ИИ-агентов/);
   assert.doesNotMatch(russianMetadataSource, /приватный AI/);
   assert.doesNotMatch(russianMetadataSource, /report packs, исходные данные/);
   assert.doesNotMatch(russianMetadataSource, /reporting skills/);

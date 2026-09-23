@@ -7,7 +7,7 @@ import "./sales-operator.css";
 export default function SalesOperatorLayout({ children }: { children: ReactNode }) {
   return (
     <Suspense fallback={<main className="account-page account-page--center"><div className="account-skeleton-card" aria-label="Loading Sales Operator" /></main>}>
-      <RequireAuth preserveSearchParams={false}>
+      <RequireAuth preserveSearchParams={false} preserveInstagramCompletionContext>
         <SalesOperatorChannelsProvider>
           <SalesOperatorShell>{children}</SalesOperatorShell>
         </SalesOperatorChannelsProvider>
