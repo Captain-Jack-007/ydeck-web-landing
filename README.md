@@ -99,7 +99,7 @@ The development server runs on:
 http://localhost:3005
 ```
 
-Required environment variables are documented in `.env.local.example`. Local development runs the frontend on `http://localhost:3005` and can proxy API requests to the local server at `http://localhost:8085`.
+Required environment variables are documented in `.env.local.example`. Local development runs the frontend on `http://localhost:3005` and can proxy API requests to the local server at `http://localhost:2026`.
 
 ## Verification Commands
 

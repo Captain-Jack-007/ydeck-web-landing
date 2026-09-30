@@ -2,9 +2,9 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Bot, Camera, ChevronRight, MessageCircle, MessagesSquare, Radio, Send } from "lucide-react";
+import { ArrowLeft, Bot, Camera, ChevronRight, MessageCircle, MessagesSquare, Radio, Send } from "lucide-react";
 import type { ReactNode } from "react";
-import { ProductTopBar } from "@/components/workspace/ProductTopBar";
+import { ConsoleShell } from "@/components/console/ConsoleShell";
 import {
   SALES_OPERATOR_DISPLAY_NAME,
   SALES_OPERATOR_PACKAGE_ID,
@@ -20,15 +20,26 @@ const channelLinks = [
   { href: "/sales-operator/channels#telegram", label: "Telegram", icon: Send },
 ];
 
+/**
+ * Agent surfaces that are planned but not built. Listed so the agent's shape is
+ * legible, rendered inert so none of it looks usable. Move an entry into real
+ * navigation only when its route exists.
+ */
+const plannedSections = ["Inbox", "Customers", "Analytics"];
+
 export function SalesOperatorShell({ children }: { children: ReactNode }) {
   const pathname = usePathname();
   const { workspace, status } = useWorkspace();
 
-  return (
-    <main className="sales-operator-page">
-      <ProductTopBar />
-      <aside className="sales-operator-sidebar" aria-label="Sales Operator navigation">
-        <header className="sales-operator-sidebar__identity">
+  const sidebar = (
+    <>
+      {/* Anchors the agent inside YDeck: this is one module of the workspace,
+          reached from Agents, not a separate application. */}
+      <Link className="sales-operator-sidebar__back" href="/agents">
+        <ArrowLeft aria-hidden size={14} /> Agents
+      </Link>
+
+      <header className="sales-operator-sidebar__identity">
           <span className="sales-operator-sidebar__icon"><Bot aria-hidden size={20} /></span>
           <span>
             <small>{SALES_OPERATOR_PACKAGE_ID}</small>
@@ -56,15 +67,31 @@ export function SalesOperatorShell({ children }: { children: ReactNode }) {
           })}
         </nav>
 
-        <footer>
-          <small>Active workspace</small>
-          <strong title={workspace?.name}>{workspace?.name ?? (status === "loading" ? "Loading workspace" : "Workspace unavailable")}</strong>
-          <Link href="/settings/access">Workspace access</Link>
-        </footer>
-      </aside>
-      <section className="sales-operator-content">
-        <div className="sales-operator-content__body">{children}</div>
-      </section>
-    </main>
+        <div className="sales-operator-sidebar__planned">
+          <div className="sales-operator-sidebar__section-title"><span>Coming soon</span></div>
+          <ul>
+            {plannedSections.map((section) => (
+              <li key={section} aria-disabled="true">{section}</li>
+            ))}
+          </ul>
+        </div>
+
+      <footer>
+        <small>Active workspace</small>
+        <strong title={workspace?.name}>{workspace?.name ?? (status === "loading" ? "Loading workspace" : "Workspace unavailable")}</strong>
+        <Link href="/settings/access">Workspace access</Link>
+      </footer>
+    </>
+  );
+
+  return (
+    <ConsoleShell
+      surfaceClassName="sales-operator-page"
+      sidebar={sidebar}
+      sidebarClassName="sales-operator-sidebar"
+      sidebarLabel="Sales Operator"
+    >
+      {children}
+    </ConsoleShell>
   );
 }

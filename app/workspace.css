@@ -19,20 +19,7 @@ body.workspace-body::before {
   display: none;
 }
 
-.workspace-shell {
-  --workspace-accent: #d96818;
-  --workspace-accent-strong: #b84e0d;
-  --workspace-border: #e0e3e8;
-  --workspace-muted: #6b717c;
-  --workspace-surface: #ffffff;
-  background: #f7f8fa;
-  color: #17191f;
-  display: grid;
-  grid-template-columns: 72px minmax(0, 1fr);
-  grid-template-rows: 64px minmax(0, 1fr);
-  height: 100dvh;
-  overflow: hidden;
-}
+/* Palette lives in app/tokens.css. Do not redeclare colours here. */
 
 .workspace-rail {
   align-items: center;
@@ -140,7 +127,6 @@ body.workspace-body::before {
   border-bottom: 1px solid var(--workspace-border);
   display: flex;
   gap: 10px;
-  grid-column: 2;
   min-width: 0;
   padding: 0 20px;
   position: relative;
@@ -337,21 +323,7 @@ body.workspace-body::before {
   margin-top: 5px;
 }
 
-.workspace-canvas {
-  background-color: #f8f9fa;
-  background-image: radial-gradient(#d9dce1 0.7px, transparent 0.7px);
-  background-size: 19px 19px;
-  grid-column: 2;
-  min-height: 0;
-  overflow-y: auto;
-  padding: 58px 28px 48px;
-}
 
-.workspace-canvas__inner {
-  margin: 0 auto;
-  max-width: 920px;
-  width: 100%;
-}
 
 .workspace-hero {
   margin: 0 auto 26px;
@@ -396,7 +368,7 @@ body.workspace-body::before {
 }
 
 .workspace-composer:focus-within {
-  border-color: #d96818;
+  border-color: var(--yd-accent);
   box-shadow: 0 0 0 3px rgba(217, 104, 24, 0.13), 0 16px 40px rgba(31, 36, 45, 0.08);
 }
 
@@ -634,7 +606,7 @@ body.workspace-body::before {
 
 .desktop-banner__icon {
   align-items: center;
-  background: #d96818;
+  background: var(--yd-accent);
   border-radius: 7px;
   display: inline-flex;
   height: 46px;
@@ -843,7 +815,7 @@ body.workspace-body::before {
 
 .workspace-mobile-nav > a[aria-current="page"] {
   background: #fff0e5;
-  color: #a7440e;
+  color: var(--yd-accent-strong);
 }
 
 .workspace-mobile-nav > button:disabled,
@@ -859,19 +831,9 @@ body.workspace-body::before {
 }
 
 @media (max-width: 860px) {
-  .workspace-shell {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    grid-template-rows: 64px minmax(0, 1fr);
-  }
 
   .workspace-rail {
     display: none;
-  }
-
-  .workspace-topbar,
-  .workspace-canvas {
-    grid-column: 1;
   }
 
   .workspace-hero h1 {
@@ -913,9 +875,6 @@ body.workspace-body::before {
     display: none;
   }
 
-  .workspace-canvas {
-    padding: 44px 22px 40px;
-  }
 
   .desktop-banner {
     align-items: start;
@@ -955,9 +914,6 @@ body.workspace-body::before {
     padding-left: 9px;
   }
 
-  .workspace-canvas {
-    padding: 30px 13px 34px;
-  }
 
   .workspace-hero {
     margin-bottom: 21px;
@@ -1047,14 +1003,7 @@ body.workspace-body::before {
   }
 }
 
-.workspace-shell {
-  background: #ffffff;
-  grid-template-columns: 76px minmax(0, 1fr);
-}
 
-.workspace-shell--rail-collapsed {
-  grid-template-columns: 0 minmax(0, 1fr);
-}
 
 .workspace-rail {
   background: #ffffff;
@@ -1183,31 +1132,8 @@ body.workspace-body::before {
   min-height: 40px;
 }
 
-.workspace-canvas {
-  background: #ffffff;
-  isolation: isolate;
-  overflow-y: auto;
-  padding: 0 28px 60px;
-  position: relative;
-}
 
-.workspace-canvas::before {
-  background-image: radial-gradient(#e0e2e6 1px, transparent 1px);
-  background-size: 20px 20px;
-  content: "";
-  inset: 8px 12% 0;
-  mask-image: radial-gradient(ellipse at center, #000000 0%, #000000 48%, transparent 80%);
-  opacity: 0.72;
-  pointer-events: none;
-  position: absolute;
-  z-index: -1;
-}
 
-.workspace-canvas__inner {
-  max-width: 900px;
-  position: relative;
-  z-index: 1;
-}
 
 .workspace-creation-stage {
   align-items: center;
@@ -1389,21 +1315,12 @@ body.workspace-body::before {
 }
 
 @media (max-width: 860px) {
-  .workspace-shell {
-    grid-template-columns: minmax(0, 1fr);
-  }
 
-  .workspace-shell--rail-collapsed {
-    grid-template-columns: minmax(0, 1fr);
-  }
 
   .workspace-collapse {
     display: none;
   }
 
-  .workspace-canvas {
-    padding: 0 22px 44px;
-  }
 
   .workspace-creation-stage {
     min-height: auto;
@@ -1421,9 +1338,6 @@ body.workspace-body::before {
 }
 
 @media (max-width: 560px) {
-  .workspace-canvas {
-    padding: 0 13px 34px;
-  }
 
   .workspace-creation-stage {
     padding-top: 34px;
@@ -1463,9 +1377,6 @@ body.workspace-body::before {
   min-height: calc(100dvh - 64px);
 }
 
-.workspace-canvas__inner {
-  max-width: 1360px;
-}
 
 .workspace-main-column {
   min-width: 0;
@@ -1548,7 +1459,7 @@ body.workspace-body::before {
 
 .workspace-template-carousel__preview {
   aspect-ratio: 16 / 10;
-  background: #eef1f4;
+  background: var(--yd-surface-sunken);
   border: 1px solid #e5e7ea;
   border-radius: 6px;
   overflow: hidden;
@@ -1606,7 +1517,7 @@ body.workspace-body::before {
 }
 
 .workspace-template-carousel__body > span {
-  color: #ad4e13;
+  color: var(--yd-accent-strong);
   font-size: 0.62rem;
   font-weight: 800;
   letter-spacing: 0.06em;
@@ -1631,7 +1542,7 @@ body.workspace-body::before {
   align-items: center;
   background: transparent;
   border: 0;
-  color: #9b450f;
+  color: var(--yd-accent-strong);
   display: inline-flex;
   font-size: 0.7rem;
   font-weight: 750;
@@ -1642,7 +1553,7 @@ body.workspace-body::before {
 }
 
 .workspace-template-carousel__body > button:hover {
-  color: #6f2f0a;
+  color: var(--yd-accent-strong);
 }
 
 .workspace-template-carousel__pagination {
@@ -1659,8 +1570,8 @@ body.workspace-body::before {
 }
 
 .workspace-template-carousel__pagination button.is-active {
-  background: #d96818;
-  border-color: #d96818;
+  background: var(--yd-accent);
+  border-color: var(--yd-accent);
   width: 18px;
 }
 
@@ -1705,7 +1616,7 @@ body.workspace-body::before {
 }
 
 .workspace-product-note li > svg {
-  color: #b45b22;
+  color: var(--yd-accent-strong);
   flex: 0 0 auto;
   margin-top: 1px;
 }
@@ -1770,7 +1681,7 @@ body.workspace-body::before {
   background: #fff1e5;
   border: 1px solid #f1d2b7;
   border-radius: 999px;
-  color: #ad4e13;
+  color: var(--yd-accent-strong);
   font-size: 0.63rem;
   font-weight: 800;
   letter-spacing: 0.08em;

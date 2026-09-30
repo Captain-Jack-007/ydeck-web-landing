@@ -2,8 +2,8 @@
 
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { DesktopPortalHome } from "@/components/workspace/DesktopPortalHome";
-import { ProductTopBar } from "@/components/workspace/ProductTopBar";
+import { ConsoleShell } from "@/components/console/ConsoleShell";
+import { WorkspaceDashboard } from "@/components/workspace/WorkspaceDashboard";
 import { useAuth } from "@/src/providers/auth-provider";
 
 export function ProductWorkspace() {
@@ -33,12 +33,11 @@ export function ProductWorkspace() {
     return null;
   }
 
+  // No sidebar by design: Home stays chrome-light and leads with workspace
+  // state. Global navigation lives in the shell's top bar.
   return (
-    <main className="workspace-shell workspace-shell--portal">
-      <ProductTopBar />
-      <section className="workspace-canvas desktop-portal-canvas">
-        <DesktopPortalHome />
-      </section>
-    </main>
+    <ConsoleShell surfaceClassName="workspace-shell workspace-dashboard">
+      <WorkspaceDashboard />
+    </ConsoleShell>
   );
 }

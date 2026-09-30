@@ -1,57 +1,6 @@
-.sales-operator-page {
-  --account-accent-ink: #ffffff;
-  --account-danger: #b42318;
-  --account-ink: #10161f;
-  --account-line: rgba(16, 22, 31, 0.12);
-  --account-muted: #566274;
-  --account-radius: 8px;
-  --account-radius-lg: 12px;
-  --account-strong-line: rgba(16, 22, 31, 0.22);
-  --account-surface-3: #f9fafb;
-  --so-bg: #f5f6f8;
-  --so-surface: #ffffff;
-  --so-surface-subtle: #f8f9fa;
-  --so-ink: #17191d;
-  --so-text: #424a54;
-  --so-muted: #6c7580;
-  --so-line: #e1e4e8;
-  --so-line-strong: #cbd1d8;
-  --so-accent: #c45b18;
-  --so-accent-strong: #8f3e0d;
-  --so-accent-soft: #fff2e8;
-  --so-success: #116b47;
-  --so-warning: #8d5b0b;
-  --so-danger: #9e3731;
-  background: var(--so-bg);
-  color: var(--so-ink);
-  display: grid;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-  grid-template-columns: 248px minmax(0, 1fr);
-  grid-template-rows: 60px minmax(0, 1fr);
-  height: 100dvh;
-  overflow: hidden;
-}
-
-.sales-operator-page > .workspace-topbar--portal {
-  background: #fff;
-  border-bottom: 1px solid var(--so-line);
-  grid-column: 1 / -1;
-  grid-row: 1;
-  min-height: 60px;
-  padding-inline: 20px;
-}
-
-.sales-operator-sidebar {
-  background: #fff;
-  border-right: 1px solid var(--so-line);
-  display: flex;
-  flex-direction: column;
-  grid-column: 1;
-  grid-row: 2;
-  min-height: 0;
-  overflow-y: auto;
-  padding: 22px 16px 18px;
-}
+/* Palette lives in app/tokens.css. Do not redeclare colours here. */
+/* Shell layout (grid, top bar, sidebar chrome, content gutter) is owned by
+   .console-shell in app/console.css. Only section content is styled here. */
 
 .sales-operator-sidebar__identity {
   align-items: center;
@@ -148,7 +97,7 @@
 
 .sales-operator-sidebar nav a.active {
   background: var(--so-accent-soft);
-  color: #78330e;
+  color: var(--yd-accent-strong);
 }
 
 .sales-operator-sidebar footer {
@@ -164,20 +113,6 @@
   font-weight: 650;
   margin-top: 7px;
   width: fit-content;
-}
-
-.sales-operator-content {
-  background: var(--so-bg);
-  grid-column: 2;
-  grid-row: 2;
-  min-height: 0;
-  overflow-y: auto;
-}
-
-.sales-operator-content__body {
-  margin: 0 auto;
-  max-width: 1180px;
-  padding: 38px 44px 72px;
 }
 
 .channels-header {
@@ -204,10 +139,10 @@
 .channels-header h1,
 .instagram-assets__header h1 {
   color: var(--so-ink);
-  font-size: 30px;
-  font-weight: 720;
-  letter-spacing: 0;
-  line-height: 1.15;
+  font-size: var(--yd-text-4xl);
+  font-weight: var(--yd-weight-semibold);
+  letter-spacing: var(--yd-tracking-tight);
+  line-height: var(--yd-leading-tight);
   margin: 0;
   text-wrap: balance;
 }
@@ -719,7 +654,7 @@
 }
 
 .instagram-completion h1 {
-  font-size: 30px;
+  font-size: var(--yd-text-4xl);
   letter-spacing: -0.02em;
   line-height: 1.16;
   margin: 0 0 14px;
@@ -755,8 +690,6 @@
 }
 
 @media (max-width: 1020px) {
-  .sales-operator-page { grid-template-columns: 210px minmax(0, 1fr); }
-  .sales-operator-content__body { padding: 30px 28px 64px; }
   .instagram-connect-panel { grid-template-columns: 44px minmax(0, 1fr); }
   .instagram-connect-panel > span:last-child { grid-column: 2; max-width: none; }
   .channel-card__facts { grid-template-columns: minmax(0, 1fr); }
@@ -767,28 +700,12 @@
 }
 
 @media (max-width: 760px) {
-  .sales-operator-page {
-    display: block;
-    height: auto;
-    min-height: 100dvh;
-    overflow: visible;
-  }
-  .sales-operator-page > .workspace-topbar--portal { min-height: 60px; position: sticky; top: 0; z-index: 30; }
-  .sales-operator-sidebar {
-    border-bottom: 1px solid var(--so-line);
-    border-right: 0;
-    display: block;
-    overflow-x: auto;
-    padding: 12px 14px;
-  }
   .sales-operator-sidebar__identity,
   .sales-operator-sidebar__worker,
   .sales-operator-sidebar footer { display: none; }
   .sales-operator-sidebar nav { display: flex; min-width: max-content; }
   .sales-operator-sidebar__section-title { display: none; }
   .sales-operator-sidebar nav a { min-height: 38px; }
-  .sales-operator-content { overflow: visible; }
-  .sales-operator-content__body { padding: 24px 14px 48px; }
   .channels-header { align-items: stretch; flex-direction: column; }
   .channels-header__actions > *, .channels-header__actions .account-button { flex: 1 1 150px; }
   .channel-card__header { align-items: start; grid-template-columns: 44px minmax(0, 1fr); }
@@ -802,7 +719,7 @@
 }
 
 @media (max-width: 480px) {
-  .channels-header h1, .instagram-assets__header h1 { font-size: 26px; }
+  .channels-header h1, .instagram-assets__header h1 { font-size: var(--yd-text-3xl); }
   .instagram-connect-panel { align-items: start; grid-template-columns: 38px minmax(0, 1fr); padding: 16px; }
   .instagram-connect-panel__icon { height: 38px; width: 38px; }
   .channel-card { padding: 16px; }

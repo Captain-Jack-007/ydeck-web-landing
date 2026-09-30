@@ -1,27 +1,9 @@
-.workspace-shell--portal {
-  --portal-bg: #f5f6f7;
-  --portal-surface: #ffffff;
-  --portal-surface-cool: #eef1f4;
-  --portal-ink: #1c2026;
-  --portal-text: #464e59;
-  --portal-muted: #68717d;
-  --portal-line: #d5dae0;
-  --portal-line-strong: #bfc6ce;
-  --portal-accent: #c75b18;
-  --portal-accent-strong: #8e3d0d;
-  --portal-accent-soft: #fff1e6;
-  background: var(--portal-bg);
-  color: var(--portal-ink);
-  display: grid;
-  font-family: "Sora", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  grid-template-columns: minmax(0, 1fr);
-  grid-template-rows: 64px minmax(0, 1fr);
-  letter-spacing: 0;
-}
-
-.workspace-shell--portal .workspace-topbar,
-.workspace-shell--portal .desktop-portal-canvas {
-  grid-column: 1;
+/* Palette lives in app/tokens.css. Do not redeclare colours here.
+   Layout comes from .console-shell; this keeps only the portal's own
+   dot-grid surface treatment, re-pointed at the shell's content column. */
+.workspace-shell--portal .console-main {
+  background-image: radial-gradient(#d8dce1 0.65px, transparent 0.65px);
+  background-size: 20px 20px;
 }
 
 .workspace-topbar--portal {
@@ -342,15 +324,6 @@
   grid-template-columns: 1fr;
 }
 
-.desktop-portal-canvas {
-  background-color: var(--portal-bg);
-  background-image: radial-gradient(#d8dce1 0.65px, transparent 0.65px);
-  background-size: 20px 20px;
-  height: 100%;
-  min-height: 0;
-  overflow-y: auto;
-  padding: 24px 32px;
-}
 
 .desktop-portal {
   color: var(--portal-ink);
@@ -401,10 +374,10 @@
 
 .desktop-portal__hero-copy h1 {
   color: #15191e;
-  font-size: 3.45rem;
-  font-weight: 650;
-  letter-spacing: -0.025em;
-  line-height: 1.04;
+  font-size: var(--yd-text-4xl);
+  font-weight: var(--yd-weight-semibold);
+  letter-spacing: var(--yd-tracking-tight);
+  line-height: var(--yd-leading-tight);
   margin: 17px 0 17px;
   max-width: 600px;
   text-wrap: balance;
@@ -532,7 +505,7 @@
 }
 
 .desktop-release-message > svg {
-  color: #a14d18;
+  color: var(--yd-accent-strong);
   margin-top: 1px;
 }
 
@@ -618,8 +591,8 @@
 
 .desktop-connection--attention .desktop-connection__icon,
 .desktop-connection--unavailable .desktop-connection__icon {
-  background: #fff2e8;
-  color: #994813;
+  background: var(--yd-accent-soft);
+  color: var(--yd-accent-strong);
 }
 
 .desktop-connection > span:last-child {
@@ -717,7 +690,7 @@
 .walkthrough-card__header small {
   background: #f5d6be;
   border-radius: 4px;
-  color: #74320b;
+  color: var(--yd-accent-strong);
   font-size: 0.59rem;
   font-weight: 750;
   padding: 5px 7px;
@@ -985,7 +958,7 @@
 
 .desktop-portal__resource-links a:hover,
 .desktop-portal__account-actions a:hover {
-  color: #632806;
+  color: var(--yd-accent-strong);
   text-decoration: underline;
   text-underline-offset: 3px;
 }
@@ -1144,7 +1117,7 @@
 }
 
 .walkthrough-dialog__error span {
-  color: #cbd1d8;
+  color: var(--yd-line-strong);
   font-size: 0.75rem;
 }
 
@@ -1166,17 +1139,10 @@
 }
 
 @media (max-width: 1220px) and (min-width: 901px) {
-  .desktop-portal-canvas {
-    padding-inline: 22px;
-  }
 
   .desktop-portal__overview {
     gap: 30px;
     grid-template-columns: minmax(350px, 0.92fr) minmax(410px, 1.08fr);
-  }
-
-  .desktop-portal__hero-copy h1 {
-    font-size: 2.85rem;
   }
 
   .desktop-portal__hero-actions {
@@ -1202,11 +1168,6 @@
 }
 
 @media (max-width: 1100px) and (min-width: 901px) {
-  .desktop-portal-canvas {
-    height: auto;
-    min-height: 100%;
-    overflow-y: auto;
-  }
 
   .desktop-portal {
     grid-template-rows: auto auto;
@@ -1227,10 +1188,6 @@
     grid-template-columns: minmax(320px, 0.94fr) minmax(360px, 1.06fr);
   }
 
-  .desktop-portal__hero-copy h1 {
-    font-size: 2.55rem;
-  }
-
   .desktop-portal__hero-actions {
     grid-template-columns: minmax(0, 1fr);
   }
@@ -1249,12 +1206,6 @@
 }
 
 @media (max-width: 900px) {
-  .desktop-portal-canvas {
-    height: auto;
-    min-height: 100%;
-    overflow-y: auto;
-    padding: 26px 20px 42px;
-  }
 
   .desktop-portal {
     gap: 24px;
@@ -1270,10 +1221,6 @@
 
   .desktop-portal__hero-copy {
     max-width: 680px;
-  }
-
-  .desktop-portal__hero-copy h1 {
-    font-size: 3rem;
   }
 
   #product-walkthrough {
@@ -1306,15 +1253,6 @@
     right: 14px;
     top: 58px;
     width: calc(100vw - 28px);
-  }
-
-  .desktop-portal-canvas {
-    padding: 22px 14px 34px;
-  }
-
-  .desktop-portal__hero-copy h1 {
-    font-size: 2.35rem;
-    line-height: 1.08;
   }
 
   .desktop-portal__hero-copy > p {
@@ -1391,10 +1329,6 @@
 @media (max-width: 390px) {
   .workspace-topbar__brand strong {
     display: none;
-  }
-
-  .desktop-portal__hero-copy h1 {
-    font-size: 2.12rem;
   }
 
   .desktop-portal__meta {

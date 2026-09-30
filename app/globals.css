@@ -2,6 +2,11 @@
 @import "tailwindcss" important;
 @source "../components/ydeck";
 @import "./ydeck.css";
+/* Console design tokens. Must stay inside this @import block: CSS drops any
+   @import that follows a rule, and hoisting tokens.css above the font import
+   in layout.tsx silently kills the Sora webfont. */
+@import "./tokens.css";
+@import "./console.css";
 
 @theme {
   --font-sora: "Sora", sans-serif;

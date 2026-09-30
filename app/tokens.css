@@ -1,0 +1,238 @@
+/* =============================================================================
+   YDeck console design tokens
+
+   Single source of truth for the authenticated surfaces: Workspace, Sales
+   Operator, Settings, Auth, and the Desktop portal. Every surface-scoped
+   palette (--account-*, --settings-*, --so-*, --portal-*, --workspace-*) is
+   an alias defined at the bottom of this file, so a value is changed here
+   once and never per screen.
+
+   The public landing page keeps its own identity in globals.css / ydeck.css
+   and deliberately does not consume this layer.
+
+   Contrast: every text token below clears WCAG AA (4.5:1) against all four
+   surface tokens. Re-verify with scripts before changing any value.
+   ========================================================================== */
+
+:root {
+  /* --- Surfaces ---------------------------------------------------------
+     A second neutral (sunken) separates chrome and wells from content. */
+  --yd-bg: #f5f6f8;
+  --yd-surface: #ffffff;
+  --yd-surface-subtle: #f8f9fa;
+  --yd-surface-sunken: #eef1f4;
+  --yd-sidebar: #ffffff;
+
+  /* --- Text -------------------------------------------------------------
+     ink 17.6:1 · text 9.5:1 · muted 5.2:1 against --yd-surface.
+     muted holds >=4.5:1 on sunken too, which is why it is not lighter. */
+  --yd-ink: #17191d;
+  --yd-text: #3f4650;
+  --yd-muted: #656d78;
+  --yd-on-accent: #ffffff;
+
+  /* --- Lines ------------------------------------------------------------ */
+  --yd-line: #e2e5e9;
+  --yd-line-strong: #cbd1d8;
+  /* Form-control boundary. WCAG 1.4.11 asks 3:1 of the visual boundary that
+     identifies a UI component, and on a white card the border is the only
+     thing identifying an input. The previous #cbd1d8 managed 1.54:1.
+     #868a8f clears 3:1 against every surface token — card 3.47, page 3.21,
+     sunken 3.06. Do not lighten it without re-checking the sunken case, which
+     is the tightest of the three. Controls are the one place the UI is
+     deliberately not quiet. */
+  --yd-line-control: #868a8f;
+  --yd-line-control-hover: #6c7076;
+
+  /* --- Accent -----------------------------------------------------------
+     Primary action, current selection, brand moments. Nothing else.
+     #bd5616 is the darkest-passing member of the existing orange family:
+     white text on it is 4.66:1, where every prior value failed AA. */
+  --yd-accent: #bd5616;
+  --yd-accent-strong: #8f3e0d;
+  --yd-accent-soft: #fff2e8;
+  --yd-focus-ring: rgba(189, 86, 22, 0.28);
+
+  /* --- Link -------------------------------------------------------------
+     Inline links stay blue. Reserving orange for action and selection is
+     what keeps it meaningful. */
+  --yd-link: #0f5f8d;
+  --yd-link-soft: rgba(15, 95, 141, 0.1);
+
+  /* --- Status ----------------------------------------------------------- */
+  --yd-success: #16734b;
+  --yd-warning: #8d5b0b;
+  --yd-danger: #b42318;
+
+  /* --- Radius ----------------------------------------------------------- */
+  --yd-radius-sm: 6px;
+  --yd-radius-md: 8px;
+  --yd-radius-lg: 12px;
+  --yd-radius-full: 999px;
+
+  /* --- Elevation --------------------------------------------------------
+     Quiet surfaces: borders do the separating, shadow is a hint. */
+  --yd-shadow-sm: 0 1px 2px rgba(16, 22, 31, 0.04);
+  --yd-shadow-md: 0 8px 24px rgba(16, 22, 31, 0.08);
+  --yd-shadow-pop: 0 16px 40px rgba(16, 22, 31, 0.14);
+
+  /* --- Type families ----------------------------------------------------
+     One family across the console. Sora is the brand face and three of the
+     four surfaces already resolved to it; Sales Operator was the outlier on
+     the bare system stack, which is a large part of why the screens read as
+     different products. */
+  --yd-font-ui: "Sora", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  --yd-font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* --- Type scale -------------------------------------------------------
+     Fixed rem steps, ~1.14 ratio. Product UI is viewed at a consistent size;
+     fluid headings shrink badly inside panels. Roles, not sizes, at usage. */
+  --yd-text-2xs: 0.6875rem; /* 11px  dense badges, table chrome */
+  --yd-text-xs: 0.75rem; /* 12px  metadata, timestamps    */
+  --yd-text-sm: 0.8125rem; /* 13px  secondary text           */
+  --yd-text-md: 0.875rem; /* 14px  body, controls, default  */
+  --yd-text-lg: 1rem; /* 16px  card title               */
+  --yd-text-xl: 1.125rem; /* 18px  section title            */
+  --yd-text-2xl: 1.25rem; /* 20px  section title, large     */
+  --yd-text-3xl: 1.5rem; /* 24px  subpage title            */
+  --yd-text-4xl: 1.75rem; /* 28px  page title               */
+  --yd-text-5xl: 2rem; /* 32px  page title, large        */
+
+  --yd-weight-regular: 400;
+  --yd-weight-medium: 500;
+  --yd-weight-semibold: 600;
+  --yd-weight-bold: 700;
+
+  --yd-leading-tight: 1.25;
+  --yd-leading-snug: 1.35;
+  --yd-leading-normal: 1.5;
+  --yd-leading-relaxed: 1.6;
+
+  --yd-tracking-tight: -0.011em;
+  --yd-tracking-normal: 0;
+  --yd-tracking-wide: 0.02em;
+
+  /* --- Spacing (8px system, 4px half-step) ------------------------------ */
+  --yd-space-1: 4px;
+  --yd-space-2: 8px;
+  --yd-space-3: 12px;
+  --yd-space-4: 16px;
+  --yd-space-5: 20px;
+  --yd-space-6: 24px;
+  --yd-space-7: 32px;
+  --yd-space-8: 40px;
+  --yd-space-9: 48px;
+  --yd-space-10: 64px;
+
+  /* --- Layout grid ------------------------------------------------------ */
+  --yd-content-max: 1240px;
+  --yd-sidebar-width: 248px;
+  --yd-topbar-height: 64px;
+  --yd-page-pad-x: 32px;
+  --yd-page-pad-x-compact: 16px;
+  --yd-section-gap: 28px;
+  --yd-card-pad: 20px;
+
+  /* --- Motion -----------------------------------------------------------
+     State feedback only. 150-250ms keeps users in flow. */
+  --yd-duration-fast: 120ms;
+  --yd-duration: 180ms;
+  --yd-duration-slow: 260ms;
+  --yd-ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* --- Stacking ---------------------------------------------------------- */
+  --yd-z-dropdown: 100;
+  --yd-z-sticky: 200;
+  --yd-z-backdrop: 300;
+  --yd-z-modal: 400;
+  --yd-z-toast: 500;
+  --yd-z-tooltip: 600;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --yd-duration-fast: 0.01ms;
+    --yd-duration: 0.01ms;
+    --yd-duration-slow: 0.01ms;
+  }
+}
+
+/* =============================================================================
+   Surface-scoped aliases
+
+   These are the names the existing stylesheets already reference. They stay so
+   the migration touches definitions rather than the ~400 usage sites, but they
+   now all resolve to the canonical tokens above. New code should use --yd-*
+   directly; these shrink as each stylesheet is rewritten.
+   ========================================================================== */
+
+:root {
+  /* Auth + account (app/account.css) */
+  --account-bg: var(--yd-bg);
+  --account-surface-2: var(--yd-surface-sunken);
+  --account-surface-3: var(--yd-surface-subtle);
+  --account-sidebar: var(--yd-sidebar);
+  --account-ink: var(--yd-ink);
+  --account-muted: var(--yd-muted);
+  --account-muted-2: var(--yd-muted);
+  --account-line: var(--yd-line);
+  --account-strong-line: var(--yd-line-strong);
+  --account-accent: var(--yd-link);
+  --account-accent-soft: var(--yd-link-soft);
+  --account-accent-ink: var(--yd-on-accent);
+  --account-brand: var(--yd-accent);
+  --account-brand-soft: var(--yd-accent-soft);
+  --account-danger: var(--yd-danger);
+  --account-warning: var(--yd-warning);
+  --account-success: var(--yd-success);
+  --account-radius: var(--yd-radius-md);
+  --account-radius-lg: var(--yd-radius-lg);
+  --account-shadow: var(--yd-shadow-sm);
+
+  /* Settings (app/settings/settings-production.css) */
+  --settings-bg: var(--yd-bg);
+  --settings-sidebar: var(--yd-sidebar);
+  --settings-surface: var(--yd-surface);
+  --settings-surface-subtle: var(--yd-surface-subtle);
+  --settings-ink: var(--yd-ink);
+  --settings-muted: var(--yd-muted);
+  --settings-line: var(--yd-line);
+  --settings-line-strong: var(--yd-line-strong);
+  --settings-accent: var(--yd-accent);
+  --settings-accent-strong: var(--yd-accent-strong);
+  --settings-accent-soft: var(--yd-accent-soft);
+  --settings-focus: var(--yd-focus-ring);
+  --settings-success: var(--yd-success);
+  --settings-warning: var(--yd-warning);
+  --settings-danger: var(--yd-danger);
+
+  /* Sales Operator (app/sales-operator/sales-operator.css) */
+  --so-bg: var(--yd-bg);
+  --so-surface-subtle: var(--yd-surface-subtle);
+  --so-ink: var(--yd-ink);
+  --so-text: var(--yd-text);
+  --so-muted: var(--yd-muted);
+  --so-line: var(--yd-line);
+  --so-line-strong: var(--yd-line-strong);
+  --so-accent: var(--yd-accent);
+  --so-accent-strong: var(--yd-accent-strong);
+  --so-accent-soft: var(--yd-accent-soft);
+  --so-success: var(--yd-success);
+
+  /* Desktop portal (app/desktop-portal.css) */
+  --portal-bg: var(--yd-bg);
+  --portal-surface: var(--yd-surface);
+  --portal-ink: var(--yd-ink);
+  --portal-text: var(--yd-text);
+  --portal-line: var(--yd-line);
+  --portal-line-strong: var(--yd-line-strong);
+  --portal-accent: var(--yd-accent);
+  --portal-accent-strong: var(--yd-accent-strong);
+  --portal-accent-soft: var(--yd-accent-soft);
+
+  /* Workspace shell (app/workspace.css) */
+  --workspace-accent: var(--yd-accent);
+  --workspace-accent-strong: var(--yd-accent-strong);
+  --workspace-border: var(--yd-line);
+  --workspace-muted: var(--yd-muted);
+}

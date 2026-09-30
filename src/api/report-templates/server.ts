@@ -6,7 +6,7 @@ import {
   type LandingReportTemplatesPayload,
 } from '@/src/api/report-templates';
 
-const LOCAL_API_ORIGIN = 'http://127.0.0.1:8085';
+const LOCAL_API_ORIGIN = 'http://127.0.0.1:2026';
 const PRODUCTION_API_ORIGIN = 'https://api.ydeck.app';
 const REPORT_TEMPLATES_REVALIDATE_SECONDS = 300;
 

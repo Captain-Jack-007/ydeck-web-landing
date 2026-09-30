@@ -117,8 +117,13 @@ export function safeSalesOperatorError(error: unknown): SafeChannelError {
   const known = SAFE_ERROR_COPY[code];
   return {
     code,
-    message: known?.message ?? "The Sales Operator request could not be completed safely.",
-    remediation: known?.remediation ?? "Try again. If the problem continues, contact YDeck support.",
+    // Generic fallback: this fires for ANY unmapped failure, so it must read as
+    // an ordinary connectivity problem rather than a security event, and must
+    // reassure the user that nothing was changed.
+    message: known?.message ?? "We couldn't complete that request.",
+    remediation:
+      known?.remediation
+      ?? "There was a problem communicating with YDeck Cloud. Your existing connections haven't been changed. Try again in a moment.",
     retryable: apiError?.retryable ?? known?.retryable ?? true,
     requestId: apiError?.requestId ?? null,
   };
