@@ -101,7 +101,11 @@ export function ChannelsPage() {
           <h2 id="instagram-connect-title">Instagram business messaging</h2>
           <p>Instagram connection requires an eligible professional account linked through Meta&apos;s supported business configuration. Personal accounts are not automatically eligible.</p>
         </div>
-        <span><ShieldCheck aria-hidden size={15} /> OAuth and credentials are handled by YDeck Cloud</span>
+        {/* Plain-language reassurance; the mechanism (OAuth token custody) is
+            available on hover rather than stated as developer terminology. */}
+        <span title="YDeck connects through Meta's official authorization flow. Your account password is never shared with YDeck, and access tokens are stored by YDeck Cloud.">
+          <ShieldCheck aria-hidden size={15} /> Secure connection via YDeck
+        </span>
       </section>
 
       {status === "loading" ? (
@@ -109,10 +113,21 @@ export function ChannelsPage() {
       ) : status === "error" && connections.length === 0 ? (
         <EmptyState
           icon={<AlertCircle aria-hidden size={21} />}
-          title="Connected channels unavailable"
-          action={<Button type="button" variant="secondary" onClick={() => void refreshChannels()}>Try again</Button>}
+          title="We couldn't load your connected channels"
+          action={
+            <>
+              <Button type="button" variant="secondary" onClick={() => void refreshChannels()}>Try again</Button>
+              {/* System terminology stays collapsed behind a disclosure rather
+                  than leading the message. */}
+              <ErrorDetails
+                requestId={error?.requestId ?? null}
+                category={error?.code ?? "UNKNOWN"}
+                timestamp={new Date().toISOString()}
+              />
+            </>
+          }
         >
-          YDeck could not load channel connections for this workspace. No connection settings were changed.
+          There was a problem communicating with YDeck Cloud. Your existing connections haven&apos;t been changed.
         </EmptyState>
       ) : connections.length === 0 ? (
         <EmptyState

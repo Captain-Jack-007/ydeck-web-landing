@@ -100,9 +100,45 @@ test("auth bootstrap limits refresh attempts without an access token", async () 
   assert.doesNotMatch(client, /refreshWebAccessToken\(\);[\s\S]*Boolean\(token\)/);
 });
 
+test("primary navigation only links to routes that exist", async () => {
+  const nav = await readFile(new URL("../components/console/ConsoleNav.tsx", import.meta.url), "utf8");
+  const routed = [...nav.matchAll(/href:\s*"([^"]+)"/g)].map((match) => match[1]);
+
+  // Every href in the primary nav must resolve to a real app route.
+  assert.ok(routed.length > 0, "expected the primary nav to declare routes");
+  for (const href of routed) {
+    const segment = href.split("/").filter(Boolean)[0];
+    await readFile(new URL(`../app/${segment}/page.tsx`, import.meta.url), "utf8");
+  }
+
+  // Unbuilt destinations must be inert and labelled, never links.
+  assert.match(nav, /console-nav__link--soon/);
+  assert.match(nav, /aria-disabled="true"/);
+  assert.doesNotMatch(nav, /href:\s*"\/knowledge"/);
+  assert.doesNotMatch(nav, /href:\s*"\/activity"/);
+
+  // Settings belongs to the account menu, not the product nav.
+  assert.doesNotMatch(nav, /href:\s*"\/settings/);
+});
+
+test("agent catalogue never presents unbuilt agents as usable", async () => {
+  const agents = await readFile(new URL("../src/lib/agents.ts", import.meta.url), "utf8");
+  const blocks = agents.split(/\{\s*\n\s*id:/).slice(1);
+
+  assert.ok(blocks.length >= 4, "expected several agents in the catalogue");
+  for (const block of blocks) {
+    if (/availability:\s*"coming_soon"/.test(block)) {
+      // A coming-soon agent must not carry a destination.
+      assert.doesNotMatch(block, /href:/);
+    }
+  }
+});
+
 test("settings shell avoids duplicate product navigation", async () => {
   const settingsUi = await readFile(new URL("../components/account/ui.tsx", import.meta.url), "utf8");
-  assert.match(settingsUi, /<ProductTopBar \/>/);
+  // Settings mounts no top bar of its own; it inherits the one ConsoleShell owns.
+  assert.match(settingsUi, /ConsoleShell/);
+  assert.doesNotMatch(settingsUi, /<ProductTopBar \/>/);
   assert.doesNotMatch(settingsUi, /Account Center|YDeck account controls|Back to YDeck|settings-back-link/);
   assert.doesNotMatch(settingsUi, /className="settings-account"/);
   assert.doesNotMatch(settingsUi, /No workspace available/);
@@ -204,31 +240,66 @@ test("authenticated workspace keeps the account bar without side navigation", as
   const workspaceRoute = await readFile(new URL("../app/workspace/page.tsx", import.meta.url), "utf8");
   const topBar = await readFile(new URL("../components/workspace/ProductTopBar.tsx", import.meta.url), "utf8");
   assert.match(workspaceRoute, /ProductWorkspace/);
-  assert.match(workspace, /ProductTopBar/);
-  assert.doesNotMatch(workspace, /ProductRail|AppNavigationDrawer/);
+  // The workspace renders inside the shared shell but passes no sidebar: the
+  // Desktop portal stays chrome-light. Global nav lives in the shell top bar.
+  assert.match(workspace, /ConsoleShell/);
+  assert.doesNotMatch(workspace, /ProductRail|AppNavigationDrawer|sidebar=/);
+  // The avatar menu is account-scoped. Product destinations belong to
+  // ConsoleNav and the section sidebars, not to a second navigation system.
+  assert.match(topBar, /ConsoleNav/);
   assert.match(topBar, /Profile/);
   assert.match(topBar, /Upgrade plan/);
-  assert.match(topBar, /settings\/security/);
-  assert.match(topBar, /settings\/devices/);
   assert.match(topBar, /settings\/billing/);
-  assert.match(topBar, /settings\/account/);
   assert.match(topBar, /Sign out/);
+  // Settings is reachable from the account menu so it does not compete with
+  // the product nav, but its individual pages are not relisted here.
+  assert.match(topBar, /settings\/account/);
+  assert.doesNotMatch(topBar, /settings\/security/);
+  assert.doesNotMatch(topBar, /settings\/devices/);
+  assert.doesNotMatch(topBar, /Sales Operator channels/);
   assert.doesNotMatch(topBar, /Language|Appearance/);
   assert.match(portalComponents, /Manage devices/);
   assert.match(portalComponents, /Billing and plan/);
 });
 
-test("main workspace is Desktop-first and contains no inactive Cloud controls", async () => {
+test("main workspace leads with workspace state, not the Desktop product", async () => {
   const portal = await readFile(new URL("../components/workspace/DesktopPortalHome.tsx", import.meta.url), "utf8");
   const portalComponents = await readFile(new URL("../components/workspace/DesktopPortalComponents.tsx", import.meta.url), "utf8");
   const workspace = await readFile(new URL("../components/workspace/ProductWorkspace.tsx", import.meta.url), "utf8");
+  const portalRoute = await readFile(new URL("../app/desktop-portal/page.tsx", import.meta.url), "utf8");
   const portalSource = `${portal}\n${portalComponents}`;
-  assert.match(workspace, /DesktopPortalHome/);
+
+  // Home is the workspace dashboard; the Desktop product moved to its own route.
+  assert.match(workspace, /WorkspaceDashboard/);
+  assert.doesNotMatch(workspace, /DesktopPortalHome/);
+  assert.match(portalRoute, /DesktopPortalHome/);
+
+  // Desktop capabilities must survive the move intact.
   assert.match(portalSource, /YDeck Desktop Beta/);
   assert.match(portalSource, /Download for macOS/);
   assert.match(portalSource, /Download for Windows/);
+
   assert.doesNotMatch(workspace, /GenerationComposer|TemplateDirectionCarousel|RecentPresentations/);
   assert.doesNotMatch(portalSource, /Cloud Mode|Create a presentation|Recent presentations|Starting prompts/);
+});
+
+test("workspace dashboard reports real state and never invents activity", async () => {
+  const dashboard = await readFile(new URL("../components/workspace/WorkspaceDashboard.tsx", import.meta.url), "utf8");
+  const attention = await readFile(new URL("../src/lib/workspace-attention.ts", import.meta.url), "utf8");
+
+  // Figures come from providers, not literals.
+  assert.match(dashboard, /useSalesOperatorChannels/);
+  assert.match(dashboard, /useDevices/);
+  assert.match(dashboard, /useBilling/);
+
+  // No activity endpoint exists, so the section must be an empty state.
+  assert.match(dashboard, /EmptyState/);
+  assert.doesNotMatch(dashboard, /\b\d{2,}\s*(runs|conversations|tokens|messages)\b/i);
+  assert.doesNotMatch(dashboard, /1\.8M|142 runs/);
+
+  // Routine setup must not be dressed up as a fault.
+  assert.match(attention, /tone: "info"/);
+  assert.doesNotMatch(attention, /could not be completed safely/);
 });
 
 test("root route renders the public landing instead of the protected workspace", async () => {

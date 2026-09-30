@@ -1,5 +1,5 @@
 const DEVELOPMENT_PHASE = "phase-development-server";
-const LOCAL_API_ORIGIN = "http://localhost:8085";
+const LOCAL_API_ORIGIN = "http://localhost:2026";
 const PRODUCTION_API_ORIGIN = "https://api.ydeck.app";
 
 export function resolveApiProxyTarget(phase, configuredTarget = process.env.YDECK_API_PROXY_TARGET) {

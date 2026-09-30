@@ -31,7 +31,7 @@ import {
 import { useBilling } from "@/src/providers/billing-provider";
 import { useWorkspace } from "@/src/providers/workspace-provider";
 import { getHumanErrorMessage } from "@/src/api/client";
-import { ProductTopBar } from "@/components/workspace/ProductTopBar";
+import { ConsoleShell } from "@/components/console/ConsoleShell";
 
 export function Button({
   children,
@@ -514,12 +514,8 @@ export function SettingsShell({ children }: { children: ReactNode }) {
     </>
   );
 
-  return (
-    <main className="settings-page">
-      <ProductTopBar />
-      <aside className="settings-sidebar settings-sidebar--desktop" aria-label="Settings navigation">
-        {sidebarContent()}
-      </aside>
+  const mobileChrome = (
+    <>
       <header className="settings-mobile-bar">
         <div className="settings-mobile-brand">
           <span className="settings-mobile-brand__icon"><ActiveItemIcon aria-hidden size={18} /></span>
@@ -554,10 +550,19 @@ export function SettingsShell({ children }: { children: ReactNode }) {
           </aside>
         </div>
       ) : null}
-      <section className="settings-content">
-        <div className="settings-content__body">{children}</div>
-      </section>
-    </main>
+    </>
+  );
+
+  return (
+    <ConsoleShell
+      surfaceClassName="settings-page"
+      sidebar={sidebarContent()}
+      sidebarClassName="settings-sidebar settings-sidebar--desktop"
+      sidebarLabel="Settings"
+      beforeContent={mobileChrome}
+    >
+      {children}
+    </ConsoleShell>
   );
 }
 

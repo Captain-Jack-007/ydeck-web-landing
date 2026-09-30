@@ -7,16 +7,14 @@ import {
   ChevronDown,
   CreditCard,
   Crown,
-  Laptop,
   Loader2,
-  LockKeyhole,
   LogOut,
-  MessageSquareText,
   Settings,
   Sparkles,
   User,
 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import { ConsoleNav } from "@/components/console/ConsoleNav";
 import { useAuth } from "@/src/providers/auth-provider";
 import { useBilling } from "@/src/providers/billing-provider";
 import { useWorkspace } from "@/src/providers/workspace-provider";
@@ -89,10 +87,11 @@ export function ProductTopBar() {
 
   return (
     <header className="workspace-topbar workspace-topbar--portal">
-      <Link className="workspace-topbar__brand" href="/" aria-label="YDeck home">
+      <Link className="workspace-topbar__brand" href="/workspace" aria-label="YDeck home">
         <Image src="/ydeck.png" alt="" width={25} height={32} priority />
         <strong>YDeck</strong>
       </Link>
+      <ConsoleNav />
       <div className="workspace-topbar__spacer" />
 
       <div className="portal-topbar__controls" ref={controlsRef}>
@@ -158,18 +157,19 @@ export function ProductTopBar() {
 
               <div className="portal-topbar__workspace">
                 <Building2 aria-hidden size={17} />
-                <span><small>Current workspace</small><strong>{workspaceLabel}</strong></span>
+                <span>
+                  <small>{workspace?.type === "organization" ? "Business workspace" : "Personal workspace"}</small>
+                  <strong>{workspaceLabel}</strong>
+                </span>
               </div>
 
-              <nav className="portal-topbar__settings" aria-label="Account settings">
-                <span>Workspace</span>
-                <Link href="/sales-operator/channels" role="menuitem" onClick={() => setActivePopover(null)}><MessageSquareText aria-hidden size={17} /><span><strong>Sales Operator channels</strong><small>Instagram, Facebook Messenger, and Telegram</small></span></Link>
-                <span>Settings</span>
+              {/* Account-scoped only. Product destinations live in ConsoleNav,
+                  not in the avatar menu. Settings sits here so it does not
+                  compete with the primary product navigation. */}
+              <nav className="portal-topbar__settings" aria-label="Account">
                 <Link href="/settings/profile" role="menuitem" onClick={() => setActivePopover(null)}><User aria-hidden size={17} /><span><strong>Profile</strong><small>Name, avatar, and preferences</small></span></Link>
-                <Link href="/settings/security" role="menuitem" onClick={() => setActivePopover(null)}><LockKeyhole aria-hidden size={17} /><span><strong>Security</strong><small>Password and active sessions</small></span></Link>
-                <Link href="/settings/devices" role="menuitem" onClick={() => setActivePopover(null)}><Laptop aria-hidden size={17} /><span><strong>Connected devices</strong><small>Desktop pairing and access</small></span></Link>
                 <Link href="/settings/billing" role="menuitem" onClick={() => setActivePopover(null)}><CreditCard aria-hidden size={17} /><span><strong>Billing and plan</strong><small>Subscription, usage, and invoices</small></span></Link>
-                <Link href="/settings/account" role="menuitem" onClick={() => setActivePopover(null)}><Settings aria-hidden size={17} /><span><strong>Account settings</strong><small>Workspace access and lifecycle</small></span></Link>
+                <Link href="/settings/account" role="menuitem" onClick={() => setActivePopover(null)}><Settings aria-hidden size={17} /><span><strong>Settings</strong><small>Security, devices, and workspace access</small></span></Link>
               </nav>
 
               <button className="portal-topbar__sign-out" type="button" role="menuitem" disabled={signingOut} onClick={() => void handleSignOut()}>
